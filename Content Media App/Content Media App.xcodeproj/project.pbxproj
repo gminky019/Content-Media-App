@@ -17,6 +17,8 @@
 		856425F71C829DB500D6AEE6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856425F51C829DB500D6AEE6 /* SWRevealViewController.m */; };
 		856425F91C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 856425F81C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf */; };
 		856425FC1C82A37C00D6AEE6 /* VideoObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856425FB1C82A37C00D6AEE6 /* VideoObj.swift */; };
+		856425FE1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 856425FD1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf */; };
+		856426001C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 856425FF1C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		856425F51C829DB500D6AEE6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		856425F81C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = BackEnd_ReadMe.rtf; sourceTree = "<group>"; };
 		856425FB1C82A37C00D6AEE6 /* VideoObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoObj.swift; sourceTree = "<group>"; };
+		856425FD1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe_Integration.rtf; sourceTree = "<group>"; };
+		856425FF1C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe_FrontEnd.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		856425ED1C829C2D00D6AEE6 /* FrontEnd */ = {
 			isa = PBXGroup;
 			children = (
+				856425FF1C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf */,
 			);
 			name = FrontEnd;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 		856425EE1C829C3700D6AEE6 /* Integration */ = {
 			isa = PBXGroup;
 			children = (
+				856425FD1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf */,
 			);
 			name = Integration;
 			sourceTree = "<group>";
@@ -237,6 +243,8 @@
 				856425F91C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf in Resources */,
 				856425D51C829B3D00D6AEE6 /* Assets.xcassets in Resources */,
 				856425D31C829B3D00D6AEE6 /* Main.storyboard in Resources */,
+				856426001C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf in Resources */,
+				856425FE1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
