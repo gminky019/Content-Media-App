@@ -15,6 +15,7 @@
 		856425E31C829B3E00D6AEE6 /* Content_Media_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856425E21C829B3E00D6AEE6 /* Content_Media_AppTests.swift */; };
 		856425F61C829DB500D6AEE6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856425F31C829DB500D6AEE6 /* SwiftyJSON.swift */; };
 		856425F71C829DB500D6AEE6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856425F51C829DB500D6AEE6 /* SWRevealViewController.m */; };
+		856425F91C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 856425F81C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		856425F31C829DB500D6AEE6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		856425F41C829DB500D6AEE6 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		856425F51C829DB500D6AEE6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		856425F81C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = BackEnd_ReadMe.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		856425CC1C829B3D00D6AEE6 /* Content Media App */ = {
 			isa = PBXGroup;
 			children = (
+				856425FA1C82A2F000D6AEE6 /* Content Classes */,
 				856425F11C829C5200D6AEE6 /* Third Party Assets */,
 				856425F01C829C4A00D6AEE6 /* BackEnd */,
 				856425EE1C829C3700D6AEE6 /* Integration */,
@@ -123,6 +126,7 @@
 		856425F01C829C4A00D6AEE6 /* BackEnd */ = {
 			isa = PBXGroup;
 			children = (
+				856425F81C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf */,
 			);
 			name = BackEnd;
 			sourceTree = "<group>";
@@ -136,6 +140,13 @@
 				856425F21C829DB500D6AEE6 /* Content Media App-Bridging-Header.h */,
 			);
 			name = "Third Party Assets";
+			sourceTree = "<group>";
+		};
+		856425FA1C82A2F000D6AEE6 /* Content Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Content Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				856425D81C829B3D00D6AEE6 /* LaunchScreen.storyboard in Resources */,
+				856425F91C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf in Resources */,
 				856425D51C829B3D00D6AEE6 /* Assets.xcassets in Resources */,
 				856425D31C829B3D00D6AEE6 /* Main.storyboard in Resources */,
 			);
