@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8514CF7B1C869E7F00EF5301 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8514CF7A1C869E7F00EF5301 /* Content.swift */; };
 		856425CE1C829B3D00D6AEE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856425CD1C829B3D00D6AEE6 /* AppDelegate.swift */; };
 		856425D01C829B3D00D6AEE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856425CF1C829B3D00D6AEE6 /* ViewController.swift */; };
 		856425D31C829B3D00D6AEE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856425D11C829B3D00D6AEE6 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8514CF7A1C869E7F00EF5301 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		856425CA1C829B3D00D6AEE6 /* Content Media App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Content Media App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		856425CD1C829B3D00D6AEE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		856425CF1C829B3D00D6AEE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				856425FB1C82A37C00D6AEE6 /* VideoObj.swift */,
+				8514CF7A1C869E7F00EF5301 /* Content.swift */,
 			);
 			name = "Content Classes";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				856425D01C829B3D00D6AEE6 /* ViewController.swift in Sources */,
 				856425CE1C829B3D00D6AEE6 /* AppDelegate.swift in Sources */,
 				856425F71C829DB500D6AEE6 /* SWRevealViewController.m in Sources */,
+				8514CF7B1C869E7F00EF5301 /* Content.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +463,7 @@
 				856425E91C829B3E00D6AEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		856425EA1C829B3E00D6AEE6 /* Build configuration list for PBXNativeTarget "Content Media AppTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +472,7 @@
 				856425EC1C829B3E00D6AEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

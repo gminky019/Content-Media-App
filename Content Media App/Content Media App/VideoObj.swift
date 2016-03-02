@@ -8,13 +8,33 @@
 
 import Foundation
 
-class VideoObj {
+class VideoObj: Content {
     
-    var title: String?
-    var url: String?
+    init(Vidtitle: String, Viddescription: String,url: String, youtube: Bool , other: Bool, otherDescr: String? )
+    {
+        super.init(title: Vidtitle, description: Viddescription)
+        
+        self.url = NSURL(string: url)
+        
+        if(youtube)
+        {
+            self.youtube = true
+        }
+        else if(!youtube && other)
+        {
+            self.otherSourceType = true
+            self.otherSourceDescr = otherDescr
+        }
+        else
+        {
+            self.vimeo = true
+        }
+        
+    }
+    
+    var url: NSURL?
     var vimeo = false
     var youtube = false
-    var otherSourceType: BooleanLiteralType?
-    //test branch
+    var otherSourceType = false
     var otherSourceDescr: String?
 }
