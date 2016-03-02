@@ -15,5 +15,6 @@ class VideoObj {
     var vimeo = false
     var youtube = false
     var otherSourceType: BooleanLiteralType?
+    //test branch
     var otherSourceDescr: String?
 }
