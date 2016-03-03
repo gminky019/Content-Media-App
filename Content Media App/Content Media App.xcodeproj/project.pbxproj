@@ -20,6 +20,8 @@
 		856425FC1C82A37C00D6AEE6 /* VideoObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856425FB1C82A37C00D6AEE6 /* VideoObj.swift */; };
 		856425FE1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 856425FD1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf */; };
 		856426001C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 856425FF1C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf */; };
+		85ED5AC91C88AC9300DA2971 /* ArticleObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5AC81C88AC9300DA2971 /* ArticleObj.swift */; };
+		85ED5ACB1C88AD4A00DA2971 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5ACA1C88AD4A00DA2971 /* Picture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		856425FB1C82A37C00D6AEE6 /* VideoObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoObj.swift; sourceTree = "<group>"; };
 		856425FD1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe_Integration.rtf; sourceTree = "<group>"; };
 		856425FF1C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe_FrontEnd.rtf; sourceTree = "<group>"; };
+		85ED5AC81C88AC9300DA2971 /* ArticleObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleObj.swift; sourceTree = "<group>"; };
+		85ED5ACA1C88AD4A00DA2971 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 			children = (
 				856425FB1C82A37C00D6AEE6 /* VideoObj.swift */,
 				8514CF7A1C869E7F00EF5301 /* Content.swift */,
+				85ED5AC81C88AC9300DA2971 /* ArticleObj.swift */,
+				85ED5ACA1C88AD4A00DA2971 /* Picture.swift */,
 			);
 			name = "Content Classes";
 			sourceTree = "<group>";
@@ -269,6 +275,8 @@
 				856425F61C829DB500D6AEE6 /* SwiftyJSON.swift in Sources */,
 				856425D01C829B3D00D6AEE6 /* ViewController.swift in Sources */,
 				856425CE1C829B3D00D6AEE6 /* AppDelegate.swift in Sources */,
+				85ED5ACB1C88AD4A00DA2971 /* Picture.swift in Sources */,
+				85ED5AC91C88AC9300DA2971 /* ArticleObj.swift in Sources */,
 				856425F71C829DB500D6AEE6 /* SWRevealViewController.m in Sources */,
 				8514CF7B1C869E7F00EF5301 /* Content.swift in Sources */,
 			);
