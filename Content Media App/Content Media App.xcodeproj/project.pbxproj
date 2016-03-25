@@ -59,9 +59,6 @@
 		856425FF1C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe_FrontEnd.rtf; sourceTree = "<group>"; };
 		8593BE191CA4E489009FECB5 /* InterfaceToBackEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceToBackEnd.swift; sourceTree = "<group>"; };
 		8593BE1B1CA4E550009FECB5 /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
-		8593BE231CA4EE88009FECB5 /* FB_Login_BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FB_Login_BridgingHeader.h; sourceTree = "<group>"; };
-		8593BE241CA4EF0D009FECB5 /* FB_Share_BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FB_Share_BridgingHeader.h; sourceTree = "<group>"; };
-		8593BE251CA4EF64009FECB5 /* FB_Core_BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FB_Core_BridgingHeader.h; sourceTree = "<group>"; };
 		8593BE261CA4F140009FECB5 /* FBTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBTest.swift; sourceTree = "<group>"; };
 		85ED5AC81C88AC9300DA2971 /* ArticleObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleObj.swift; sourceTree = "<group>"; };
 		85ED5ACA1C88AD4A00DA2971 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
@@ -163,9 +160,6 @@
 				856425F41C829DB500D6AEE6 /* SWRevealViewController.h */,
 				856425F51C829DB500D6AEE6 /* SWRevealViewController.m */,
 				856425F21C829DB500D6AEE6 /* Content Media App-Bridging-Header.h */,
-				8593BE231CA4EE88009FECB5 /* FB_Login_BridgingHeader.h */,
-				8593BE241CA4EF0D009FECB5 /* FB_Share_BridgingHeader.h */,
-				8593BE251CA4EF64009FECB5 /* FB_Core_BridgingHeader.h */,
 			);
 			name = "Third Party Assets";
 			sourceTree = "<group>";
