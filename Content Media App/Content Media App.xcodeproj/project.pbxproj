@@ -22,6 +22,10 @@
 		856426001C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 856425FF1C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf */; };
 		85ED5AC91C88AC9300DA2971 /* ArticleObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5AC81C88AC9300DA2971 /* ArticleObj.swift */; };
 		85ED5ACB1C88AD4A00DA2971 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5ACA1C88AD4A00DA2971 /* Picture.swift */; };
+		CCD62A761CA4EB4D00B4E786 /* LogoSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A751CA4EB4D00B4E786 /* LogoSmall.png */; };
+		CCD62A7A1CA4EE9100B4E786 /* navButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A791CA4EE9100B4E786 /* navButton.png */; };
+		CCD62A7C1CA4EF4500B4E786 /* SearchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A7B1CA4EF4500B4E786 /* SearchButton.png */; };
+		CCD62A7E1CA4F2EC00B4E786 /* tempHeroOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A7D1CA4F2EC00B4E786 /* tempHeroOne.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		856425FF1C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe_FrontEnd.rtf; sourceTree = "<group>"; };
 		85ED5AC81C88AC9300DA2971 /* ArticleObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleObj.swift; sourceTree = "<group>"; };
 		85ED5ACA1C88AD4A00DA2971 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		CCD62A751CA4EB4D00B4E786 /* LogoSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoSmall.png; sourceTree = "<group>"; };
+		CCD62A791CA4EE9100B4E786 /* navButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navButton.png; sourceTree = "<group>"; };
+		CCD62A7B1CA4EF4500B4E786 /* SearchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchButton.png; sourceTree = "<group>"; };
+		CCD62A7D1CA4F2EC00B4E786 /* tempHeroOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempHeroOne.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,7 @@
 		856425ED1C829C2D00D6AEE6 /* FrontEnd */ = {
 			isa = PBXGroup;
 			children = (
+				CCD62A721CA4EA2700B4E786 /* Assets */,
 				856425FF1C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf */,
 			);
 			name = FrontEnd;
@@ -165,6 +174,17 @@
 				85ED5ACA1C88AD4A00DA2971 /* Picture.swift */,
 			);
 			name = "Content Classes";
+			sourceTree = "<group>";
+		};
+		CCD62A721CA4EA2700B4E786 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CCD62A7D1CA4F2EC00B4E786 /* tempHeroOne.jpg */,
+				CCD62A751CA4EB4D00B4E786 /* LogoSmall.png */,
+				CCD62A7B1CA4EF4500B4E786 /* SearchButton.png */,
+				CCD62A791CA4EE9100B4E786 /* navButton.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +268,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD62A761CA4EB4D00B4E786 /* LogoSmall.png in Resources */,
+				CCD62A7C1CA4EF4500B4E786 /* SearchButton.png in Resources */,
+				CCD62A7A1CA4EE9100B4E786 /* navButton.png in Resources */,
 				856425D81C829B3D00D6AEE6 /* LaunchScreen.storyboard in Resources */,
 				856425F91C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf in Resources */,
 				856425D51C829B3D00D6AEE6 /* Assets.xcassets in Resources */,
+				CCD62A7E1CA4F2EC00B4E786 /* tempHeroOne.jpg in Resources */,
 				856425D31C829B3D00D6AEE6 /* Main.storyboard in Resources */,
 				856426001C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf in Resources */,
 				856425FE1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf in Resources */,
