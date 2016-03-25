@@ -4,7 +4,14 @@
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 This is the Read Me for the Integration.\
+\f0\fs24 \cf0 Classes\
 \
-testtt\
+ConnectToFrontend\
+	IntegrationFrontend\
+		Functions called by the frontend to query for content.  Middleware takes query and translate it for use by backend functions.\
+\
+\
+ConnectToBackend\
+	IntegrationBackend\
+		Functions are used to query backend for content.  Query orginates from frontend and translated for the backend to understand.  After call backend queries and recieves content from database and returns data to Middleware\
 }
