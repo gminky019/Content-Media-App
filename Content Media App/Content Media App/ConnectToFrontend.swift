@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class IntegrationFrontend{
     
     var DateTime: Int?
@@ -51,7 +52,7 @@ class IntegrationFrontend{
     }
     
     func shareText( txt: String, contentURL: Content ){
-        
+        //open facebook api
     }
     
     func getUpdate( currUpdate: String ){

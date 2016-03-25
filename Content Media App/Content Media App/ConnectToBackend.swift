@@ -7,3 +7,30 @@
 //
 
 import Foundation
+
+class IntegrateBackend{
+    
+    func retrieveMainPage(){
+        var mainPage = 
+    }
+    
+    func retrieveWatch(){
+        
+    }
+    
+    func retrieveLearn(){
+    
+    }
+    
+    func retrieveShop(){
+    
+    }
+    
+    func retrieveSingle(){
+    
+    }
+    
+    func retrieveUpdate( update: Int ){
+    
+    }
+}
