@@ -78,14 +78,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var articleThreeTitle: UITextView!
     @IBOutlet weak var articleFourTitle: UITextView!
     
+    @IBOutlet weak var watchHero: UIImageView!
+    @IBOutlet weak var watchHeroTitle: UITextView!
+    @IBOutlet weak var watchHeroType: UITextView!
+    
+    @IBOutlet weak var watchArticleOne: UIImageView!
+    @IBOutlet weak var watchArticleTwo: UIImageView!
+    
+    @IBOutlet weak var watchArticleOneType: UITextView!
+    @IBOutlet weak var watchArticleTwoType: UITextView!
+    
+    @IBOutlet weak var watchArticleOneTitle: UITextView!
+    @IBOutlet weak var watchArticleTwoTitle: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         let typeColor = UIColor.init(red: 221/255, green: 180/255, blue: 0/255, alpha: 1)
-        // Hero One
-        self.heroOneView.image = UIImage (named: "tempHeroOne.jpg")
+        // ---- Featured Articles ----
         
+        // Hero One
+        //heroOneView.image = UIImage (named: "tempHeroOne.jpg")
+        if let image = UIImage (named: "tempHeroOne.jpg"){
+            heroOneView.image = image
+        }
         heroOneTitle.text = "Ice Melting In Arctic: How can you save the polar bears?"
         heroOneTitle.font = UIFont(name: "Roboto-Bold", size: 18)
         heroOneTitle.textColor = UIColor.whiteColor()
@@ -93,6 +111,11 @@ class ViewController: UIViewController {
         heroOneType.text = "READ"
         heroOneType.font = UIFont(name: "Roboto-Medium", size: 12)
         heroOneType.textColor = typeColor
+        
+        heroOneView.userInteractionEnabled = true
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: "imageTapped:")
+        //Add the recognizer to your view.
+        heroOneView.addGestureRecognizer(tapRecognizer)
         
         // Hero Two
         self.heroTwoView.image = UIImage (named: "tempHeroTwo.jpg")
@@ -103,6 +126,9 @@ class ViewController: UIViewController {
         heroTwoType.text = "WATCH"
         heroTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
         heroTwoType.textColor = typeColor
+        
+        heroTwoView.userInteractionEnabled = true
+        heroTwoView.addGestureRecognizer(tapRecognizer)
         
         // Hero Three
         self.heroThreeView.image = UIImage (named: "tempHeroThree.jpg")
@@ -140,6 +166,7 @@ class ViewController: UIViewController {
         gradientLayerH2.endPoint = endPoint
         gradientLayerH3.startPoint = startPoint
         gradientLayerH3.endPoint = endPoint
+        
         
         self.heroOneView.layer.addSublayer(gradientLayerH1)
         self.heroTwoView.layer.addSublayer(gradientLayerH2)
@@ -195,11 +222,70 @@ class ViewController: UIViewController {
         articleFourTitle.text = "Learn The Dark Side of The Force with Kylo Ren"
         articleFourTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         articleFourTitle.textColor = UIColor.blackColor()
+        
+        // ------- Watch --------
+        
+        // Hero 
+        
+        watchHero.image = UIImage (named: "MileniumFalcon.png")
+        
+        watchHeroTitle.text = "Millennium Falcon: Kessel Run in 12 Parsecs"
+        watchHeroTitle.font = UIFont(name: "Roboto-Bold", size: 18)
+        watchHeroTitle.textColor = UIColor.whiteColor()
+        
+        watchHeroType.text = "RE/MX"
+        watchHeroType.font = UIFont(name: "Roboto-Medium", size: 12)
+        watchHeroType.textColor = typeColor
+        
+        // Hero Gradient
+        
+        let gradientLayerWatchHero = CAGradientLayer.init()
+        gradientLayerWatchHero.frame = watchHero.bounds
+        gradientLayerWatchHero.colors = colors
+        gradientLayerWatchHero.startPoint = startPoint
+        gradientLayerWatchHero.endPoint = endPoint
+        watchHero.layer.addSublayer(gradientLayerWatchHero)
+
+        
+        
+        // Article One
+        watchArticleOne.image = UIImage (named: "DarthMal.png")
+        
+        watchArticleOneType.text = "WATCH"
+        watchArticleOneType.font = UIFont(name: "Roboto-Medium", size: 12)
+        watchArticleOneType.textColor = typeColor
+        watchArticleOneType.textAlignment = .Center
+        
+        
+        watchArticleOneTitle.text = "Darth Mal: What was his downfall?"
+        watchArticleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+        watchArticleOneTitle.textColor = UIColor.blackColor()
+        
+        
+        // Article Two
+        watchArticleTwo.image = UIImage(named: "r2d2.png")
+        
+        watchArticleTwoType.text = "RE/MX"
+        watchArticleTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
+        watchArticleTwoType.textColor = typeColor
+        watchArticleTwoType.textAlignment = .Center
+        
+        
+        watchArticleTwoTitle.text = "Why didn't R2D2 give up the map earlier?"
+        watchArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+        watchArticleTwoTitle.textColor = UIColor.blackColor()
+        
     }
+    
+    func imageTapped(gestureRecognizer: UITapGestureRecognizer) {
+
+        self.performSegueWithIdentifier("goToArticle", sender: self)
+    }
+    
     
     override func viewDidAppear(animated: Bool) {
         // Nav helper variable
-        var nav = self.navigationController?.navigationBar
+        let nav = self.navigationController?.navigationBar
         // Nav background color
 
         // Nav button color

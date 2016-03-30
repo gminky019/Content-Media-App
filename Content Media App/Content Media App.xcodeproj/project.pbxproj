@@ -27,11 +27,6 @@
 		85ED5ACB1C88AD4A00DA2971 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5ACA1C88AD4A00DA2971 /* Picture.swift */; };
 		CCD62A761CA4EB4D00B4E786 /* LogoSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A751CA4EB4D00B4E786 /* LogoSmall.png */; };
 		CCD62A7E1CA4F2EC00B4E786 /* tempHeroOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A7D1CA4F2EC00B4E786 /* tempHeroOne.jpg */; };
-		CCD62A841CA4FF4600B4E786 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD62A7F1CA4FF4600B4E786 /* Bolts.framework */; };
-		CCD62A851CA4FF4600B4E786 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD62A801CA4FF4600B4E786 /* FBSDKCoreKit.framework */; };
-		CCD62A861CA4FF4600B4E786 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD62A811CA4FF4600B4E786 /* FBSDKLoginKit.framework */; };
-		CCD62A871CA4FF4600B4E786 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD62A821CA4FF4600B4E786 /* FBSDKMessengerShareKit.framework */; };
-		CCD62A881CA4FF4600B4E786 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD62A831CA4FF4600B4E786 /* FBSDKShareKit.framework */; };
 		CCD62A8F1CAA11B700B4E786 /* tempHeroThree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A8D1CAA11B700B4E786 /* tempHeroThree.jpg */; };
 		CCD62A901CAA11B700B4E786 /* tempHeroTwo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A8E1CAA11B700B4E786 /* tempHeroTwo.jpg */; };
 		CCD62A921CAA172200B4E786 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD62A911CAA172200B4E786 /* QuartzCore.framework */; };
@@ -57,6 +52,12 @@
 		CCD62AB81CAA5B5600B4E786 /* KyloRen.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AB61CAA5B5600B4E786 /* KyloRen.png */; };
 		CCD62ABB1CAA5DAA00B4E786 /* navButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AB91CAA5DAA00B4E786 /* navButton.png */; };
 		CCD62ABC1CAA5DAA00B4E786 /* SearchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62ABA1CAA5DAA00B4E786 /* SearchButton.png */; };
+		CCD62ABE1CAA6AF700B4E786 /* articleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */; };
+		CCD62AC41CAB7FE200B4E786 /* DarthMal.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62ABF1CAB7FE200B4E786 /* DarthMal.png */; };
+		CCD62AC51CAB7FE200B4E786 /* MileniumFalcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AC01CAB7FE200B4E786 /* MileniumFalcon.png */; };
+		CCD62AC61CAB7FE200B4E786 /* r2d2.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AC11CAB7FE200B4E786 /* r2d2.png */; };
+		CCD62AC71CAB7FE200B4E786 /* Vader.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AC21CAB7FE200B4E786 /* Vader.png */; };
+		CCD62AC81CAB7FE200B4E786 /* X-Wing Attack.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AC31CAB7FE200B4E786 /* X-Wing Attack.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,11 +97,6 @@
 		85ED5ACA1C88AD4A00DA2971 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		CCD62A751CA4EB4D00B4E786 /* LogoSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoSmall.png; sourceTree = "<group>"; };
 		CCD62A7D1CA4F2EC00B4E786 /* tempHeroOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempHeroOne.jpg; sourceTree = "<group>"; };
-		CCD62A7F1CA4FF4600B4E786 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		CCD62A801CA4FF4600B4E786 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		CCD62A811CA4FF4600B4E786 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		CCD62A821CA4FF4600B4E786 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
-		CCD62A831CA4FF4600B4E786 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		CCD62A8D1CAA11B700B4E786 /* tempHeroThree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempHeroThree.jpg; sourceTree = "<group>"; };
 		CCD62A8E1CAA11B700B4E786 /* tempHeroTwo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempHeroTwo.jpg; sourceTree = "<group>"; };
 		CCD62A911CAA172200B4E786 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -117,6 +113,12 @@
 		CCD62AB61CAA5B5600B4E786 /* KyloRen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = KyloRen.png; path = "../../../../UI Items/Images/KyloRen.png"; sourceTree = "<group>"; };
 		CCD62AB91CAA5DAA00B4E786 /* navButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navButton.png; path = "../../../UI Items/navButton.png"; sourceTree = "<group>"; };
 		CCD62ABA1CAA5DAA00B4E786 /* SearchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SearchButton.png; path = "../../../UI Items/SearchButton.png"; sourceTree = "<group>"; };
+		CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = articleViewController.swift; sourceTree = "<group>"; };
+		CCD62ABF1CAB7FE200B4E786 /* DarthMal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DarthMal.png; path = "../../../../UI Items/Images/DarthMal.png"; sourceTree = "<group>"; };
+		CCD62AC01CAB7FE200B4E786 /* MileniumFalcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MileniumFalcon.png; path = "../../../../UI Items/Images/MileniumFalcon.png"; sourceTree = "<group>"; };
+		CCD62AC11CAB7FE200B4E786 /* r2d2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = r2d2.png; path = "../../../../UI Items/Images/r2d2.png"; sourceTree = "<group>"; };
+		CCD62AC21CAB7FE200B4E786 /* Vader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Vader.png; path = "../../../../UI Items/Images/Vader.png"; sourceTree = "<group>"; };
+		CCD62AC31CAB7FE200B4E786 /* X-Wing Attack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "X-Wing Attack.png"; path = "../../../../UI Items/Images/X-Wing Attack.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,11 +127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD62A921CAA172200B4E786 /* QuartzCore.framework in Frameworks */,
-				CCD62A871CA4FF4600B4E786 /* FBSDKMessengerShareKit.framework in Frameworks */,
-				CCD62A841CA4FF4600B4E786 /* Bolts.framework in Frameworks */,
-				CCD62A881CA4FF4600B4E786 /* FBSDKShareKit.framework in Frameworks */,
-				CCD62A851CA4FF4600B4E786 /* FBSDKCoreKit.framework in Frameworks */,
-				CCD62A861CA4FF4600B4E786 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +169,7 @@
 				856425CD1C829B3D00D6AEE6 /* AppDelegate.swift */,
 				856425CF1C829B3D00D6AEE6 /* ViewController.swift */,
 				856425D11C829B3D00D6AEE6 /* Main.storyboard */,
+				CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */,
 				856425D41C829B3D00D6AEE6 /* Assets.xcassets */,
 				856425D61C829B3D00D6AEE6 /* LaunchScreen.storyboard */,
 				856425D91C829B3D00D6AEE6 /* Info.plist */,
@@ -219,11 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				CCD62A911CAA172200B4E786 /* QuartzCore.framework */,
-				CCD62A7F1CA4FF4600B4E786 /* Bolts.framework */,
-				CCD62A801CA4FF4600B4E786 /* FBSDKCoreKit.framework */,
-				CCD62A811CA4FF4600B4E786 /* FBSDKLoginKit.framework */,
-				CCD62A821CA4FF4600B4E786 /* FBSDKMessengerShareKit.framework */,
-				CCD62A831CA4FF4600B4E786 /* FBSDKShareKit.framework */,
 				856425F31C829DB500D6AEE6 /* SwiftyJSON.swift */,
 				856425F41C829DB500D6AEE6 /* SWRevealViewController.h */,
 				856425F51C829DB500D6AEE6 /* SWRevealViewController.m */,
@@ -255,6 +248,11 @@
 				CCD62ABA1CAA5DAA00B4E786 /* SearchButton.png */,
 				CCD62AB51CAA5B5600B4E786 /* BB8.jpg */,
 				CCD62AB61CAA5B5600B4E786 /* KyloRen.png */,
+				CCD62ABF1CAB7FE200B4E786 /* DarthMal.png */,
+				CCD62AC01CAB7FE200B4E786 /* MileniumFalcon.png */,
+				CCD62AC11CAB7FE200B4E786 /* r2d2.png */,
+				CCD62AC21CAB7FE200B4E786 /* Vader.png */,
+				CCD62AC31CAB7FE200B4E786 /* X-Wing Attack.png */,
 				CCD62A9A1CAA2F6200B4E786 /* PlayfairDisplay-Bold.ttf */,
 				CCD62A9B1CAA2F6200B4E786 /* PlayfairDisplay-BoldItalic.ttf */,
 				CCD62A9C1CAA2F6200B4E786 /* PlayfairDisplay-Italic.ttf */,
@@ -351,16 +349,21 @@
 			files = (
 				CCD62AB11CAA38BC00B4E786 /* tempArtOne.jpg in Resources */,
 				CCD62AA51CAA2F6200B4E786 /* PlayfairDisplay-Italic.ttf in Resources */,
+				CCD62AC71CAB7FE200B4E786 /* Vader.png in Resources */,
+				CCD62AC51CAB7FE200B4E786 /* MileniumFalcon.png in Resources */,
 				CCD62A761CA4EB4D00B4E786 /* LogoSmall.png in Resources */,
 				CCD62AA71CAA2F6200B4E786 /* PlayfairDisplay-Regular.ttf in Resources */,
+				CCD62AC81CAB7FE200B4E786 /* X-Wing Attack.png in Resources */,
 				856425D81C829B3D00D6AEE6 /* LaunchScreen.storyboard in Resources */,
 				CCD62AA91CAA2F6200B4E786 /* Roboto-Bold.ttf in Resources */,
+				CCD62AC61CAB7FE200B4E786 /* r2d2.png in Resources */,
 				CCD62A901CAA11B700B4E786 /* tempHeroTwo.jpg in Resources */,
 				CCD62AB81CAA5B5600B4E786 /* KyloRen.png in Resources */,
 				CCD62ABC1CAA5DAA00B4E786 /* SearchButton.png in Resources */,
 				CCD62AAB1CAA2F6200B4E786 /* Roboto-Medium.ttf in Resources */,
 				856425F91C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf in Resources */,
 				CCD62AA31CAA2F6200B4E786 /* PlayfairDisplay-BoldItalic.ttf in Resources */,
+				CCD62AC41CAB7FE200B4E786 /* DarthMal.png in Resources */,
 				856425D51C829B3D00D6AEE6 /* Assets.xcassets in Resources */,
 				CCD62AB31CAA38BC00B4E786 /* tempArtTwo.JPG in Resources */,
 				CCD62A8F1CAA11B700B4E786 /* tempHeroThree.jpg in Resources */,
@@ -407,6 +410,7 @@
 				8593BE1C1CA4E550009FECB5 /* MainPage.swift in Sources */,
 				85ED5ACB1C88AD4A00DA2971 /* Picture.swift in Sources */,
 				85ED5AC91C88AC9300DA2971 /* ArticleObj.swift in Sources */,
+				CCD62ABE1CAA6AF700B4E786 /* articleViewController.swift in Sources */,
 				856425F71C829DB500D6AEE6 /* SWRevealViewController.m in Sources */,
 				8514CF7B1C869E7F00EF5301 /* Content.swift in Sources */,
 			);
