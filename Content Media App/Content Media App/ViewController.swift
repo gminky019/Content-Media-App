@@ -78,6 +78,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var articleThreeTitle: UITextView!
     @IBOutlet weak var articleFourTitle: UITextView!
     
+    @IBOutlet weak var watchLabel: UILabel!
+    @IBOutlet weak var readLabel: UILabel!
+    
     @IBOutlet weak var watchHero: UIImageView!
     @IBOutlet weak var watchHeroTitle: UITextView!
     @IBOutlet weak var watchHeroType: UITextView!
@@ -91,6 +94,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var watchArticleOneTitle: UITextView!
     @IBOutlet weak var watchArticleTwoTitle: UITextView!
     
+    @IBOutlet weak var readHero: UIImageView!
+    @IBOutlet weak var readHeroTitle: UITextView!
+    @IBOutlet weak var readHeroType: UITextView!
+    
+    @IBOutlet weak var readArticleOne: UIImageView!
+    @IBOutlet weak var readArticleTwo: UIImageView!
+    
+    @IBOutlet weak var readArticleOneType: UITextView!
+    @IBOutlet weak var readArticleTwoType: UITextView!
+    
+    @IBOutlet weak var readArticleOneTitle: UITextView!
+    @IBOutlet weak var readArticleTwoTitle: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -225,9 +240,17 @@ class ViewController: UIViewController {
         
         // ------- Watch --------
         
+        watchLabel.text = "Watch"
+        watchLabel.font = UIFont(name: "Roboto-Bold", size: 26)
+        watchLabel.textColor = UIColor.blackColor()
+        
+        let underlineAttribute = [NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue]
+        let underlineAttributedString = NSAttributedString(string: "StringWithUnderLine", attributes: underlineAttribute)
+        watchLabel.attributedText = underlineAttributedString
+        
         // Hero 
         
-        watchHero.image = UIImage (named: "MileniumFalcon.png")
+        self.watchHero.image = UIImage (named: "MileniumFalcon.png")
         
         watchHeroTitle.text = "Millennium Falcon: Kessel Run in 12 Parsecs"
         watchHeroTitle.font = UIFont(name: "Roboto-Bold", size: 18)
@@ -237,15 +260,16 @@ class ViewController: UIViewController {
         watchHeroType.font = UIFont(name: "Roboto-Medium", size: 12)
         watchHeroType.textColor = typeColor
         
-        // Hero Gradient
-        
+        // Hero Gradient  --- Broken, Fix Later
+       
+        /*
         let gradientLayerWatchHero = CAGradientLayer.init()
         gradientLayerWatchHero.frame = watchHero.bounds
         gradientLayerWatchHero.colors = colors
         gradientLayerWatchHero.startPoint = startPoint
         gradientLayerWatchHero.endPoint = endPoint
-        watchHero.layer.addSublayer(gradientLayerWatchHero)
-
+        self.watchHero.layer.addSublayer(gradientLayerWatchHero)
+        */
         
         
         // Article One
@@ -274,6 +298,60 @@ class ViewController: UIViewController {
         watchArticleTwoTitle.text = "Why didn't R2D2 give up the map earlier?"
         watchArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         watchArticleTwoTitle.textColor = UIColor.blackColor()
+        
+        // ------- Read --------
+        
+        // Hero
+        
+        self.readHero.image = UIImage (named: "MileniumFalcon.png")
+        
+        readHeroTitle.text = "Millennium Falcon: Kessel Run in 12 Parsecs"
+        readHeroTitle.font = UIFont(name: "Roboto-Bold", size: 18)
+        readHeroTitle.textColor = UIColor.whiteColor()
+        
+        readHeroType.text = "RE/MX"
+        readHeroType.font = UIFont(name: "Roboto-Medium", size: 12)
+        readHeroType.textColor = typeColor
+        
+        // Hero Gradient  --- Broken, Fix Later
+        
+        /*
+        let gradientLayerWatchHero = CAGradientLayer.init()
+        gradientLayerWatchHero.frame = watchHero.bounds
+        gradientLayerWatchHero.colors = colors
+        gradientLayerWatchHero.startPoint = startPoint
+        gradientLayerWatchHero.endPoint = endPoint
+        self.watchHero.layer.addSublayer(gradientLayerWatchHero)
+        */
+        
+        
+        // Article One
+        readArticleOne.image = UIImage (named: "DarthMal.png")
+        
+        readArticleOneType.text = "WATCH"
+        readArticleOneType.font = UIFont(name: "Roboto-Medium", size: 12)
+        readArticleOneType.textColor = typeColor
+        readArticleOneType.textAlignment = .Center
+        
+        
+        readArticleOneTitle.text = "Darth Mal: What was his downfall?"
+        readArticleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+        readArticleOneTitle.textColor = UIColor.blackColor()
+        
+        
+        // Article Two
+        readArticleTwo.image = UIImage(named: "r2d2.png")
+        
+        readArticleTwoType.text = "RE/MX"
+        readArticleTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
+        readArticleTwoType.textColor = typeColor
+        readArticleTwoType.textAlignment = .Center
+        
+        
+        readArticleTwoTitle.text = "Why didn't R2D2 give up the map earlier?"
+        readArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+        readArticleTwoTitle.textColor = UIColor.blackColor()
+
         
     }
     
