@@ -23,11 +23,6 @@
 		8593BE1A1CA4E489009FECB5 /* InterfaceToBackEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8593BE191CA4E489009FECB5 /* InterfaceToBackEnd.swift */; };
 		8593BE1C1CA4E550009FECB5 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8593BE1B1CA4E550009FECB5 /* MainPage.swift */; };
 		8593BE271CA4F140009FECB5 /* FBTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8593BE261CA4F140009FECB5 /* FBTest.swift */; };
-		8593BE3F1CA4FBD2009FECB5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8593BE3A1CA4FBD2009FECB5 /* FBSDKLoginKit.framework */; };
-		8593BE401CA4FBD2009FECB5 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8593BE3B1CA4FBD2009FECB5 /* FBSDKMessengerShareKit.framework */; };
-		8593BE411CA4FBD2009FECB5 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8593BE3C1CA4FBD2009FECB5 /* FBSDKShareKit.framework */; };
-		8593BE421CA4FBD2009FECB5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8593BE3D1CA4FBD2009FECB5 /* FBSDKCoreKit.framework */; };
-		8593BE431CA4FBD2009FECB5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8593BE3E1CA4FBD2009FECB5 /* Bolts.framework */; };
 		85ED5AC91C88AC9300DA2971 /* ArticleObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5AC81C88AC9300DA2971 /* ArticleObj.swift */; };
 		85ED5ACB1C88AD4A00DA2971 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5ACA1C88AD4A00DA2971 /* Picture.swift */; };
 /* End PBXBuildFile section */
@@ -65,11 +60,6 @@
 		8593BE191CA4E489009FECB5 /* InterfaceToBackEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceToBackEnd.swift; sourceTree = "<group>"; };
 		8593BE1B1CA4E550009FECB5 /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		8593BE261CA4F140009FECB5 /* FBTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBTest.swift; sourceTree = "<group>"; };
-		8593BE3A1CA4FBD2009FECB5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		8593BE3B1CA4FBD2009FECB5 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
-		8593BE3C1CA4FBD2009FECB5 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		8593BE3D1CA4FBD2009FECB5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		8593BE3E1CA4FBD2009FECB5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		85ED5AC81C88AC9300DA2971 /* ArticleObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleObj.swift; sourceTree = "<group>"; };
 		85ED5ACA1C88AD4A00DA2971 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,11 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8593BE431CA4FBD2009FECB5 /* Bolts.framework in Frameworks */,
-				8593BE401CA4FBD2009FECB5 /* FBSDKMessengerShareKit.framework in Frameworks */,
-				8593BE421CA4FBD2009FECB5 /* FBSDKCoreKit.framework in Frameworks */,
-				8593BE3F1CA4FBD2009FECB5 /* FBSDKLoginKit.framework in Frameworks */,
-				8593BE411CA4FBD2009FECB5 /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,11 +156,6 @@
 		856425F11C829C5200D6AEE6 /* Third Party Assets */ = {
 			isa = PBXGroup;
 			children = (
-				8593BE3A1CA4FBD2009FECB5 /* FBSDKLoginKit.framework */,
-				8593BE3B1CA4FBD2009FECB5 /* FBSDKMessengerShareKit.framework */,
-				8593BE3C1CA4FBD2009FECB5 /* FBSDKShareKit.framework */,
-				8593BE3D1CA4FBD2009FECB5 /* FBSDKCoreKit.framework */,
-				8593BE3E1CA4FBD2009FECB5 /* Bolts.framework */,
 				856425F31C829DB500D6AEE6 /* SwiftyJSON.swift */,
 				856425F41C829DB500D6AEE6 /* SWRevealViewController.h */,
 				856425F51C829DB500D6AEE6 /* SWRevealViewController.m */,
