@@ -10,7 +10,6 @@
 		8514CF7B1C869E7F00EF5301 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8514CF7A1C869E7F00EF5301 /* Content.swift */; };
 		856425CE1C829B3D00D6AEE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856425CD1C829B3D00D6AEE6 /* AppDelegate.swift */; };
 		856425D01C829B3D00D6AEE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856425CF1C829B3D00D6AEE6 /* ViewController.swift */; };
-		856425D31C829B3D00D6AEE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856425D11C829B3D00D6AEE6 /* Main.storyboard */; };
 		856425D51C829B3D00D6AEE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856425D41C829B3D00D6AEE6 /* Assets.xcassets */; };
 		856425D81C829B3D00D6AEE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856425D61C829B3D00D6AEE6 /* LaunchScreen.storyboard */; };
 		856425E31C829B3E00D6AEE6 /* Content_Media_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856425E21C829B3E00D6AEE6 /* Content_Media_AppTests.swift */; };
@@ -58,6 +57,7 @@
 		CCD62AC61CAB7FE200B4E786 /* r2d2.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AC11CAB7FE200B4E786 /* r2d2.png */; };
 		CCD62AC71CAB7FE200B4E786 /* Vader.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AC21CAB7FE200B4E786 /* Vader.png */; };
 		CCD62AC81CAB7FE200B4E786 /* X-Wing Attack.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AC31CAB7FE200B4E786 /* X-Wing Attack.png */; };
+		CCEB0A331CAB996D00D4F349 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A321CAB996D00D4F349 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,6 @@
 		856425CA1C829B3D00D6AEE6 /* Content Media App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Content Media App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		856425CD1C829B3D00D6AEE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		856425CF1C829B3D00D6AEE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		856425D21C829B3D00D6AEE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		856425D41C829B3D00D6AEE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		856425D71C829B3D00D6AEE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		856425D91C829B3D00D6AEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +118,7 @@
 		CCD62AC11CAB7FE200B4E786 /* r2d2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = r2d2.png; path = "../../../../UI Items/Images/r2d2.png"; sourceTree = "<group>"; };
 		CCD62AC21CAB7FE200B4E786 /* Vader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Vader.png; path = "../../../../UI Items/Images/Vader.png"; sourceTree = "<group>"; };
 		CCD62AC31CAB7FE200B4E786 /* X-Wing Attack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "X-Wing Attack.png"; path = "../../../../UI Items/Images/X-Wing Attack.png"; sourceTree = "<group>"; };
+		CCEB0A321CAB996D00D4F349 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +168,8 @@
 				856425ED1C829C2D00D6AEE6 /* FrontEnd */,
 				856425CD1C829B3D00D6AEE6 /* AppDelegate.swift */,
 				856425CF1C829B3D00D6AEE6 /* ViewController.swift */,
-				856425D11C829B3D00D6AEE6 /* Main.storyboard */,
 				CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */,
+				CCEB0A321CAB996D00D4F349 /* Main.storyboard */,
 				856425D41C829B3D00D6AEE6 /* Assets.xcassets */,
 				856425D61C829B3D00D6AEE6 /* LaunchScreen.storyboard */,
 				856425D91C829B3D00D6AEE6 /* Info.plist */,
@@ -354,6 +354,7 @@
 				CCD62A761CA4EB4D00B4E786 /* LogoSmall.png in Resources */,
 				CCD62AA71CAA2F6200B4E786 /* PlayfairDisplay-Regular.ttf in Resources */,
 				CCD62AC81CAB7FE200B4E786 /* X-Wing Attack.png in Resources */,
+				CCEB0A331CAB996D00D4F349 /* Main.storyboard in Resources */,
 				856425D81C829B3D00D6AEE6 /* LaunchScreen.storyboard in Resources */,
 				CCD62AA91CAA2F6200B4E786 /* Roboto-Bold.ttf in Resources */,
 				CCD62AC61CAB7FE200B4E786 /* r2d2.png in Resources */,
@@ -368,7 +369,6 @@
 				CCD62AB31CAA38BC00B4E786 /* tempArtTwo.JPG in Resources */,
 				CCD62A8F1CAA11B700B4E786 /* tempHeroThree.jpg in Resources */,
 				CCD62A7E1CA4F2EC00B4E786 /* tempHeroOne.jpg in Resources */,
-				856425D31C829B3D00D6AEE6 /* Main.storyboard in Resources */,
 				CCD62AAD1CAA2F6200B4E786 /* Roboto-Regular.ttf in Resources */,
 				CCD62AB71CAA5B5600B4E786 /* BB8.jpg in Resources */,
 				CCD62AA11CAA2F6200B4E786 /* PlayfairDisplay-Bold.ttf in Resources */,
@@ -435,14 +435,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		856425D11C829B3D00D6AEE6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				856425D21C829B3D00D6AEE6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		856425D61C829B3D00D6AEE6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
