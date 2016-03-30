@@ -11,7 +11,7 @@ import Foundation
 class IntegrateBackend{
     
     func retrieveMainPage(){
-        var mainPage = 
+
     }
     
     func retrieveWatch(){
