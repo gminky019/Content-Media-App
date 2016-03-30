@@ -24,40 +24,33 @@
 		8593BE271CA4F140009FECB5 /* FBTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8593BE261CA4F140009FECB5 /* FBTest.swift */; };
 		85ED5AC91C88AC9300DA2971 /* ArticleObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5AC81C88AC9300DA2971 /* ArticleObj.swift */; };
 		85ED5ACB1C88AD4A00DA2971 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5ACA1C88AD4A00DA2971 /* Picture.swift */; };
-		CCD62A761CA4EB4D00B4E786 /* LogoSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A751CA4EB4D00B4E786 /* LogoSmall.png */; };
-		CCD62A7E1CA4F2EC00B4E786 /* tempHeroOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A7D1CA4F2EC00B4E786 /* tempHeroOne.jpg */; };
-		CCD62A8F1CAA11B700B4E786 /* tempHeroThree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A8D1CAA11B700B4E786 /* tempHeroThree.jpg */; };
-		CCD62A901CAA11B700B4E786 /* tempHeroTwo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A8E1CAA11B700B4E786 /* tempHeroTwo.jpg */; };
 		CCD62A921CAA172200B4E786 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD62A911CAA172200B4E786 /* QuartzCore.framework */; };
-		CCD62AA11CAA2F6200B4E786 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9A1CAA2F6200B4E786 /* PlayfairDisplay-Bold.ttf */; };
-		CCD62AA21CAA2F6200B4E786 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9A1CAA2F6200B4E786 /* PlayfairDisplay-Bold.ttf */; };
-		CCD62AA31CAA2F6200B4E786 /* PlayfairDisplay-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9B1CAA2F6200B4E786 /* PlayfairDisplay-BoldItalic.ttf */; };
-		CCD62AA41CAA2F6200B4E786 /* PlayfairDisplay-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9B1CAA2F6200B4E786 /* PlayfairDisplay-BoldItalic.ttf */; };
-		CCD62AA51CAA2F6200B4E786 /* PlayfairDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9C1CAA2F6200B4E786 /* PlayfairDisplay-Italic.ttf */; };
-		CCD62AA61CAA2F6200B4E786 /* PlayfairDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9C1CAA2F6200B4E786 /* PlayfairDisplay-Italic.ttf */; };
-		CCD62AA71CAA2F6200B4E786 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9D1CAA2F6200B4E786 /* PlayfairDisplay-Regular.ttf */; };
-		CCD62AA81CAA2F6200B4E786 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9D1CAA2F6200B4E786 /* PlayfairDisplay-Regular.ttf */; };
-		CCD62AA91CAA2F6200B4E786 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9E1CAA2F6200B4E786 /* Roboto-Bold.ttf */; };
-		CCD62AAA1CAA2F6200B4E786 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9E1CAA2F6200B4E786 /* Roboto-Bold.ttf */; };
-		CCD62AAB1CAA2F6200B4E786 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9F1CAA2F6200B4E786 /* Roboto-Medium.ttf */; };
-		CCD62AAC1CAA2F6200B4E786 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62A9F1CAA2F6200B4E786 /* Roboto-Medium.ttf */; };
-		CCD62AAD1CAA2F6200B4E786 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AA01CAA2F6200B4E786 /* Roboto-Regular.ttf */; };
-		CCD62AAE1CAA2F6200B4E786 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AA01CAA2F6200B4E786 /* Roboto-Regular.ttf */; };
-		CCD62AB11CAA38BC00B4E786 /* tempArtOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AAF1CAA38BC00B4E786 /* tempArtOne.jpg */; };
-		CCD62AB21CAA38BC00B4E786 /* tempArtOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AAF1CAA38BC00B4E786 /* tempArtOne.jpg */; };
-		CCD62AB31CAA38BC00B4E786 /* tempArtTwo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AB01CAA38BC00B4E786 /* tempArtTwo.JPG */; };
-		CCD62AB41CAA38BC00B4E786 /* tempArtTwo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AB01CAA38BC00B4E786 /* tempArtTwo.JPG */; };
-		CCD62AB71CAA5B5600B4E786 /* BB8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AB51CAA5B5600B4E786 /* BB8.jpg */; };
-		CCD62AB81CAA5B5600B4E786 /* KyloRen.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AB61CAA5B5600B4E786 /* KyloRen.png */; };
-		CCD62ABB1CAA5DAA00B4E786 /* navButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AB91CAA5DAA00B4E786 /* navButton.png */; };
-		CCD62ABC1CAA5DAA00B4E786 /* SearchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62ABA1CAA5DAA00B4E786 /* SearchButton.png */; };
 		CCD62ABE1CAA6AF700B4E786 /* articleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */; };
-		CCD62AC41CAB7FE200B4E786 /* DarthMal.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62ABF1CAB7FE200B4E786 /* DarthMal.png */; };
-		CCD62AC51CAB7FE200B4E786 /* MileniumFalcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AC01CAB7FE200B4E786 /* MileniumFalcon.png */; };
-		CCD62AC61CAB7FE200B4E786 /* r2d2.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AC11CAB7FE200B4E786 /* r2d2.png */; };
-		CCD62AC71CAB7FE200B4E786 /* Vader.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AC21CAB7FE200B4E786 /* Vader.png */; };
-		CCD62AC81CAB7FE200B4E786 /* X-Wing Attack.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD62AC31CAB7FE200B4E786 /* X-Wing Attack.png */; };
 		CCEB0A331CAB996D00D4F349 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A321CAB996D00D4F349 /* Main.storyboard */; };
+		CCEB0A531CAB9E7000D4F349 /* BlackOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A4B1CAB9E7000D4F349 /* BlackOverlay.png */; };
+		CCEB0A541CAB9E7000D4F349 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A4C1CAB9E7000D4F349 /* Logo.png */; };
+		CCEB0A551CAB9E7000D4F349 /* navButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A4D1CAB9E7000D4F349 /* navButton.png */; };
+		CCEB0A561CAB9E7000D4F349 /* SearchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A4E1CAB9E7000D4F349 /* SearchButton.png */; };
+		CCEB0A571CAB9E7000D4F349 /* tempArtOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A4F1CAB9E7000D4F349 /* tempArtOne.jpg */; };
+		CCEB0A581CAB9E7000D4F349 /* tempArtTwo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A501CAB9E7000D4F349 /* tempArtTwo.JPG */; };
+		CCEB0A591CAB9E7000D4F349 /* tempHeroThree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A511CAB9E7000D4F349 /* tempHeroThree.jpg */; };
+		CCEB0A5A1CAB9E7000D4F349 /* tempHeroTwo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A521CAB9E7000D4F349 /* tempHeroTwo.jpg */; };
+		CCEB0A641CAB9E9A00D4F349 /* BB8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A5B1CAB9E9A00D4F349 /* BB8.jpg */; };
+		CCEB0A651CAB9E9A00D4F349 /* bb8.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A5C1CAB9E9A00D4F349 /* bb8.png */; };
+		CCEB0A661CAB9E9A00D4F349 /* DarthMal.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A5D1CAB9E9A00D4F349 /* DarthMal.png */; };
+		CCEB0A671CAB9E9A00D4F349 /* KyloRen.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A5E1CAB9E9A00D4F349 /* KyloRen.png */; };
+		CCEB0A681CAB9E9A00D4F349 /* MileniumFalcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A5F1CAB9E9A00D4F349 /* MileniumFalcon.png */; };
+		CCEB0A691CAB9E9A00D4F349 /* r2d2.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A601CAB9E9A00D4F349 /* r2d2.png */; };
+		CCEB0A6A1CAB9E9A00D4F349 /* tempHeroOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A611CAB9E9A00D4F349 /* tempHeroOne.jpg */; };
+		CCEB0A6B1CAB9E9A00D4F349 /* Vader.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A621CAB9E9A00D4F349 /* Vader.png */; };
+		CCEB0A6C1CAB9E9A00D4F349 /* X-Wing Attack.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A631CAB9E9A00D4F349 /* X-Wing Attack.png */; };
+		CCEB0A741CAB9EEE00D4F349 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A6D1CAB9EEE00D4F349 /* PlayfairDisplay-Bold.ttf */; };
+		CCEB0A751CAB9EEE00D4F349 /* PlayfairDisplay-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A6E1CAB9EEE00D4F349 /* PlayfairDisplay-BoldItalic.ttf */; };
+		CCEB0A761CAB9EEE00D4F349 /* PlayfairDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A6F1CAB9EEE00D4F349 /* PlayfairDisplay-Italic.ttf */; };
+		CCEB0A771CAB9EEE00D4F349 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A701CAB9EEE00D4F349 /* PlayfairDisplay-Regular.ttf */; };
+		CCEB0A781CAB9EEE00D4F349 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A711CAB9EEE00D4F349 /* Roboto-Bold.ttf */; };
+		CCEB0A791CAB9EEE00D4F349 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A721CAB9EEE00D4F349 /* Roboto-Medium.ttf */; };
+		CCEB0A7A1CAB9EEE00D4F349 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A731CAB9EEE00D4F349 /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,31 +87,33 @@
 		8593BE261CA4F140009FECB5 /* FBTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBTest.swift; sourceTree = "<group>"; };
 		85ED5AC81C88AC9300DA2971 /* ArticleObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleObj.swift; sourceTree = "<group>"; };
 		85ED5ACA1C88AD4A00DA2971 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
-		CCD62A751CA4EB4D00B4E786 /* LogoSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoSmall.png; sourceTree = "<group>"; };
-		CCD62A7D1CA4F2EC00B4E786 /* tempHeroOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempHeroOne.jpg; sourceTree = "<group>"; };
-		CCD62A8D1CAA11B700B4E786 /* tempHeroThree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempHeroThree.jpg; sourceTree = "<group>"; };
-		CCD62A8E1CAA11B700B4E786 /* tempHeroTwo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempHeroTwo.jpg; sourceTree = "<group>"; };
 		CCD62A911CAA172200B4E786 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		CCD62A9A1CAA2F6200B4E786 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Bold.ttf"; path = "../../../../../Downloads/documents-export-2016-03-28 2/PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
-		CCD62A9B1CAA2F6200B4E786 /* PlayfairDisplay-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-BoldItalic.ttf"; path = "../../../../../Downloads/documents-export-2016-03-28 2/PlayfairDisplay-BoldItalic.ttf"; sourceTree = "<group>"; };
-		CCD62A9C1CAA2F6200B4E786 /* PlayfairDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Italic.ttf"; path = "../../../../../Downloads/documents-export-2016-03-28 2/PlayfairDisplay-Italic.ttf"; sourceTree = "<group>"; };
-		CCD62A9D1CAA2F6200B4E786 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Regular.ttf"; path = "../../../../../Downloads/documents-export-2016-03-28 2/PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
-		CCD62A9E1CAA2F6200B4E786 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../../../Downloads/documents-export-2016-03-28 2/Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		CCD62A9F1CAA2F6200B4E786 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../Downloads/documents-export-2016-03-28 2/Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		CCD62AA01CAA2F6200B4E786 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../Downloads/documents-export-2016-03-28 2/Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		CCD62AAF1CAA38BC00B4E786 /* tempArtOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tempArtOne.jpg; path = "../../../UI Items/tempArtOne.jpg"; sourceTree = "<group>"; };
-		CCD62AB01CAA38BC00B4E786 /* tempArtTwo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tempArtTwo.JPG; path = "../../../UI Items/tempArtTwo.JPG"; sourceTree = "<group>"; };
-		CCD62AB51CAA5B5600B4E786 /* BB8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BB8.jpg; path = "../../../../UI Items/Images/BB8.jpg"; sourceTree = "<group>"; };
-		CCD62AB61CAA5B5600B4E786 /* KyloRen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = KyloRen.png; path = "../../../../UI Items/Images/KyloRen.png"; sourceTree = "<group>"; };
-		CCD62AB91CAA5DAA00B4E786 /* navButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navButton.png; path = "../../../UI Items/navButton.png"; sourceTree = "<group>"; };
-		CCD62ABA1CAA5DAA00B4E786 /* SearchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SearchButton.png; path = "../../../UI Items/SearchButton.png"; sourceTree = "<group>"; };
 		CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = articleViewController.swift; sourceTree = "<group>"; };
-		CCD62ABF1CAB7FE200B4E786 /* DarthMal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DarthMal.png; path = "../../../../UI Items/Images/DarthMal.png"; sourceTree = "<group>"; };
-		CCD62AC01CAB7FE200B4E786 /* MileniumFalcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MileniumFalcon.png; path = "../../../../UI Items/Images/MileniumFalcon.png"; sourceTree = "<group>"; };
-		CCD62AC11CAB7FE200B4E786 /* r2d2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = r2d2.png; path = "../../../../UI Items/Images/r2d2.png"; sourceTree = "<group>"; };
-		CCD62AC21CAB7FE200B4E786 /* Vader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Vader.png; path = "../../../../UI Items/Images/Vader.png"; sourceTree = "<group>"; };
-		CCD62AC31CAB7FE200B4E786 /* X-Wing Attack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "X-Wing Attack.png"; path = "../../../../UI Items/Images/X-Wing Attack.png"; sourceTree = "<group>"; };
 		CCEB0A321CAB996D00D4F349 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CCEB0A4B1CAB9E7000D4F349 /* BlackOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackOverlay.png; sourceTree = "<group>"; };
+		CCEB0A4C1CAB9E7000D4F349 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		CCEB0A4D1CAB9E7000D4F349 /* navButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navButton.png; sourceTree = "<group>"; };
+		CCEB0A4E1CAB9E7000D4F349 /* SearchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchButton.png; sourceTree = "<group>"; };
+		CCEB0A4F1CAB9E7000D4F349 /* tempArtOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempArtOne.jpg; sourceTree = "<group>"; };
+		CCEB0A501CAB9E7000D4F349 /* tempArtTwo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempArtTwo.JPG; sourceTree = "<group>"; };
+		CCEB0A511CAB9E7000D4F349 /* tempHeroThree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempHeroThree.jpg; sourceTree = "<group>"; };
+		CCEB0A521CAB9E7000D4F349 /* tempHeroTwo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempHeroTwo.jpg; sourceTree = "<group>"; };
+		CCEB0A5B1CAB9E9A00D4F349 /* BB8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BB8.jpg; sourceTree = "<group>"; };
+		CCEB0A5C1CAB9E9A00D4F349 /* bb8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bb8.png; sourceTree = "<group>"; };
+		CCEB0A5D1CAB9E9A00D4F349 /* DarthMal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarthMal.png; sourceTree = "<group>"; };
+		CCEB0A5E1CAB9E9A00D4F349 /* KyloRen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KyloRen.png; sourceTree = "<group>"; };
+		CCEB0A5F1CAB9E9A00D4F349 /* MileniumFalcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MileniumFalcon.png; sourceTree = "<group>"; };
+		CCEB0A601CAB9E9A00D4F349 /* r2d2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r2d2.png; sourceTree = "<group>"; };
+		CCEB0A611CAB9E9A00D4F349 /* tempHeroOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempHeroOne.jpg; sourceTree = "<group>"; };
+		CCEB0A621CAB9E9A00D4F349 /* Vader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vader.png; sourceTree = "<group>"; };
+		CCEB0A631CAB9E9A00D4F349 /* X-Wing Attack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "X-Wing Attack.png"; sourceTree = "<group>"; };
+		CCEB0A6D1CAB9EEE00D4F349 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		CCEB0A6E1CAB9EEE00D4F349 /* PlayfairDisplay-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CCEB0A6F1CAB9EEE00D4F349 /* PlayfairDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Italic.ttf"; sourceTree = "<group>"; };
+		CCEB0A701CAB9EEE00D4F349 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		CCEB0A711CAB9EEE00D4F349 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		CCEB0A721CAB9EEE00D4F349 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		CCEB0A731CAB9EEE00D4F349 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,28 +235,30 @@
 		CCD62A721CA4EA2700B4E786 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				CCD62A8D1CAA11B700B4E786 /* tempHeroThree.jpg */,
-				CCD62A8E1CAA11B700B4E786 /* tempHeroTwo.jpg */,
-				CCD62A7D1CA4F2EC00B4E786 /* tempHeroOne.jpg */,
-				CCD62A751CA4EB4D00B4E786 /* LogoSmall.png */,
-				CCD62AB91CAA5DAA00B4E786 /* navButton.png */,
-				CCD62ABA1CAA5DAA00B4E786 /* SearchButton.png */,
-				CCD62AB51CAA5B5600B4E786 /* BB8.jpg */,
-				CCD62AB61CAA5B5600B4E786 /* KyloRen.png */,
-				CCD62ABF1CAB7FE200B4E786 /* DarthMal.png */,
-				CCD62AC01CAB7FE200B4E786 /* MileniumFalcon.png */,
-				CCD62AC11CAB7FE200B4E786 /* r2d2.png */,
-				CCD62AC21CAB7FE200B4E786 /* Vader.png */,
-				CCD62AC31CAB7FE200B4E786 /* X-Wing Attack.png */,
-				CCD62A9A1CAA2F6200B4E786 /* PlayfairDisplay-Bold.ttf */,
-				CCD62A9B1CAA2F6200B4E786 /* PlayfairDisplay-BoldItalic.ttf */,
-				CCD62A9C1CAA2F6200B4E786 /* PlayfairDisplay-Italic.ttf */,
-				CCD62A9D1CAA2F6200B4E786 /* PlayfairDisplay-Regular.ttf */,
-				CCD62A9E1CAA2F6200B4E786 /* Roboto-Bold.ttf */,
-				CCD62A9F1CAA2F6200B4E786 /* Roboto-Medium.ttf */,
-				CCD62AA01CAA2F6200B4E786 /* Roboto-Regular.ttf */,
-				CCD62AAF1CAA38BC00B4E786 /* tempArtOne.jpg */,
-				CCD62AB01CAA38BC00B4E786 /* tempArtTwo.JPG */,
+				CCEB0A5B1CAB9E9A00D4F349 /* BB8.jpg */,
+				CCEB0A5C1CAB9E9A00D4F349 /* bb8.png */,
+				CCEB0A5D1CAB9E9A00D4F349 /* DarthMal.png */,
+				CCEB0A5E1CAB9E9A00D4F349 /* KyloRen.png */,
+				CCEB0A5F1CAB9E9A00D4F349 /* MileniumFalcon.png */,
+				CCEB0A601CAB9E9A00D4F349 /* r2d2.png */,
+				CCEB0A611CAB9E9A00D4F349 /* tempHeroOne.jpg */,
+				CCEB0A621CAB9E9A00D4F349 /* Vader.png */,
+				CCEB0A631CAB9E9A00D4F349 /* X-Wing Attack.png */,
+				CCEB0A4B1CAB9E7000D4F349 /* BlackOverlay.png */,
+				CCEB0A4C1CAB9E7000D4F349 /* Logo.png */,
+				CCEB0A4D1CAB9E7000D4F349 /* navButton.png */,
+				CCEB0A4E1CAB9E7000D4F349 /* SearchButton.png */,
+				CCEB0A4F1CAB9E7000D4F349 /* tempArtOne.jpg */,
+				CCEB0A501CAB9E7000D4F349 /* tempArtTwo.JPG */,
+				CCEB0A511CAB9E7000D4F349 /* tempHeroThree.jpg */,
+				CCEB0A521CAB9E7000D4F349 /* tempHeroTwo.jpg */,
+				CCEB0A6D1CAB9EEE00D4F349 /* PlayfairDisplay-Bold.ttf */,
+				CCEB0A6E1CAB9EEE00D4F349 /* PlayfairDisplay-BoldItalic.ttf */,
+				CCEB0A6F1CAB9EEE00D4F349 /* PlayfairDisplay-Italic.ttf */,
+				CCEB0A701CAB9EEE00D4F349 /* PlayfairDisplay-Regular.ttf */,
+				CCEB0A711CAB9EEE00D4F349 /* Roboto-Bold.ttf */,
+				CCEB0A721CAB9EEE00D4F349 /* Roboto-Medium.ttf */,
+				CCEB0A731CAB9EEE00D4F349 /* Roboto-Regular.ttf */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -347,34 +344,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCD62AB11CAA38BC00B4E786 /* tempArtOne.jpg in Resources */,
-				CCD62AA51CAA2F6200B4E786 /* PlayfairDisplay-Italic.ttf in Resources */,
-				CCD62AC71CAB7FE200B4E786 /* Vader.png in Resources */,
-				CCD62AC51CAB7FE200B4E786 /* MileniumFalcon.png in Resources */,
-				CCD62A761CA4EB4D00B4E786 /* LogoSmall.png in Resources */,
-				CCD62AA71CAA2F6200B4E786 /* PlayfairDisplay-Regular.ttf in Resources */,
-				CCD62AC81CAB7FE200B4E786 /* X-Wing Attack.png in Resources */,
+				CCEB0A741CAB9EEE00D4F349 /* PlayfairDisplay-Bold.ttf in Resources */,
+				CCEB0A671CAB9E9A00D4F349 /* KyloRen.png in Resources */,
+				CCEB0A771CAB9EEE00D4F349 /* PlayfairDisplay-Regular.ttf in Resources */,
+				CCEB0A691CAB9E9A00D4F349 /* r2d2.png in Resources */,
 				CCEB0A331CAB996D00D4F349 /* Main.storyboard in Resources */,
 				856425D81C829B3D00D6AEE6 /* LaunchScreen.storyboard in Resources */,
-				CCD62AA91CAA2F6200B4E786 /* Roboto-Bold.ttf in Resources */,
-				CCD62AC61CAB7FE200B4E786 /* r2d2.png in Resources */,
-				CCD62A901CAA11B700B4E786 /* tempHeroTwo.jpg in Resources */,
-				CCD62AB81CAA5B5600B4E786 /* KyloRen.png in Resources */,
-				CCD62ABC1CAA5DAA00B4E786 /* SearchButton.png in Resources */,
-				CCD62AAB1CAA2F6200B4E786 /* Roboto-Medium.ttf in Resources */,
+				CCEB0A6B1CAB9E9A00D4F349 /* Vader.png in Resources */,
 				856425F91C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf in Resources */,
-				CCD62AA31CAA2F6200B4E786 /* PlayfairDisplay-BoldItalic.ttf in Resources */,
-				CCD62AC41CAB7FE200B4E786 /* DarthMal.png in Resources */,
+				CCEB0A791CAB9EEE00D4F349 /* Roboto-Medium.ttf in Resources */,
 				856425D51C829B3D00D6AEE6 /* Assets.xcassets in Resources */,
-				CCD62AB31CAA38BC00B4E786 /* tempArtTwo.JPG in Resources */,
-				CCD62A8F1CAA11B700B4E786 /* tempHeroThree.jpg in Resources */,
-				CCD62A7E1CA4F2EC00B4E786 /* tempHeroOne.jpg in Resources */,
-				CCD62AAD1CAA2F6200B4E786 /* Roboto-Regular.ttf in Resources */,
-				CCD62AB71CAA5B5600B4E786 /* BB8.jpg in Resources */,
-				CCD62AA11CAA2F6200B4E786 /* PlayfairDisplay-Bold.ttf in Resources */,
-				CCD62ABB1CAA5DAA00B4E786 /* navButton.png in Resources */,
+				CCEB0A581CAB9E7000D4F349 /* tempArtTwo.JPG in Resources */,
+				CCEB0A541CAB9E7000D4F349 /* Logo.png in Resources */,
+				CCEB0A7A1CAB9EEE00D4F349 /* Roboto-Regular.ttf in Resources */,
+				CCEB0A651CAB9E9A00D4F349 /* bb8.png in Resources */,
+				CCEB0A5A1CAB9E7000D4F349 /* tempHeroTwo.jpg in Resources */,
+				CCEB0A531CAB9E7000D4F349 /* BlackOverlay.png in Resources */,
+				CCEB0A781CAB9EEE00D4F349 /* Roboto-Bold.ttf in Resources */,
 				856426001C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf in Resources */,
+				CCEB0A661CAB9E9A00D4F349 /* DarthMal.png in Resources */,
+				CCEB0A6A1CAB9E9A00D4F349 /* tempHeroOne.jpg in Resources */,
+				CCEB0A641CAB9E9A00D4F349 /* BB8.jpg in Resources */,
+				CCEB0A761CAB9EEE00D4F349 /* PlayfairDisplay-Italic.ttf in Resources */,
+				CCEB0A751CAB9EEE00D4F349 /* PlayfairDisplay-BoldItalic.ttf in Resources */,
+				CCEB0A681CAB9E9A00D4F349 /* MileniumFalcon.png in Resources */,
+				CCEB0A551CAB9E7000D4F349 /* navButton.png in Resources */,
 				856425FE1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf in Resources */,
+				CCEB0A6C1CAB9E9A00D4F349 /* X-Wing Attack.png in Resources */,
+				CCEB0A571CAB9E7000D4F349 /* tempArtOne.jpg in Resources */,
+				CCEB0A591CAB9E7000D4F349 /* tempHeroThree.jpg in Resources */,
+				CCEB0A561CAB9E7000D4F349 /* SearchButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,15 +381,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCD62AA81CAA2F6200B4E786 /* PlayfairDisplay-Regular.ttf in Resources */,
-				CCD62AB41CAA38BC00B4E786 /* tempArtTwo.JPG in Resources */,
-				CCD62AAE1CAA2F6200B4E786 /* Roboto-Regular.ttf in Resources */,
-				CCD62AA61CAA2F6200B4E786 /* PlayfairDisplay-Italic.ttf in Resources */,
-				CCD62AAC1CAA2F6200B4E786 /* Roboto-Medium.ttf in Resources */,
-				CCD62AB21CAA38BC00B4E786 /* tempArtOne.jpg in Resources */,
-				CCD62AAA1CAA2F6200B4E786 /* Roboto-Bold.ttf in Resources */,
-				CCD62AA41CAA2F6200B4E786 /* PlayfairDisplay-BoldItalic.ttf in Resources */,
-				CCD62AA21CAA2F6200B4E786 /* PlayfairDisplay-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
