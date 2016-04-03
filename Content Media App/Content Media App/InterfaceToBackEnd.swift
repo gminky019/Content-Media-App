@@ -12,7 +12,7 @@ class BackEndInterface {
     
     func getMain() -> MainPageContent{
         
-        var mainPage = MainPageContent(heros: [Content](), sub: [Content]())
+        var mainPage = MainPageContent(heros: [Content](), sub: [Content](), contSub: [SubHero]())
         
         return mainPage
     }
@@ -47,7 +47,7 @@ class BackEndInterface {
     
     func getSingle(title: String, type: String) -> Content
     {
-        var single = Content(title: title, description: type)
+        var single = Content(title: title, description: type,key: "" )
         
         return single
     }

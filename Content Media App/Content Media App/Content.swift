@@ -14,10 +14,12 @@ class Content {
     
     var title: String
     var description: String
+    var awskey: String
     
-    init(title: String , description: String)
+    init(title: String , description: String, key: String)
     {
         self.title = title
         self.description = description
+        self.awskey = key
     }
 }

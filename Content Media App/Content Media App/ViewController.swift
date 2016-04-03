@@ -110,6 +110,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //GARRETT BACKEND TEST AREA
+        let aws: ConnectToAWS = ConnectToAWS()
+        
+        aws.testGet()
+        
         
         let typeColor = UIColor.init(red: 221/255, green: 180/255, blue: 0/255, alpha: 1)
         // ---- Featured Articles ----
@@ -356,7 +361,7 @@ class ViewController: UIViewController {
     }
     
     func imageTapped(gestureRecognizer: UITapGestureRecognizer) {
-
+        
         self.performSegueWithIdentifier("goToArticle", sender: self)
     }
     
