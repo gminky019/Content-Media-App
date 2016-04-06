@@ -113,7 +113,13 @@ class ViewController: UIViewController {
         //GARRETT BACKEND TEST AREA
         let aws: ConnectToAWS = ConnectToAWS()
         
-        aws.testGet()
+        var mainP: MainPageContent?
+        
+        aws.getMain({(main: MainPageContent) in
+            
+            mainP = main
+        })
+        
         
         
         let typeColor = UIColor.init(red: 221/255, green: 180/255, blue: 0/255, alpha: 1)
@@ -124,6 +130,10 @@ class ViewController: UIViewController {
         if let image = UIImage (named: "tempHeroOne.jpg"){
             heroOneView.image = image
         }
+        //TEST FOR BACKEND
+       // let temp: ThumbNail = main.hero[0] as! ThumbNail
+        //heroOneView.image =  temp.pic
+        ////////////
         heroOneTitle.text = "Ice Melting In Arctic: How can you save the polar bears?"
         heroOneTitle.font = UIFont(name: "Roboto-Bold", size: 18)
         heroOneTitle.textColor = UIColor.whiteColor()
