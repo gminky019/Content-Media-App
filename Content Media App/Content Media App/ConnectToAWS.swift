@@ -17,6 +17,7 @@ class ConnectToAWS{
     var _MainKeyDict: [String: AWSS3Object]
     var _HeroURLDict: [String: [NSURL]]
     var _urlsTemp : [NSURL]
+    var _urlKey : [String: String]
     
     
     //let _baseURL : String
@@ -31,6 +32,7 @@ class ConnectToAWS{
         self._urlsTemp = [NSURL]()
         self._MainKeyDict = [String: AWSS3Object]()
         self._HeroURLDict = [String: [NSURL]]()
+        self._urlKey = [String: String]()
     
     }
     
@@ -317,8 +319,9 @@ class ConnectToAWS{
             
             if(s3.key!.lowercaseString.rangeOfString("/") != nil)
             {
-                str = s3.key!.stringByReplacingOccurrencesOfString("/", withString: "-")
+                str = s3.key!.stringByReplacingOccurrencesOfString("/", withString: "+")
             }
+            self._urlKey[str] = s3.key!
             
             let downFileURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent(str)
             let downFilePath = downFileURL.path!
@@ -612,6 +615,11 @@ class ConnectToAWS{
             return nil
         }
 
+    }
+    
+    func getUrlKeyDict() -> [String: String]
+    {
+        return self._urlKey
     }
     
 }
