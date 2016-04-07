@@ -14,6 +14,8 @@ class ConnectToAWS{
     var _prefix: String
     let _s3: AWSS3
     var _keys: [AWSS3Object]
+    var _MainKeyDict: [String: AWSS3Object]
+    var _HeroURLDict: [String: [NSURL]]
     var _urlsTemp : [NSURL]
     
     
@@ -27,6 +29,8 @@ class ConnectToAWS{
         self._s3 = AWSS3.defaultS3()
         self._keys = [AWSS3Object]()
         self._urlsTemp = [NSURL]()
+        self._MainKeyDict = [String: AWSS3Object]()
+        self._HeroURLDict = [String: [NSURL]]()
     
     }
     
@@ -37,31 +41,51 @@ class ConnectToAWS{
              self._keys = keys
             //parse string for key
             
+            self.setMainKeyDict(keys)
+            
             let sortKeys: [AWSS3Object] = self.parseKeys("Main", allKey: keys)
             
             //set download req
             let req : [AWSS3TransferManagerDownloadRequest] = self.setReq(sortKeys)
             
+          //  self.testGet()
+            
             //initiate download
-            let queue:dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+           // let queue:dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
             
             var urls: [NSURL]  = [NSURL]()
             
             for r in req
             {
-            dispatch_async(queue, {() -> Void in
+           // dispatch_async(queue, {() -> Void in
             
                 var error: NSError?
+                let DictKey: String = self.findMainURLKey(r.key!)
                 
                 self.downLoadV2(r) { (url: NSURL) in
+                    
+                    var temp: [NSURL]
+                    
+                    if(!self._HeroURLDict.keys.contains(DictKey).boolValue)
+                    {
+                        temp = [NSURL]()
+                    }
+                    else
+                    {
+                        temp = self._HeroURLDict[DictKey]!
+                    }
+                    
+                    temp.append(url)
+                    
+                    self._HeroURLDict[DictKey] = temp
+                    
                     self._urlsTemp.append(url)
+                    
                 }
-                
-            })
             }
+            
+            
             self._urlsTemp = urls
-            
-            
         }
         
         
@@ -70,8 +94,11 @@ class ConnectToAWS{
     func downLoadV2(downReq: AWSS3TransferManagerDownloadRequest, completionDown: (url: NSURL) ->())
     {
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
+
         
         var downLoadPath: NSURL?
+        
+        print("Getting:  " + downReq.key! + "\n")
         
         transferManager.download(downReq).continueWithBlock({(task) -> AnyObject! in
             if let error = task.error{
@@ -79,7 +106,8 @@ class ConnectToAWS{
                     && AWSS3TransferManagerErrorType(rawValue: error.code) == AWSS3TransferManagerErrorType.Paused{
                     print ("DownLoad Paused")
                 }else{
-                    print("DownLoad Failed: [\(error)]")
+                    print("FAILED ON  " + downReq.key! + "\n")
+                    print("DownLoad Failed: [\(error)]" + "\n\n")
                 }
             }
             else if let exception = task.exception
@@ -88,7 +116,11 @@ class ConnectToAWS{
             }
             else{
                 dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                    
+                    print("SUCCESS ON  " + downReq.key! + "\n\n")
                     downLoadPath = downReq.downloadingFileURL
+                    
+                    
                     
                     completionDown(url: downLoadPath!)
                 })
@@ -96,6 +128,151 @@ class ConnectToAWS{
             return nil
         })
        
+    }
+    
+    func findMainURLKey(key: String) -> String
+    {
+        var dicKey: String = ""
+        
+        let keyVal = key.lowercaseString
+        
+        if(keyVal.lowercaseString.rangeOfString("hero") != nil)
+        {
+            if(keyVal.lowercaseString.rangeOfString("main") != nil)
+            {
+                if(keyVal.lowercaseString.rangeOfString("sub") != nil)
+                {
+                    dicKey = "mainsub"
+                }
+                else
+                {
+                   dicKey = "main"
+                }
+            }
+            else if (keyVal.lowercaseString.rangeOfString("read/hero") != nil)
+            {
+                if(keyVal.lowercaseString.rangeOfString("sub") != nil)
+                {
+                    dicKey = "readsub"
+                }
+                else
+                {
+                    dicKey = "read"
+                }
+            }
+            else if(keyVal.lowercaseString.rangeOfString("learn/hero") != nil)
+            {
+                if(keyVal.lowercaseString.rangeOfString("sub") != nil)
+                {
+                    dicKey = "learnsub"
+                }
+                else
+                {
+                    dicKey = "learn"
+                }
+            }
+            else if(keyVal.lowercaseString.rangeOfString("shop/hero") != nil)
+            {
+                if(keyVal.lowercaseString.rangeOfString("sub") != nil)
+                {
+                    dicKey = "shopsub"
+                }
+                else
+                {
+                    dicKey = "shop"
+                }
+            }
+            else if(keyVal.lowercaseString.rangeOfString("watch/hero") != nil)
+            {
+                if(keyVal.lowercaseString.rangeOfString("sub") != nil)
+                {
+                    dicKey = "watchsub"
+                }
+                else
+                {
+                    dicKey = "watch"
+                }
+            }
+            else
+            {
+                
+            }
+        }
+        
+        
+        return dicKey
+    }
+    
+    func setMainKeyDict(allKey: [AWSS3Object])
+    {
+        for key in allKey
+        {
+            let keyVal: String = key.key!.lowercaseString
+            
+            if(keyVal.lowercaseString.rangeOfString("hero") != nil)
+            {
+                if(keyVal.lowercaseString.rangeOfString("main") != nil)
+                {
+                    if(keyVal.lowercaseString.rangeOfString("sub") != nil)
+                    {
+                        self._MainKeyDict["mainsub"] = key
+                    }
+                    else
+                    {
+                        self._MainKeyDict["main"] = key
+                    }
+                }
+                else if (keyVal.lowercaseString.rangeOfString("read") != nil)
+                {
+                    if(keyVal.lowercaseString.rangeOfString("sub") != nil)
+                    {
+                        self._MainKeyDict["readsub"] = key
+                    }
+                    else
+                    {
+                        self._MainKeyDict["read"] = key
+                    }
+                }
+                else if(keyVal.lowercaseString.rangeOfString("learn") != nil)
+                {
+                    if(keyVal.lowercaseString.rangeOfString("sub") != nil)
+                    {
+                        self._MainKeyDict["learnsub"] = key
+                    }
+                    else
+                    {
+                        self._MainKeyDict["learn"] = key
+                    }
+                }
+                else if(keyVal.lowercaseString.rangeOfString("shop") != nil)
+                {
+                    if(keyVal.lowercaseString.rangeOfString("sub") != nil)
+                    {
+                        self._MainKeyDict["shopsub"] = key
+                    }
+                    else
+                    {
+                        self._MainKeyDict["shop"] = key
+                    }
+                }
+                else if(keyVal.lowercaseString.rangeOfString("watch") != nil)
+                {
+                    if(keyVal.lowercaseString.rangeOfString("sub") != nil)
+                    {
+                        self._MainKeyDict["watchsub"] = key
+                    }
+                    else
+                    {
+                        self._MainKeyDict["watch"] = key
+                    }
+                }
+                else
+                {
+                    
+                }
+            }
+        }
+        
     }
     
     func parseKeys(type: String, allKey: [AWSS3Object]) -> [AWSS3Object]
@@ -108,9 +285,9 @@ class ConnectToAWS{
             
             for k in allKey
             {
-                let val: String = k.key!
+                let val: String = k.key!.lowercaseString
                 
-                if(val.rangeOfString("ron") != nil)
+                if(val.lowercaseString.rangeOfString("hero") != nil)
                 {
                     parsedKeys.append(k)
                 }
@@ -129,10 +306,24 @@ class ConnectToAWS{
         
         
         for s3 in s3Obj{
-            let downFileURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent("download").URLByAppendingPathComponent(s3.key!)
+            
+            let tempDir = NSURL(fileURLWithPath: NSTemporaryDirectory())
+            
+            let downloadURL = NSTemporaryDirectory().stringByAppendingString(s3.key!)
+            let tempURL = NSURL(fileURLWithPath: downloadURL)
+            
+            let url: NSURL = NSURL.fileURLWithPath(NSTemporaryDirectory(), isDirectory: true).URLByAppendingPathComponent(s3.key!)
+            var str: String = s3.key!
+            
+            if(s3.key!.lowercaseString.rangeOfString("/") != nil)
+            {
+                str = s3.key!.stringByReplacingOccurrencesOfString("/", withString: "-")
+            }
+            
+            let downFileURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent(str)
             let downFilePath = downFileURL.path!
             
-            if NSFileManager.defaultManager().fileExistsAtPath(downFilePath){
+            if NSFileManager.defaultManager().fileExistsAtPath(tempURL.path!){
                 //reqList.append(nil)
                 print("Error getting download request file path exists")
             }
@@ -145,6 +336,9 @@ class ConnectToAWS{
                 
                 reqList.append(downReq)
             }
+            
+            //downloadURL = nil
+           // rempurl = nil
         }
         
         return reqList
@@ -400,6 +594,7 @@ class ConnectToAWS{
         task.continueWithBlock { (task: AWSTask) -> AnyObject! in
             print(task.error)
             if task.error != nil {
+                print("GAHH")
             } else {
                 dispatch_async(dispatch_get_main_queue()
                     , {
