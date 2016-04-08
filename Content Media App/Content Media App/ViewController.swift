@@ -307,6 +307,8 @@ class ViewController: UIViewController {
         articleOneTitle.text = titleArticleOne
         articleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         articleOneTitle.textColor = UIColor.blackColor()
+        articleOneTitle.textAlignment = .Center
+        
         
         // Article One Tap Gesture Recognizer
         articleOne.tag = 4
@@ -326,6 +328,8 @@ class ViewController: UIViewController {
         articleTwoTitle.text = titleArticleTwo
         articleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         articleTwoTitle.textColor = UIColor.blackColor()
+        articleTwoTitle.textAlignment = .Center
+        
         
         // Article Two Tap Gesture Recognizer
         articleTwo.tag = 5
@@ -345,6 +349,8 @@ class ViewController: UIViewController {
         articleThreeTitle.text = titleArticleThree
         articleThreeTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         articleThreeTitle.textColor = UIColor.blackColor()
+        articleThreeTitle.textAlignment = .Center
+        
         
         // Article Three Tap Gesture Recognizer
         articleThree.tag = 6
@@ -363,7 +369,8 @@ class ViewController: UIViewController {
         
         articleFourTitle.text = titleArticleFour
         articleFourTitle.font = UIFont(name: "Roboto-Bold", size: 14)
-        articleFourTitle.textColor = UIColor.blackColor()
+        articleFourTitle.textAlignment = .Center
+        
         
         // Article Four Tap Gesture Recognizer
         articleFour.tag = 7
@@ -421,6 +428,8 @@ class ViewController: UIViewController {
         watchArticleOneTitle.text = titleWatchArticleOne
         watchArticleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         watchArticleOneTitle.textColor = UIColor.blackColor()
+        watchArticleOneTitle.textAlignment = .Center
+        
         
         // Watch Article One Tap Gesture Recognizer
         watchArticleOne.tag = 11
@@ -441,6 +450,7 @@ class ViewController: UIViewController {
         watchArticleTwoTitle.text = titleWatchArticleTwo
         watchArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         watchArticleTwoTitle.textColor = UIColor.blackColor()
+        watchArticleTwoTitle.textAlignment = .Center
         
         // Watch Article Two Tap Gesture Recognizer
         watchArticleTwo.tag = 12
@@ -497,6 +507,7 @@ class ViewController: UIViewController {
         readArticleOneTitle.text = titleReadArticleOne
         readArticleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         readArticleOneTitle.textColor = UIColor.blackColor()
+        readArticleOneTitle.textAlignment = .Center
         
         // Read Article One Tap Gesture Recognizer
         readArticleOne.tag = 21
@@ -517,6 +528,7 @@ class ViewController: UIViewController {
         readArticleTwoTitle.text = titleReadArticleTwo
         readArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         readArticleTwoTitle.textColor = UIColor.blackColor()
+        readArticleTwoTitle.textAlignment = .Center
         
         // Read Article Two Tap Gesture Recognizer
         readArticleTwo.tag = 22
@@ -541,6 +553,7 @@ class ViewController: UIViewController {
         learnHeroType.text = typeLearnHero
         learnHeroType.font = UIFont(name: "Roboto-Medium", size: 12)
         learnHeroType.textColor = typeColor
+        
         
         // Hero Gradient  --- Broken, Fix Later
         
@@ -571,6 +584,7 @@ class ViewController: UIViewController {
         learnArticleOneTitle.text = titleLearnArticleOne
         learnArticleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         learnArticleOneTitle.textColor = UIColor.blackColor()
+        learnArticleOneTitle.textAlignment = .Center
         
         // Learn Article One Tap Gesture Recognizer
         learnArticleOne.tag = 31
@@ -591,6 +605,7 @@ class ViewController: UIViewController {
         learnArticleTwoTitle.text = titleLearnArticleTwo
         learnArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         learnArticleTwoTitle.textColor = UIColor.blackColor()
+        learnArticleTwoTitle.textAlignment = .Center
         
         // Learn Article Two Tap Gesture Recognizer
         learnArticleTwo.tag = 32
@@ -641,6 +656,7 @@ class ViewController: UIViewController {
         shopArticleOneType.font = UIFont(name: "Roboto-Medium", size: 12)
         shopArticleOneType.textColor = typeColor
         shopArticleOneType.textAlignment = .Center
+        shopArticleOneTitle.textAlignment = .Center
         
         
         shopArticleOneTitle.text = titleShopArticleOne
@@ -666,6 +682,7 @@ class ViewController: UIViewController {
         shopArticleTwoTitle.text = titleShopArticleTwo
         shopArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
         shopArticleTwoTitle.textColor = UIColor.blackColor()
+        shopArticleTwoTitle.textAlignment = .Center
         
         // Learn Article Two Tap Gesture Recognizer
         shopArticleTwo.tag = 32
