@@ -33,6 +33,8 @@
 		CC747D471CB4C07000140275 /* instagram2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D431CB4C07000140275 /* instagram2.png */; };
 		CC747D481CB4C07000140275 /* twitter2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D441CB4C07000140275 /* twitter2.png */; };
 		CC747D491CB4C07000140275 /* youtube2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D451CB4C07000140275 /* youtube2.png */; };
+		CCC816681CB787FA00E75007 /* categoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC816671CB787FA00E75007 /* categoryViewController.swift */; };
+		CCC8166A1CB7882C00E75007 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC816691CB7882C00E75007 /* settingsViewController.swift */; };
 		CCD62A921CAA172200B4E786 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD62A911CAA172200B4E786 /* QuartzCore.framework */; };
 		CCD62ABE1CAA6AF700B4E786 /* articleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */; };
 		CCEB0A331CAB996D00D4F349 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A321CAB996D00D4F349 /* Main.storyboard */; };
@@ -105,6 +107,8 @@
 		CC747D431CB4C07000140275 /* instagram2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagram2.png; sourceTree = "<group>"; };
 		CC747D441CB4C07000140275 /* twitter2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter2.png; sourceTree = "<group>"; };
 		CC747D451CB4C07000140275 /* youtube2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube2.png; sourceTree = "<group>"; };
+		CCC816671CB787FA00E75007 /* categoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryViewController.swift; sourceTree = "<group>"; };
+		CCC816691CB7882C00E75007 /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		CCD62A911CAA172200B4E786 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = articleViewController.swift; sourceTree = "<group>"; };
 		CCEB0A321CAB996D00D4F349 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				856425CF1C829B3D00D6AEE6 /* ViewController.swift */,
 				CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */,
 				CCEB0A321CAB996D00D4F349 /* Main.storyboard */,
+				CCC816671CB787FA00E75007 /* categoryViewController.swift */,
+				CCC816691CB7882C00E75007 /* settingsViewController.swift */,
 				856425D41C829B3D00D6AEE6 /* Assets.xcassets */,
 				856425D61C829B3D00D6AEE6 /* LaunchScreen.storyboard */,
 				856425D91C829B3D00D6AEE6 /* Info.plist */,
@@ -433,12 +439,14 @@
 				856425CE1C829B3D00D6AEE6 /* AppDelegate.swift in Sources */,
 				8593BE1A1CA4E489009FECB5 /* InterfaceToBackEnd.swift in Sources */,
 				8593BE271CA4F140009FECB5 /* FBTest.swift in Sources */,
+				CCC816681CB787FA00E75007 /* categoryViewController.swift in Sources */,
 				8593BE1C1CA4E550009FECB5 /* MainPage.swift in Sources */,
 				85ED5ACB1C88AD4A00DA2971 /* Picture.swift in Sources */,
 				85ED5AC91C88AC9300DA2971 /* ArticleObj.swift in Sources */,
 				CCD62ABE1CAA6AF700B4E786 /* articleViewController.swift in Sources */,
 				856425F71C829DB500D6AEE6 /* SWRevealViewController.m in Sources */,
 				8514CF7B1C869E7F00EF5301 /* Content.swift in Sources */,
+				CCC8166A1CB7882C00E75007 /* settingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

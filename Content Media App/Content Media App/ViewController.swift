@@ -12,6 +12,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     @IBOutlet weak var heroOneView: UIImageView!
     @IBOutlet weak var heroTwoView: UIImageView!
     @IBOutlet weak var heroThreeView: UIImageView!
@@ -198,6 +200,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Navigation 
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+       }
+        
+        
+        // Color for Type
         
         let typeColor = UIColor.init(red: 221/255, green: 180/255, blue: 0/255, alpha: 1)
         // ---- Featured Articles ----
@@ -724,7 +735,7 @@ class ViewController: UIViewController {
     
     
     override func viewDidAppear(animated: Bool) {
-        // Nav helper variable
+       /* // Nav helper variable
         let nav = self.navigationController?.navigationBar
         // Nav background color
 
@@ -753,7 +764,7 @@ class ViewController: UIViewController {
         imageSearch = imageSearch?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: imageSearch, style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
-        
+        */
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
