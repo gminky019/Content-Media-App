@@ -177,4 +177,25 @@ class Helpers{
         }*/
         //return ""
     }
+    
+    func createKeyFromContent(cont: Content) -> String
+    {
+        let oldKey: String = cont.awskey
+        
+        //split key
+        let tempArr: [String] = oldKey.characters.split{$0 == "/"}.map(String.init)
+        
+        let arrcount: Int = tempArr.count - 2
+        var str: String = ""
+        
+        for i in 0...arrcount
+        {
+            str += (tempArr[i]+"/")
+        }
+        
+        str = str + "ArticleText.rtf"
+        
+        return str
+
+    }
 }

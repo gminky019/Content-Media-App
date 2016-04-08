@@ -29,6 +29,13 @@ class MiddleIntegration{
         
     }
     
+    func getContent(cont : Content, completion: (retContent: Content) -> ())
+    {
+        let srcKey: String = self.help.createKeyFromContent(cont)
+        
+        
+    }
+    
     
     
 }

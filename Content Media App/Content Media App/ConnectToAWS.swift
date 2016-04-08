@@ -19,6 +19,9 @@ class ConnectToAWS{
     var _urlsTemp : [NSURL]
     var _urlKey : [String: String]
     var _globalCountVar : Int
+    var _globFlag: Bool = false
+    var _downLoaded: [String: Bool]
+    var _realDown: [String]
     
     
     //let _baseURL : String
@@ -35,6 +38,8 @@ class ConnectToAWS{
         self._HeroURLDict = [String: [NSURL]]()
         self._urlKey = [String: String]()
         self._globalCountVar = 0
+        self._downLoaded = [String: Bool]()
+        self._realDown = [String]()
     
     }
     
@@ -75,20 +80,27 @@ class ConnectToAWS{
         self._globalCountVar = 0
         
         let firstGroup = dispatch_group_create()
-        
+       //             let sem : dispatch_semaphore_t = dispatch_semaphore_create(0)
+
+        let queue:dispatch_queue_t = dispatch_queue_create("com.company.app.queue", DISPATCH_QUEUE_CONCURRENT)
         for r in reqs
+       // dispatch_apply(reqs.count, queue)
         {
+          //  i in
             // dispatch_async(queue, {() -> Void in
             
-            dispatch_group_enter(firstGroup)
-            
+          dispatch_group_enter(firstGroup)
+           // let index = Int(i)
+            //let r:AWSS3TransferManagerDownloadRequest = reqs[index]
+
             let DictKey: String = self.findMainURLKey(r.key!)
-            
-            
-            
+            self._downLoaded[r.downloadingFileURL.path!] = false;
+
+
             self.downLoadV2(r, group: firstGroup) { (url: NSURL) in
-                
+                //dispatch_group_leave(firstGroup)
                 var temp: [NSURL]
+
                 
                 if(!self._HeroURLDict.keys.contains(DictKey).boolValue)
                 {
@@ -102,19 +114,20 @@ class ConnectToAWS{
                 temp.append(url)
                 
                 self._HeroURLDict[DictKey] = temp
-                dispatch_group_leave(firstGroup)
-                
-                self._globalCountVar += 1
+
+
                 self._urlsTemp.append(url)
                 
                 
             }
+            
+
         }
         
-        dispatch_group_notify(firstGroup, dispatch_get_main_queue()) {
-
-        (complete(mainDict: self._HeroURLDict))
+        dispatch_group_notify(firstGroup, dispatch_get_main_queue()){
+            complete(mainDict: self._HeroURLDict)
         }
+
     }
     
     func downLoadV2(downReq: AWSS3TransferManagerDownloadRequest, group: dispatch_group_t, completionDown: (url: NSURL) ->())
@@ -124,36 +137,45 @@ class ConnectToAWS{
         
         var downLoadPath: NSURL?
         
-        print("Getting:  " + downReq.key! + "\n")
-        dispatch_group_enter(group)
-        
+       // dispatch_group_enter(group)
+
+        print(String(self._globalCountVar))
+        print("Adding Dispatch Low Level \n")
         transferManager.download(downReq).continueWithBlock({(task) -> AnyObject! in
             if let error = task.error{
                 if error.domain == AWSS3TransferManagerErrorDomain as String
                     && AWSS3TransferManagerErrorType(rawValue: error.code) == AWSS3TransferManagerErrorType.Paused{
+                  // dispatch_group_leave(group)
                     print ("DownLoad Paused")
                 }else{
+                   
+                    dispatch_group_leave(group)
+
                     print("FAILED ON  " + downReq.key! + "\n")
                     print("DownLoad Failed: [\(error)]" + "\n\n")
                 }
             }
             else if let exception = task.exception
             {
+                //dispatch_group_leave(group)
                 print("download failed: [\(exception)]")
             }
             else{
-                dispatch_group_leave(group)
-                
-                dispatch_async(dispatch_get_main_queue(), {() -> Void in
+
+               // dispatch_group_leave(group)
+
+
+               dispatch_async(dispatch_get_main_queue(), {() -> Void in
                     
                     print("SUCCESS ON  " + downReq.key! + "\n\n")
                     downLoadPath = downReq.downloadingFileURL
-                    
-                    dispatch_group_leave(group)
-                    
+
+                   dispatch_group_leave(group)
+
                     completionDown(url: downLoadPath!)
-                })
+               })
             }
+         //   dispatch_group_leave(group)
             return nil
         })
        
@@ -396,7 +418,7 @@ class ConnectToAWS{
         listObjectsRequest.bucket = "contentmediaapp"
         //listObjectsRequest.delimiter = "/"
        // listObjectsRequest.prefix = prefix
-        
+        //listObjectsRequest.
         self._s3.listObjects(listObjectsRequest).continueWithSuccessBlock({(task) -> AnyObject! in
             if let error = task.error{
                 print("List objects Failed: [\(error)]")
