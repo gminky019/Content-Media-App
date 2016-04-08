@@ -200,18 +200,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Navigation 
+        let typeColor = UIColor.init(red: 221/255, green: 180/255, blue: 0/255, alpha: 1)
+
+        // Navigation
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
        }
         
+        var mainP: MainPageContent?
+        /*
+        aws.getMain({(main: MainPageContent) in
+            
+            mainP = main
+        })
+        */
         
         // Color for Type
+        heroOneView.image = imageHeroOne
         
-        let typeColor = UIColor.init(red: 221/255, green: 180/255, blue: 0/255, alpha: 1)
-        // ---- Featured Articles ----
+        heroOneTitle.text = titleHeroOne
         
         // Hero One
         //heroOneView.image = UIImage (named: "tempHeroOne.jpg")
