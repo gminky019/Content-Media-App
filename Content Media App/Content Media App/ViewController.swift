@@ -109,6 +109,7 @@ class ViewController: UIViewController {
     var articleClicked = "null"
     
     // Hero Articles
+    
     var imageHeroOne = UIImage (named: "tempHeroOne.jpg")
     var titleHeroOne = "Ice Melting In Arctic: How can you save the polar bears?"
     var typeHeroOne = "READ"
@@ -194,9 +195,7 @@ class ViewController: UIViewController {
     var imageShopArticleTwo = UIImage(named: "MileniumFalcon.png")
     var titleShopArticleTwo = "Millennium Falcon: Kessel Run in 12 Parsecs"
     var typeShopArticleTwo = "RE/MX"
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -210,25 +209,211 @@ class ViewController: UIViewController {
        }
         
         var mainP: MainPageContent?
-        /*
-        aws.getMain({(main: MainPageContent) in
-            
+        var integrate: MiddleIntegration = MiddleIntegration()
+        integrate.getMainPage(){
+            (main: MainPageContent) in
             mainP = main
-        })
-        */
+            
+            // Hero Articles
+            let heroOne = mainP!.hero[0] as! ThumbNail
+            let heroTwo = mainP!.hero[1] as! ThumbNail
+            let heroThree = mainP!.hero[2] as! ThumbNail
+            
+            // Hero One
+            self.heroOneView.image = heroOne.pic
+            self.heroOneTitle.text = heroOne.title
+            
+            self.heroOneTitle.font = UIFont(name: "Roboto-Bold", size: 18)
+            self.heroOneTitle.textColor = UIColor.whiteColor()
+            
+            // Hero Two
+            self.heroTwoView.image = heroTwo.pic
+            self.heroTwoTitle.text = heroTwo.title
+            
+            self.heroTwoTitle.font = UIFont(name: "Roboto-Bold", size: 18)
+            self.heroTwoTitle.textColor = UIColor.whiteColor()
+            
+            // Hero Three
+            self.heroThreeView.image = heroThree.pic
+            self.heroThreeTitle.text = heroThree.title
+            
+            self.heroThreeTitle.font = UIFont(name: "Roboto-Bold", size: 18)
+            self.heroThreeTitle.textColor = UIColor.whiteColor()
+            
+            // Featured Articles
+            let featuredOne = mainP!.subHero[0] as! ThumbNail
+            let featuredTwo = mainP!.subHero[1] as! ThumbNail
+            let featuredThree = mainP!.subHero[2] as! ThumbNail
+            let featuredFour = mainP!.subHero[3] as! ThumbNail
+            
+            // Featured One
+            self.articleOne.image = featuredOne.pic
+            self.articleOneTitle.text = featuredOne.title
+            
+            self.articleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+            self.articleOneTitle.textColor = UIColor.blackColor()
+            self.articleOneTitle.textAlignment = .Center
+            
+            // Featured Two
+            self.articleTwo.image = featuredTwo.pic
+            self.articleTwoTitle.text = featuredTwo.title
+            
+            self.articleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+            self.articleTwoTitle.textColor = UIColor.blackColor()
+            self.articleTwoTitle.textAlignment = .Center
+            
+            // Featured Three
+            self.articleThree.image = featuredThree.pic
+            self.articleThreeTitle.text = featuredThree.title
+            
+            self.articleThreeTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+            self.articleThreeTitle.textColor = UIColor.blackColor()
+            self.articleThreeTitle.textAlignment = .Center
+            
+            // Featured Four
+            self.articleFour.image = featuredFour.pic
+            self.articleFourTitle.text = featuredFour.title
+            
+            self.articleFourTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+            self.articleFourTitle.textColor = UIColor.blackColor()
+            self.articleFourTitle.textAlignment = .Center
+            
+            let contentHero:[SubHero] = mainP!.contentHero
+            
+            for categoryHero in contentHero {
+                let mainH :
+                    ThumbNail = categoryHero.main as! ThumbNail
+                let subC: [Content] = categoryHero.sub
+                let sub1: ThumbNail = subC[0] as! ThumbNail
+                let sub2: ThumbNail = subC[1] as! ThumbNail
+                
+                switch categoryHero.type {
+                    case "read":
+                        self.readHero.image = mainH.pic
+                        self.readHeroTitle.text = mainH.title
+                        self.readHeroType.text = categoryHero.type
+                        self.readArticleOne.image = sub1.pic
+                        self.readArticleOneTitle.text = sub1.title
+                        self.readArticleOneType.text = categoryHero.type
+                        self.readArticleTwo.image = sub2.pic
+                        self.readArticleTwoTitle.text = sub2.title
+                        self.readArticleTwoType.text = categoryHero.type
+                    
+                    case "watch":
+                        self.watchHero.image = mainH.pic
+                        self.watchHeroTitle.text = mainH.title
+                        self.watchHeroType.text = categoryHero.type
+                        self.watchArticleOne.image = sub1.pic
+                        self.watchArticleOneTitle.text = sub1.title
+                        self.watchArticleOneType.text = categoryHero.type
+                        self.watchArticleTwo.image = sub2.pic
+                        self.watchArticleTwoTitle.text = sub2.title
+                        self.watchArticleTwoType.text = categoryHero.type
+                    
+                    case "shop":
+                        self.shopHero.image = mainH.pic
+                        self.shopHeroTitle.text = mainH.title
+                        self.shopHeroType.text = categoryHero.type
+                        self.shopArticleOne.image = sub1.pic
+                        self.shopArticleOneTitle.text = sub1.title
+                        self.shopArticleOneType.text = categoryHero.type
+                        self.shopArticleTwo.image = sub2.pic
+                        self.shopArticleTwoTitle.text = sub2.title
+                        self.shopArticleTwoType.text = categoryHero.type
+                    
+                    case "learn":
+                        self.learnHero.image = mainH.pic
+                        self.learnHeroTitle.text = mainH.title
+                        self.learnHeroType.text = categoryHero.type
+                        self.learnArticleOne.image = sub1.pic
+                        self.learnArticleOneTitle.text = sub1.title
+                        self.learnArticleOneType.text = categoryHero.type
+                        self.learnArticleTwo.image = sub2.pic
+                        self.learnArticleTwoTitle.text = sub2.title
+                        self.learnArticleTwoType.text = categoryHero.type
+                    
+                default:
+                    break
+                    
+                }
+                
+                // Watch 
+                
+                self.watchHeroTitle.font = UIFont(name: "Roboto-Bold", size: 18)
+                self.watchHeroTitle.textColor = UIColor.whiteColor()
+                
+                self.watchHeroType.font = UIFont(name: "Roboto-Medium", size: 12)
+                self.watchHeroType.textColor = typeColor
+                
+                self.watchArticleOneType.font = UIFont(name: "Roboto-Medium", size: 12)
+                self.watchArticleOneType.textColor = typeColor
+                self.watchArticleOneType.textAlignment = .Center
+                
+                self.watchArticleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+                self.watchArticleOneTitle.textColor = UIColor.blackColor()
+                self.watchArticleOneTitle.textAlignment = .Center
+                
+                self.watchArticleTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
+                self.watchArticleTwoType.textColor = typeColor
+                self.watchArticleTwoType.textAlignment = .Center
+                
+                self.watchArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+                self.watchArticleTwoTitle.textColor = UIColor.blackColor()
+                self.watchArticleTwoTitle.textAlignment = .Center
+                
+                // Read 
+                
+                self.readHeroTitle.font = UIFont(name: "Roboto-Bold", size: 18)
+                self.readHeroTitle.textColor = UIColor.whiteColor()
+                
+                self.readHeroType.font = UIFont(name: "Roboto-Medium", size: 12)
+                self.readHeroType.textColor = typeColor
+                
+                self.readArticleOneType.font = UIFont(name: "Roboto-Medium", size: 12)
+                self.readArticleOneType.textColor = typeColor
+                self.readArticleOneType.textAlignment = .Center
+                
+                self.readArticleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+                self.readArticleOneTitle.textColor = UIColor.blackColor()
+                self.readArticleOneTitle.textAlignment = .Center
+                
+                self.readArticleTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
+                self.readArticleTwoType.textColor = typeColor
+                self.readArticleTwoType.textAlignment = .Center
+                
+                self.readArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+                self.readArticleTwoTitle.textColor = UIColor.blackColor()
+                self.readArticleTwoTitle.textAlignment = .Center
+                
+                // Learn
+                
+                self.learnHeroTitle.font = UIFont(name: "Roboto-Bold", size: 18)
+                self.learnHeroTitle.textColor = UIColor.whiteColor()
+                
+                self.learnHeroType.font = UIFont(name: "Roboto-Medium", size: 12)
+                self.learnHeroType.textColor = typeColor
+                
+                self.learnArticleOneType.font = UIFont(name: "Roboto-Medium", size: 12)
+                self.learnArticleOneType.textColor = typeColor
+                self.learnArticleOneType.textAlignment = .Center
+                
+                self.learnArticleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+                self.learnArticleOneTitle.textColor = UIColor.blackColor()
+                self.learnArticleOneTitle.textAlignment = .Center
+                
+                self.learnArticleTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
+                self.learnArticleTwoType.textColor = typeColor
+                self.learnArticleTwoType.textAlignment = .Center
+                
+                self.learnArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+                self.learnArticleTwoTitle.textColor = UIColor.blackColor()
+                self.learnArticleTwoTitle.textAlignment = .Center
+                
+            }
+            
+        }
         
-        // Color for Type
-        heroOneView.image = imageHeroOne
-        
-        heroOneTitle.text = titleHeroOne
-        
-        // Hero One
-        //heroOneView.image = UIImage (named: "tempHeroOne.jpg")
-        heroOneView.image = imageHeroOne
-        
-        heroOneTitle.text = titleHeroOne
-        heroOneTitle.font = UIFont(name: "Roboto-Bold", size: 18)
-        heroOneTitle.textColor = UIColor.whiteColor()
+        // Hero One Type 
         
         heroOneType.text = typeHeroOne
         heroOneType.font = UIFont(name: "Roboto-Medium", size: 12)
@@ -240,11 +425,7 @@ class ViewController: UIViewController {
         let tapRecognizerHeroOne = UITapGestureRecognizer(target: self, action: "imageTapped:")
         heroOneView.addGestureRecognizer(tapRecognizerHeroOne)
         
-        // Hero Two
-        heroTwoView.image = imageHeroTwo
-        heroTwoTitle.text = titleHeroTwo
-        heroTwoTitle.font = UIFont(name: "Roboto-Bold", size: 18)
-        heroTwoTitle.textColor = UIColor.whiteColor()
+        // Hero Two Type
         
         heroTwoType.text = typeHeroTwo
         heroTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
@@ -256,12 +437,7 @@ class ViewController: UIViewController {
         let tapRecognizerHeroTwo = UITapGestureRecognizer(target: self, action: "imageTapped:")
         heroTwoView.addGestureRecognizer(tapRecognizerHeroTwo)
         
-        // Hero Three
-        heroThreeView.image = imageHeroThree
-        heroThreeTitle.text = titleHeroThree
-        heroThreeTitle.font = UIFont(name: "Roboto-Bold", size: 18)
-        heroThreeTitle.textColor = UIColor.whiteColor()
-
+        // Hero Three Type
         
         heroThreeType.text = typeHeroThree
         heroThreeType.font = UIFont(name: "Roboto-Medium", size: 12)
@@ -306,17 +482,10 @@ class ViewController: UIViewController {
         self.heroThreeView.layer.addSublayer(gradientLayerH3)
         
         // Article One
-        articleOne.image = imageArticleOne
-        
         articleOneType.text = typeArticleOne
         articleOneType.font = UIFont(name: "Roboto-Medium", size: 12)
         articleOneType.textColor = typeColor
         articleOneType.textAlignment = .Center
-        
-        articleOneTitle.text = titleArticleOne
-        articleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
-        articleOneTitle.textColor = UIColor.blackColor()
-        articleOneTitle.textAlignment = .Center
         
         
         // Article One Tap Gesture Recognizer
@@ -326,19 +495,11 @@ class ViewController: UIViewController {
         articleOne.addGestureRecognizer(tapRecognizerArticleOne)
         
         // Article Two
-        articleTwo.image = imageArticleTwo
         
         articleTwoType.text = typeArticleTwo
         articleTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
         articleTwoType.textColor = typeColor
         articleTwoType.textAlignment = .Center
-        
-        
-        articleTwoTitle.text = titleArticleTwo
-        articleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
-        articleTwoTitle.textColor = UIColor.blackColor()
-        articleTwoTitle.textAlignment = .Center
-        
         
         // Article Two Tap Gesture Recognizer
         articleTwo.tag = 5
@@ -347,18 +508,11 @@ class ViewController: UIViewController {
         articleTwo.addGestureRecognizer(tapRecognizerArticleTwo)
         
         // Article Three
-        articleThree.image = imageArticleThree
         
         articleThreeType.text = typeArticleThree
         articleThreeType.font = UIFont(name: "Roboto-Medium", size: 12)
         articleThreeType.textColor = typeColor
         articleThreeType.textAlignment = .Center
-        
-        
-        articleThreeTitle.text = titleArticleThree
-        articleThreeTitle.font = UIFont(name: "Roboto-Bold", size: 14)
-        articleThreeTitle.textColor = UIColor.blackColor()
-        articleThreeTitle.textAlignment = .Center
         
         
         // Article Three Tap Gesture Recognizer
@@ -368,17 +522,11 @@ class ViewController: UIViewController {
         articleThree.addGestureRecognizer(tapRecognizerArticleThree)
         
         // Article Four
-        articleFour.image = imageArticleFour
         
         articleFourType.text = typeArticleFour
         articleFourType.font = UIFont(name: "Roboto-Medium", size: 12)
         articleFourType.textColor = typeColor
         articleFourType.textAlignment = .Center
-        
-        
-        articleFourTitle.text = titleArticleFour
-        articleFourTitle.font = UIFont(name: "Roboto-Bold", size: 14)
-        articleFourTitle.textAlignment = .Center
         
         
         // Article Four Tap Gesture Recognizer
@@ -395,17 +543,7 @@ class ViewController: UIViewController {
         watchLabel.textColor = UIColor.blackColor()
         
         
-        // Hero 
-        
-        self.watchHero.image = imageWatchHero
-        
-        watchHeroTitle.text = titleWatchHero
-        watchHeroTitle.font = UIFont(name: "Roboto-Bold", size: 18)
-        watchHeroTitle.textColor = UIColor.whiteColor()
-        
-        watchHeroType.text = typeWatchHero
-        watchHeroType.font = UIFont(name: "Roboto-Medium", size: 12)
-        watchHeroType.textColor = typeColor
+        // Hero
         
         // Hero Gradient  --- Broken, Fix Later
        
@@ -426,18 +564,6 @@ class ViewController: UIViewController {
         watchHero.addGestureRecognizer(tapRecognizerWatchHero)
         
         // Article One
-        watchArticleOne.image = imageWatchArticleOne
-        
-        watchArticleOneType.text = typeWatchArticleOne
-        watchArticleOneType.font = UIFont(name: "Roboto-Medium", size: 12)
-        watchArticleOneType.textColor = typeColor
-        watchArticleOneType.textAlignment = .Center
-        
-        
-        watchArticleOneTitle.text = titleWatchArticleOne
-        watchArticleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
-        watchArticleOneTitle.textColor = UIColor.blackColor()
-        watchArticleOneTitle.textAlignment = .Center
         
         
         // Watch Article One Tap Gesture Recognizer
@@ -448,18 +574,6 @@ class ViewController: UIViewController {
         
         
         // Article Two
-        watchArticleTwo.image = imageWatchArticleTwo
-        
-        watchArticleTwoType.text = typeWatchArticleTwo
-        watchArticleTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
-        watchArticleTwoType.textColor = typeColor
-        watchArticleTwoType.textAlignment = .Center
-        
-        
-        watchArticleTwoTitle.text = titleWatchArticleTwo
-        watchArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
-        watchArticleTwoTitle.textColor = UIColor.blackColor()
-        watchArticleTwoTitle.textAlignment = .Center
         
         // Watch Article Two Tap Gesture Recognizer
         watchArticleTwo.tag = 12
@@ -475,16 +589,6 @@ class ViewController: UIViewController {
         readLabel.textColor = UIColor.blackColor()
         
         // Hero
-        
-        self.readHero.image = imageReadHero
-        
-        readHeroTitle.text = titleReadHero
-        readHeroTitle.font = UIFont(name: "Roboto-Bold", size: 18)
-        readHeroTitle.textColor = UIColor.whiteColor()
-        
-        readHeroType.text = typeReadHero
-        readHeroType.font = UIFont(name: "Roboto-Medium", size: 12)
-        readHeroType.textColor = typeColor
         
         // Hero Gradient  --- Broken, Fix Later
         
@@ -505,18 +609,6 @@ class ViewController: UIViewController {
         readHero.addGestureRecognizer(tapRecognizerReadHero)
         
         // Article One
-        readArticleOne.image = imageReadArticleOne
-        
-        readArticleOneType.text = typeReadArticleOne
-        readArticleOneType.font = UIFont(name: "Roboto-Medium", size: 12)
-        readArticleOneType.textColor = typeColor
-        readArticleOneType.textAlignment = .Center
-        
-        
-        readArticleOneTitle.text = titleReadArticleOne
-        readArticleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
-        readArticleOneTitle.textColor = UIColor.blackColor()
-        readArticleOneTitle.textAlignment = .Center
         
         // Read Article One Tap Gesture Recognizer
         readArticleOne.tag = 21
@@ -526,18 +618,6 @@ class ViewController: UIViewController {
         
         
         // Article Two
-        readArticleTwo.image = imageReadArticleTwo
-        
-        readArticleTwoType.text = typeReadArticleTwo
-        readArticleTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
-        readArticleTwoType.textColor = typeColor
-        readArticleTwoType.textAlignment = .Center
-        
-        
-        readArticleTwoTitle.text = titleReadArticleTwo
-        readArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
-        readArticleTwoTitle.textColor = UIColor.blackColor()
-        readArticleTwoTitle.textAlignment = .Center
         
         // Read Article Two Tap Gesture Recognizer
         readArticleTwo.tag = 22
@@ -553,15 +633,6 @@ class ViewController: UIViewController {
         
         // Hero
         
-        self.learnHero.image = imageLearnHero
-        
-        learnHeroTitle.text = titleLearnHero
-        learnHeroTitle.font = UIFont(name: "Roboto-Bold", size: 18)
-        learnHeroTitle.textColor = UIColor.whiteColor()
-        
-        learnHeroType.text = typeLearnHero
-        learnHeroType.font = UIFont(name: "Roboto-Medium", size: 12)
-        learnHeroType.textColor = typeColor
         
         
         // Hero Gradient  --- Broken, Fix Later
@@ -582,18 +653,6 @@ class ViewController: UIViewController {
         learnHero.addGestureRecognizer(tapRecognizerLearnHero)
         
         // Article One
-        learnArticleOne.image = imageLearnArticleOne
-        
-        learnArticleOneType.text = typeLearnArticleOne
-        learnArticleOneType.font = UIFont(name: "Roboto-Medium", size: 12)
-        learnArticleOneType.textColor = typeColor
-        learnArticleOneType.textAlignment = .Center
-        
-        
-        learnArticleOneTitle.text = titleLearnArticleOne
-        learnArticleOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
-        learnArticleOneTitle.textColor = UIColor.blackColor()
-        learnArticleOneTitle.textAlignment = .Center
         
         // Learn Article One Tap Gesture Recognizer
         learnArticleOne.tag = 31
@@ -603,18 +662,6 @@ class ViewController: UIViewController {
         
         
         // Article Two
-        learnArticleTwo.image = imageLearnArticleTwo
-        
-        learnArticleTwoType.text = typeLearnArticleTwo
-        learnArticleTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
-        learnArticleTwoType.textColor = typeColor
-        learnArticleTwoType.textAlignment = .Center
-        
-        
-        learnArticleTwoTitle.text = titleLearnArticleTwo
-        learnArticleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
-        learnArticleTwoTitle.textColor = UIColor.blackColor()
-        learnArticleTwoTitle.textAlignment = .Center
         
         // Learn Article Two Tap Gesture Recognizer
         learnArticleTwo.tag = 32
