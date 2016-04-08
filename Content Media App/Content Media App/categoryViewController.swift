@@ -11,6 +11,7 @@ import Foundation
 class categoryViewController: UIViewController {
     
     @IBOutlet weak var navButton: UIBarButtonItem!
+    var test = "test"
     
     override func viewDidLoad(){
         
