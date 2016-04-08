@@ -185,15 +185,11 @@ class Helpers{
         //split key
         let tempArr: [String] = oldKey.characters.split{$0 == "/"}.map(String.init)
         
-        let arrcount: Int = tempArr.count - 2
-        var str: String = ""
+        let arrcount: Int = tempArr.count
+        var str: String = tempArr[arrcount-1].lowercaseString
         
-        for i in 0...arrcount
-        {
-            str += (tempArr[i]+"/")
-        }
-        
-        str = str + "ArticleText.rtf"
+        str += ".txt"
+        str = str.stringByReplacingOccurrencesOfString(":", withString: "-")
         
         return str
 

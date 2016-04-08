@@ -12,11 +12,13 @@ class MiddleIntegration{
     
     let aws: ConnectToAWS
     let help: Helpers
+    let contentAws: GetSingleContent
     
     init()
     {
         self.aws = ConnectToAWS()
         self.help = Helpers(aws: self.aws)
+        self.contentAws = GetSingleContent()
     }
     
     func getMainPage(completion: (main: MainPageContent) -> ()){
@@ -33,6 +35,9 @@ class MiddleIntegration{
     {
         let srcKey: String = self.help.createKeyFromContent(cont)
         
+        self.contentAws.getContent(srcKey, type: "Read", cont: cont){(single: Content) in
+            (completion(retContent: single as! ArticleObj))
+        }
         
     }
     

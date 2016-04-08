@@ -12,6 +12,7 @@
 		8524068A1CAE18FE0086FACB /* ConnectToAWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852406891CAE18FE0086FACB /* ConnectToAWS.swift */; };
 		8524068C1CB0C89F0086FACB /* SubHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8524068B1CB0C89F0086FACB /* SubHero.swift */; };
 		8524068E1CB0C9F60086FACB /* ThumbNail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8524068D1CB0C9F60086FACB /* ThumbNail.swift */; };
+		8537BEF01CB7928500E30EC6 /* GetSingleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537BEEF1CB7928500E30EC6 /* GetSingleContent.swift */; };
 		8539A5C61CB708F0007E4C38 /* MiddleIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539A5C51CB708F0007E4C38 /* MiddleIntegration.swift */; };
 		8539A5C81CB70A8A007E4C38 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539A5C71CB70A8A007E4C38 /* Helpers.swift */; };
 		856425CE1C829B3D00D6AEE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856425CD1C829B3D00D6AEE6 /* AppDelegate.swift */; };
@@ -75,6 +76,7 @@
 		852406891CAE18FE0086FACB /* ConnectToAWS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectToAWS.swift; sourceTree = "<group>"; };
 		8524068B1CB0C89F0086FACB /* SubHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubHero.swift; sourceTree = "<group>"; };
 		8524068D1CB0C9F60086FACB /* ThumbNail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbNail.swift; sourceTree = "<group>"; };
+		8537BEEF1CB7928500E30EC6 /* GetSingleContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSingleContent.swift; sourceTree = "<group>"; };
 		8539A5C51CB708F0007E4C38 /* MiddleIntegration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiddleIntegration.swift; sourceTree = "<group>"; };
 		8539A5C71CB70A8A007E4C38 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		856425CA1C829B3D00D6AEE6 /* Content Media App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Content Media App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,6 +234,7 @@
 				8593BE191CA4E489009FECB5 /* InterfaceToBackEnd.swift */,
 				8593BE261CA4F140009FECB5 /* FBTest.swift */,
 				852406891CAE18FE0086FACB /* ConnectToAWS.swift */,
+				8537BEEF1CB7928500E30EC6 /* GetSingleContent.swift */,
 			);
 			name = BackEnd;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				856425F61C829DB500D6AEE6 /* SwiftyJSON.swift in Sources */,
 				856425D01C829B3D00D6AEE6 /* ViewController.swift in Sources */,
 				856425CE1C829B3D00D6AEE6 /* AppDelegate.swift in Sources */,
+				8537BEF01CB7928500E30EC6 /* GetSingleContent.swift in Sources */,
 				8593BE1A1CA4E489009FECB5 /* InterfaceToBackEnd.swift in Sources */,
 				8539A5C61CB708F0007E4C38 /* MiddleIntegration.swift in Sources */,
 				8593BE271CA4F140009FECB5 /* FBTest.swift in Sources */,
