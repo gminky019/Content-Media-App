@@ -10,9 +10,9 @@ import Foundation
 
 class VideoObj: Content {
     
-    init(Vidtitle: String, Viddescription: String,url: String, youtube: Bool , other: Bool, otherDescr: String? )
+    init(Vidtitle: String, Viddescription: String,url: String, youtube: Bool , other: Bool,key: String ,otherDescr: String? )
     {
-        super.init(title: Vidtitle, description: Viddescription)
+        super.init(title: Vidtitle, description: Viddescription, key: key)
         
         self.url = NSURL(string: url)
         

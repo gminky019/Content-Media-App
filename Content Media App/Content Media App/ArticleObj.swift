@@ -14,8 +14,8 @@ class ArticleObj: Content {
     var heroPics = [Picture]()
     var regularPics = [Picture]()
     
-    init(title: String, description: String, article: String?, author: String?) {
-        super.init(title: title, description: description)
+    init(title: String, description: String,key: String ,article: String?, author: String?) {
+        super.init(title: title, description: description, key: key)
         
         self.text = article
         self.author = author
