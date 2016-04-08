@@ -18,6 +18,7 @@ class ConnectToAWS{
     var _HeroURLDict: [String: [NSURL]]
     var _urlsTemp : [NSURL]
     var _urlKey : [String: String]
+    var _globalCountVar : Int
     
     
     //let _baseURL : String
@@ -33,11 +34,12 @@ class ConnectToAWS{
         self._MainKeyDict = [String: AWSS3Object]()
         self._HeroURLDict = [String: [NSURL]]()
         self._urlKey = [String: String]()
+        self._globalCountVar = 0
     
     }
     
     
-    func getMain(completion: (main: MainPageContent)->()){
+    func getMain(completion: (main: [String: [NSURL]])->()){
         
         self.getKeys("Hero") {(keys: [AWSS3Object]) in
              self._keys = keys
@@ -57,43 +59,65 @@ class ConnectToAWS{
             
             var urls: [NSURL]  = [NSURL]()
             
-            for r in req
-            {
-           // dispatch_async(queue, {() -> Void in
             
-                var error: NSError?
-                let DictKey: String = self.findMainURLKey(r.key!)
+            self.downLoadMain(req) {( mainDict: [String: [NSURL]]) in
                 
-                self.downLoadV2(r) { (url: NSURL) in
-                    
-                    var temp: [NSURL]
-                    
-                    if(!self._HeroURLDict.keys.contains(DictKey).boolValue)
-                    {
-                        temp = [NSURL]()
-                    }
-                    else
-                    {
-                        temp = self._HeroURLDict[DictKey]!
-                    }
-                    
-                    temp.append(url)
-                    
-                    self._HeroURLDict[DictKey] = temp
-                    
-                    self._urlsTemp.append(url)
-                    
-                }
+                (completion(main: mainDict))
             }
-            
-            
             self._urlsTemp = urls
         }
         
         
     }
     
-    func downLoadV2(downReq: AWSS3TransferManagerDownloadRequest, completionDown: (url: NSURL) ->())
+    func downLoadMain(reqs : [AWSS3TransferManagerDownloadRequest], complete: (mainDict: [String: [NSURL]])-> ())
+    {
+        self._globalCountVar = 0
+        
+        let firstGroup = dispatch_group_create()
+        
+        for r in reqs
+        {
+            // dispatch_async(queue, {() -> Void in
+            
+            dispatch_group_enter(firstGroup)
+            
+            let DictKey: String = self.findMainURLKey(r.key!)
+            
+            
+            
+            self.downLoadV2(r, group: firstGroup) { (url: NSURL) in
+                
+                var temp: [NSURL]
+                
+                if(!self._HeroURLDict.keys.contains(DictKey).boolValue)
+                {
+                    temp = [NSURL]()
+                }
+                else
+                {
+                    temp = self._HeroURLDict[DictKey]!
+                }
+                
+                temp.append(url)
+                
+                self._HeroURLDict[DictKey] = temp
+                dispatch_group_leave(firstGroup)
+                
+                self._globalCountVar += 1
+                self._urlsTemp.append(url)
+                
+                
+            }
+        }
+        
+        dispatch_group_notify(firstGroup, dispatch_get_main_queue()) {
+
+        (complete(mainDict: self._HeroURLDict))
+        }
+    }
+    
+    func downLoadV2(downReq: AWSS3TransferManagerDownloadRequest, group: dispatch_group_t, completionDown: (url: NSURL) ->())
     {
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
 
@@ -101,6 +125,7 @@ class ConnectToAWS{
         var downLoadPath: NSURL?
         
         print("Getting:  " + downReq.key! + "\n")
+        dispatch_group_enter(group)
         
         transferManager.download(downReq).continueWithBlock({(task) -> AnyObject! in
             if let error = task.error{
@@ -117,12 +142,14 @@ class ConnectToAWS{
                 print("download failed: [\(exception)]")
             }
             else{
+                dispatch_group_leave(group)
+                
                 dispatch_async(dispatch_get_main_queue(), {() -> Void in
                     
                     print("SUCCESS ON  " + downReq.key! + "\n\n")
                     downLoadPath = downReq.downloadingFileURL
                     
-                    
+                    dispatch_group_leave(group)
                     
                     completionDown(url: downLoadPath!)
                 })
@@ -162,6 +189,10 @@ class ConnectToAWS{
                     dicKey = "read"
                 }
             }
+            else if(keyVal.lowercaseString.rangeOfString("read/sub") != nil)
+            {
+                dicKey = "readsub"
+            }
             else if(keyVal.lowercaseString.rangeOfString("learn/hero") != nil)
             {
                 if(keyVal.lowercaseString.rangeOfString("sub") != nil)
@@ -172,6 +203,10 @@ class ConnectToAWS{
                 {
                     dicKey = "learn"
                 }
+            }
+            else if(keyVal.lowercaseString.rangeOfString("learn/sub") != nil)
+            {
+                dicKey = "learnsub"
             }
             else if(keyVal.lowercaseString.rangeOfString("shop/hero") != nil)
             {
@@ -184,6 +219,10 @@ class ConnectToAWS{
                     dicKey = "shop"
                 }
             }
+            else if(keyVal.lowercaseString.rangeOfString("shop/sub") != nil)
+            {
+                dicKey = "shopsub"
+            }
             else if(keyVal.lowercaseString.rangeOfString("watch/hero") != nil)
             {
                 if(keyVal.lowercaseString.rangeOfString("sub") != nil)
@@ -194,6 +233,10 @@ class ConnectToAWS{
                 {
                     dicKey = "watch"
                 }
+            }
+            else if(keyVal.lowercaseString.rangeOfString("watch/sub") != nil)
+            {
+                dicKey = "watchsub"
             }
             else
             {
@@ -321,11 +364,11 @@ class ConnectToAWS{
             {
                 str = s3.key!.stringByReplacingOccurrencesOfString("/", withString: "+")
             }
-            self._urlKey[str] = s3.key!
+
             
             let downFileURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent(str)
             let downFilePath = downFileURL.path!
-            
+                        self._urlKey[downFileURL.path!] = s3.key
             if NSFileManager.defaultManager().fileExistsAtPath(tempURL.path!){
                 //reqList.append(nil)
                 print("Error getting download request file path exists")

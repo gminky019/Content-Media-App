@@ -128,7 +128,7 @@ class Helpers{
         
         subHeroes.append(createContentSub(typeHeroDict, sub: subHeroDict, key: "read"))
         subHeroes.append(createContentSub(typeHeroDict, sub: subHeroDict, key: "watch"))
-        subHeroes.append(createContentSub(typeHeroDict, sub: subHeroDict, key: "shop"))
+       // subHeroes.append(createContentSub(typeHeroDict, sub: subHeroDict, key: "shop"))
         subHeroes.append(createContentSub(typeHeroDict, sub: subHeroDict, key: "learn"))
         
         return MainPageContent(heros: MainContents, sub: subMainContents, contSub: subHeroes)
@@ -167,6 +167,14 @@ class Helpers{
     }
     
     func getKeyName(key: String) -> String{
+        /*
+        if(self._awsInstance.getUrlKeyDict().
+        {*/
         return self._awsInstance.getUrlKeyDict()[key]!
+       /*
+        else{
+            return "Getting Key Error"
+        }*/
+        //return ""
     }
 }

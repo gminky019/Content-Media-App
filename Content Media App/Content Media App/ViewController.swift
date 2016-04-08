@@ -114,12 +114,19 @@ class ViewController: UIViewController {
         let aws: ConnectToAWS = ConnectToAWS()
         
         var mainP: MainPageContent?
-        
+        /*
         aws.getMain({(main: MainPageContent) in
             
             mainP = main
         })
+        */
         
+        var integrate: MiddleIntegration = MiddleIntegration()
+        
+        integrate.getMainPage(){(main: MainPageContent) in
+            
+            mainP = main
+        }
         
         
         let typeColor = UIColor.init(red: 221/255, green: 180/255, blue: 0/255, alpha: 1)

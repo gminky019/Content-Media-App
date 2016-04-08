@@ -11,18 +11,20 @@ import Foundation
 class MiddleIntegration{
     
     let aws: ConnectToAWS
+    let help: Helpers
     
     init()
     {
         self.aws = ConnectToAWS()
+        self.help = Helpers(aws: self.aws)
     }
     
     func getMainPage(completion: (main: MainPageContent) -> ()){
+        var mainP : MainPageContent?
         
-        
-        self.aws.getMain({(main: MainPageContent) in
-            
-            
+        self.aws.getMain({(main: [String: [NSURL]]) in
+           mainP =  self.help.setMainPageContentObj(main)
+            (completion(main: mainP!))
         })
         
     }
