@@ -57,6 +57,11 @@ class GetContentPages {
             self._KeyVal = self._KeyVal! + "hero"
             self._HeroPage = false
         }
+        else
+        {
+            self._KeyVal = self._KeyVal! + "/"
+            self._KeyVal = self._KeyVal! + "non"
+        }
     }
     
     func getKeys(complete: (completion: [AWSS3Object]) -> ())
