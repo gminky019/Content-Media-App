@@ -31,9 +31,22 @@ class articleViewController: UIViewController {
         
         let accessViewController: ViewController = ViewController(nibName: nil, bundle: nil)
         
+        /*var tempCont : Content = Content(title: "Test Art", description: "My Test Art", key: "/dolphins-_communication_with_sonar")
+        var integrate: MiddleIntegration = MiddleIntegration()
+        
+        var realArt: ArticleObj?
+        integrate.getContent(tempCont){
+            (retContent: Content) in
+            realArt = retContent as! ArticleObj
+            
+         self.articleText.text = realArt?.text
+        }*/
+            
+
+        
         switch article {
         case "Hero One":
-            articleImage.image = accessViewController.imageHeroOne
+            self.articleImage.image = accessViewController.imageHeroOne
             articleType.text = accessViewController.typeHeroOne
             articleTitle.text = accessViewController.titleHeroOne
             articleText.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nulla, ultricies id cursus nec, porta at eros. Nulla risus odio, ultrices vitae ipsum sit amet, fringilla egestas dolor. Fusce ornare nulla sit amet nunc suscipit laoreet. Quisque viverra, tortor vel rutrum convallis, nulla eros ornare metus, quis facilisis justo quam eget ex. Integer feugiat efficitur urna malesuada dapibus. Etiam aliquam lectus leo, tempus porttitor turpis suscipit eget. Duis accumsan tortor ut ligula dictum, vitae rutrum metus vestibulum. Pellentesque ultricies metus nunc, in congue mauris vestibulum eget. Praesent congue ac neque in suscipit. Vivamus blandit ultrices nulla sed consectetur. Vestibulum ac ornare dui. Praesent id lorem hendrerit justo vehicula pulvinar. Aenean pharetra volutpat sapien, quis molestie mauris ullamcorper vel. Sed dui sapien, laoreet non enim ac, aliquet accumsan metus. Pellentesque consectetur tristique arcu at fringilla."
@@ -114,6 +127,8 @@ class articleViewController: UIViewController {
             articleType.text = "ERROR"
             articleTitle.text = "Error: Unexpected Error has Occured"
         }
+            
+        
 
         // Format text view title to correct size 
         
@@ -143,7 +158,7 @@ class articleViewController: UIViewController {
         articleText.textAlignment = NSTextAlignment.Justified
         
         
+    
     }
-
     
 }

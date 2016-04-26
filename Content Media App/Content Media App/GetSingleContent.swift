@@ -29,7 +29,7 @@ class GetSingleContent {
     {
         do
         {
-        let txt: String = try String(contentsOfURL: url, encoding: NSUTF8StringEncoding)
+        let txt: String = try String(contentsOfURL: url, encoding: NSUTF16StringEncoding)
             
             let singleCont: ArticleObj = ArticleObj(title: cont.title, description: cont.description, key: cont.awskey, article: txt, author: "Garrett Minky")
             
@@ -69,10 +69,12 @@ class GetSingleContent {
             str = str.stringByReplacingOccurrencesOfString("/", withString: "+")
         }
         
-        let downFileURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent(str)
+        var downFileURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent(str)
         
         if NSFileManager.defaultManager().fileExistsAtPath(downFileURL.path!){
             //reqList.append(nil)
+            let r : Int32 = rand()
+            //downFileURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent("temp" + String(r) + str)
             print("Error getting download request file path exists")
         }
         else

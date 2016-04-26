@@ -140,6 +140,11 @@ class Helpers{
         return subHero
     }
     
+    func createThumbHelper(url: NSURL) -> ThumbNail
+    {
+        return ThumbNail(title: getTitle(url), description: getDesc(url), key: getKeyName(url.path!), picture: UIImage(contentsOfFile: url.path!)!)
+    }
+    
     func getTitle(url: NSURL) -> String
     {
         var temp : String? = self.getKeyName(url.path!)
