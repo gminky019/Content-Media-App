@@ -142,7 +142,7 @@ class Helpers{
     
     func createThumbHelper(url: NSURL) -> ThumbNail
     {
-        return ThumbNail(title: getTitle(url), description: getDesc(url), key: getKeyName(url.path!), picture: UIImage(contentsOfFile: url.path!)!)
+        return ThumbNail(title: "Needs FIXING", description: getDesc(url), key: "BOBOBOBOBOB", picture: UIImage(contentsOfFile: url.path!)!)
     }
     
     func getTitle(url: NSURL) -> String
@@ -175,6 +175,8 @@ class Helpers{
         /*
         if(self._awsInstance.getUrlKeyDict().
         {*/
+        
+        
         return self._awsInstance.getUrlKeyDict()[key]!
        /*
         else{

@@ -16,6 +16,9 @@ class GetContentPages {
     let _S3 : AWSS3
     var _ContentCounter: Int
     var _HeroPage: Bool
+    var _arrayHolder: [NSURL]
+    var _heroA : [NSURL]
+    var _nonA: [NSURL]
     
     init()
     {
@@ -24,6 +27,9 @@ class GetContentPages {
         self._S3 = AWSS3.defaultS3()
         self._ContentCounter = 0
         self._HeroPage = false
+        self._arrayHolder = [NSURL] ()
+        self._nonA = [NSURL]()
+        self._heroA = [NSURL]()
     }
     
     func setType(typer: String)
@@ -32,14 +38,15 @@ class GetContentPages {
     }
     func setHero()
     {
-        self._HeroPage = true
+        self._HeroPage = false
     }
     
     func setKey ()
     {
+        self._KeyVal = "/"
         switch self._Type {
         case "Read":
-            self._KeyVal = "\read"
+            self._KeyVal = "read"
         case "Learn":
             self._KeyVal = "learn"
         case "Shop":
@@ -50,26 +57,30 @@ class GetContentPages {
         default:
             break
         }
+        self._KeyVal = self._KeyVal! + "/"
         
+        /*
         if(self._HeroPage)
         {
             self._KeyVal = self._KeyVal! + "/"
             self._KeyVal = self._KeyVal! + "hero"
+            self._KeyVal = self._KeyVal! + "/"
             self._HeroPage = false
         }
         else
         {
             self._KeyVal = self._KeyVal! + "/"
             self._KeyVal = self._KeyVal! + "non"
-        }
+            self._KeyVal = self._KeyVal! + "/"
+        }*/
     }
     
     func getKeys(complete: (completion: [AWSS3Object]) -> ())
     {
         let keyReq: AWSS3ListObjectsRequest = AWSS3ListObjectsRequest()
         
-        keyReq.bucket = "cmaContentPages"
-        keyReq.delimiter = "/"
+        keyReq.bucket = "cmacontentpages"
+        //keyReq.delimiter = "/"
         keyReq.prefix = self._KeyVal
         
         self._S3.listObjects(keyReq).continueWithSuccessBlock({(task) -> AnyObject! in
@@ -121,7 +132,7 @@ class GetContentPages {
             else
             {
                 let downReq = AWSS3TransferManagerDownloadRequest()
-                downReq.bucket = "contentmediaapp"
+                downReq.bucket = "cmacontentpages"
                 downReq.key = s3.key
                 downReq.downloadingFileURL = downFileURL
                 
@@ -219,7 +230,7 @@ class GetContentPages {
             }
             else
             {
-                fileType = "Other"
+                fileType = "non"
                 arrUrl = non
             }
             
@@ -229,15 +240,27 @@ class GetContentPages {
             
             
             self.downloadContent(r, group: firstGroup){ (compl: NSURL) in
-                arrUrl.append(compl)
+              //  arrUrl.append(compl)
+                
+            //  self._arrayHolder.append(compl)
+                
+                
+                if(fileType == "Hero")
+                {
+                    self._heroA.append(compl)
+                }
+                else{
+                    self._nonA.append(compl)
+                }
+                
             }
         }
         dispatch_group_notify(firstGroup, dispatch_get_main_queue()){
             
             var dict: [String: [NSURL]]  = [String: [NSURL]] ()
             
-            dict["Hero"] = hero
-            dict["Non"] = non
+            dict["Hero"] = self._heroA
+            dict["Non"] = self._nonA
             
             complete(locs: dict)
         }

@@ -200,6 +200,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let typeColor = UIColor.init(red: 221/255, green: 180/255, blue: 0/255, alpha: 1)
+        
+        
 
         // Navigation
         if self.revealViewController() != nil {
@@ -210,6 +212,14 @@ class ViewController: UIViewController {
         
         var mainP: MainPageContent?
         var integrate: MiddleIntegration = MiddleIntegration()
+        var testerPage: [ThumbNail] = [ThumbNail]()
+        
+        integrate.getReadPage(){(returned: [ThumbNail]) in
+            testerPage = returned
+            
+            var thatHolder = 0
+        }
+        
         integrate.getMainPage(){
             (main: MainPageContent) in
             mainP = main
