@@ -122,6 +122,13 @@
 		85ED5ACA1C88AD4A00DA2971 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		A85A99442016F02620F6ABFB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42B94CFB9E89828F48A4A01 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CC335CE11CCF16210023AFB9 /* playicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playicon.png; sourceTree = "<group>"; };
+		CC335CE21CCF16210023AFB9 /* playiconsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playiconsmall.png; sourceTree = "<group>"; };
+		CC335CE31CCF16210023AFB9 /* readicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readicon.png; sourceTree = "<group>"; };
+		CC335CE41CCF16210023AFB9 /* readiconsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readiconsmall.png; sourceTree = "<group>"; };
+		CC335CEB1CD2BE7F0023AFB9 /* watchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = watchViewController.swift; sourceTree = "<group>"; };
+		CC335CED1CD2BEA70023AFB9 /* learnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = learnViewController.swift; sourceTree = "<group>"; };
+		CC335CEF1CD304C90023AFB9 /* CDALoadingLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CDALoadingLogo.png; sourceTree = "<group>"; };
 		CC747D381CB4BC0B00140275 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		CC747D391CB4BC0B00140275 /* instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagram.png; sourceTree = "<group>"; };
 		CC747D3A1CB4BC0B00140275 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
@@ -133,6 +140,7 @@
 		CC747D451CB4C07000140275 /* youtube2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube2.png; sourceTree = "<group>"; };
 		CCC816671CB787FA00E75007 /* categoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryViewController.swift; sourceTree = "<group>"; };
 		CCC816691CB7882C00E75007 /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
+		CCC816671CB787FA00E75007 /* readViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = readViewController.swift; sourceTree = "<group>"; };
 		CCD62A911CAA172200B4E786 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = articleViewController.swift; sourceTree = "<group>"; };
 		CCEB0A321CAB996D00D4F349 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };

@@ -74,6 +74,8 @@ class MiddleIntegration{
     {
         let awsContent: GetContentPages = GetContentPages()
         
+        self.help.setContentAWS(awsContent)
+        
         var temp: [ThumbNail] = [ThumbNail] ()
         
         awsContent.getContentMain("Read"){(loc: [String: [NSURL]]) in
