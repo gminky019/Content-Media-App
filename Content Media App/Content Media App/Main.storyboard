@@ -96,7 +96,14 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" preservesSuperviewLayoutMargins="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6C-Aq-dZb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="3060"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Title Hero One" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csS-HX-gvv">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7U-VT-8Vc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="GWi-qY-Xel"/>
+                                            <constraint firstAttribute="height" constant="200" id="Qvk-PE-jAT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" text="Title Hero One" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csS-HX-gvv">
                                         <rect key="frame" x="5" y="125" width="300" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="IIJ-x7-LOH"/>
@@ -104,16 +111,6 @@
                                         </constraints>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" text="Type H1" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVG-vJ-jyo" userLabel="Type H1">
-                                        <rect key="frame" x="5" y="100" width="80" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="ZBn-4I-A2e"/>
-                                            <constraint firstAttribute="width" constant="80" id="nIb-HF-EQZ"/>
-                                        </constraints>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JEB-vt-qpe">
@@ -1696,13 +1693,16 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7U-VT-8Vc">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" text="Type H1" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVG-vJ-jyo" userLabel="Type H1">
+                                        <rect key="frame" x="5" y="100" width="80" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="375" id="GWi-qY-Xel"/>
-                                            <constraint firstAttribute="height" constant="200" id="Qvk-PE-jAT"/>
+                                            <constraint firstAttribute="height" constant="25" id="ZBn-4I-A2e"/>
+                                            <constraint firstAttribute="width" constant="80" id="nIb-HF-EQZ"/>
                                         </constraints>
-                                    </imageView>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="2oq-kW-8RU" firstAttribute="top" secondItem="gZ4-Lc-8fC" secondAttribute="bottom" constant="36" id="0Gw-Fc-aB7"/>
@@ -2418,6 +2418,7 @@
                         <outlet property="watchHeroType" destination="d6t-gK-CQ7" id="IyH-Ab-E28"/>
                         <outlet property="watchLabel" destination="jdf-lz-xys" id="mHa-DA-VvV"/>
                         <segue destination="n7I-Zl-Wkq" kind="show" identifier="goToArticle" id="twm-uE-6mu"/>
+                        <segue destination="dGa-Kj-gOr" kind="show" identifier="goToVideo" id="9if-4S-YeM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -2829,27 +2830,6 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygm-EK-mE2">
                                         <rect key="frame" x="20" y="20" width="396" height="561"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5W-nL-vFp">
-                                                <rect key="frame" x="20" y="341" width="356" height="200"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="356" id="AFE-yh-RhF"/>
-                                                </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="AFE-yh-RhF"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="10" y="339" width="356" height="200"/>
-                                                    <mask key="constraints">
-                                                        <include reference="AFE-yh-RhF"/>
-                                                    </mask>
-                                                </variation>
-                                            </textView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z3v-hU-HRH">
                                                 <rect key="frame" x="20" y="142" width="356" height="191"/>
                                                 <constraints>
@@ -3033,6 +3013,27 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5W-nL-vFp">
+                                                <rect key="frame" x="20" y="341" width="356" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="356" id="AFE-yh-RhF"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="AFE-yh-RhF"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="10" y="339" width="356" height="200"/>
+                                                    <mask key="constraints">
+                                                        <include reference="AFE-yh-RhF"/>
+                                                    </mask>
+                                                </variation>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -3189,6 +3190,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gp-Rn-bcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1736.25" y="309"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="bwq-kJ-3pq">
+            <objects>
+                <viewController id="dGa-Kj-gOr" customClass="videoViewController" customModule="Content_Media_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="53u-bk-gUm"/>
+                        <viewControllerLayoutGuide type="bottom" id="USi-F8-qdb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xSR-lV-fu5">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCw-MH-HIm">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="E3v-Hk-Xjb"/>
+                                    <constraint firstAttribute="width" constant="368" id="NPB-m2-4bM"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="E3v-Hk-Xjb"/>
+                                        <exclude reference="NPB-m2-4bM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="E3v-Hk-Xjb"/>
+                                        <include reference="NPB-m2-4bM"/>
+                                    </mask>
+                                </variation>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JCw-MH-HIm" firstAttribute="top" secondItem="xSR-lV-fu5" secondAttribute="top" constant="28" id="iZl-5S-mnX"/>
+                            <constraint firstItem="JCw-MH-HIm" firstAttribute="leading" secondItem="xSR-lV-fu5" secondAttribute="leading" constant="4" id="nOS-xC-9VL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="JCw-MH-HIm"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="iZl-5S-mnX"/>
+                                <exclude reference="nOS-xC-9VL"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="JCw-MH-HIm"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="iZl-5S-mnX"/>
+                                <include reference="nOS-xC-9VL"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="JCw-MH-HIm" id="Vea-M8-FvY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HlM-cj-ik4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2985.75" y="961"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EDe-la-j58">
@@ -4783,6 +4848,11 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1700"/>
                     <connections>
+                        <outlet property="footerBackground" destination="1kA-Pk-WMf" id="hVo-qb-ewk"/>
+                        <outlet property="footerImageFour" destination="W9P-Pn-KnX" id="fiF-rg-sbt"/>
+                        <outlet property="footerImageOne" destination="LU5-Hy-Il1" id="Ewy-mq-Mli"/>
+                        <outlet property="footerImageThree" destination="rar-la-uMd" id="39h-SA-inS"/>
+                        <outlet property="footerImageTwo" destination="vNY-n9-8vl" id="4PZ-11-gjP"/>
                         <outlet property="heroOneIcon" destination="oFc-ZT-Cuu" id="ySZ-qZ-35M"/>
                         <outlet property="heroOneTitle" destination="pjv-aK-oDK" id="Zhv-KG-YKW"/>
                         <outlet property="heroOneType" destination="s3H-Xa-CA6" id="EQ2-WO-Jo9"/>
@@ -4795,7 +4865,7 @@
                         <outlet property="originalFive" destination="1qP-eg-kFx" id="0EU-8n-Im8"/>
                         <outlet property="originalFiveIcon" destination="H7t-gj-tSw" id="fbT-7n-Uid"/>
                         <outlet property="originalFour" destination="DPz-WW-jJT" id="n4y-tL-cc8"/>
-                        <outlet property="originalFourTitle" destination="oHt-sE-QjQ" id="vQn-FV-sF3"/>
+                        <outlet property="originalFourIcon" destination="oHt-sE-QjQ" id="52s-UC-ISj"/>
                         <outlet property="originalOne" destination="g3F-H1-Hex" id="LzT-4b-Sgt"/>
                         <outlet property="originalOneIcon" destination="dMB-MY-yuV" id="ezh-2s-a9D"/>
                         <outlet property="originalSix" destination="ODK-42-Lk0" id="DfU-VI-BBh"/>
@@ -4828,6 +4898,7 @@
                         <outlet property="recentTwoIcon" destination="vLX-Yp-6kK" id="sPt-xj-1Kp"/>
                         <outlet property="recentTwoTitle" destination="fjb-1i-Dgh" id="Iez-Jc-sLl"/>
                         <outlet property="recentTwoType" destination="SsN-2n-1XG" id="xWh-Nz-Mz5"/>
+                        <segue destination="dGa-Kj-gOr" kind="show" identifier="goToVideo" id="Mc3-ae-c8m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmN-3F-nHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -6424,6 +6495,11 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1700"/>
                     <connections>
+                        <outlet property="footerBackground" destination="Jmw-1n-L0q" id="zu7-VR-fz3"/>
+                        <outlet property="footerImageFour" destination="dzI-kF-gAu" id="D0x-9b-6Xx"/>
+                        <outlet property="footerImageOne" destination="2tC-De-hof" id="nUx-8Y-q8T"/>
+                        <outlet property="footerImageThree" destination="ewA-AW-8ka" id="Z2T-iN-mqa"/>
+                        <outlet property="footerImageTwo" destination="weP-Wf-EE2" id="c8a-X6-NCO"/>
                         <outlet property="heroOneIcon" destination="Jnf-jX-F22" id="mxM-jT-f9B"/>
                         <outlet property="heroOneTitle" destination="GAL-tq-A1M" id="Z9v-Tl-noM"/>
                         <outlet property="heroOneType" destination="tk3-C6-lrg" id="e5h-gb-2dH"/>
@@ -6469,6 +6545,7 @@
                         <outlet property="recentTwoIcon" destination="dOc-gi-JLR" id="e2l-RN-eYB"/>
                         <outlet property="recentTwoTitle" destination="v9k-zi-qra" id="BdI-ct-XTI"/>
                         <outlet property="recentTwoType" destination="Rcw-E5-uCj" id="VVd-yZ-6lf"/>
+                        <segue destination="n7I-Zl-Wkq" kind="show" identifier="goToArticle" id="eKz-LI-XAn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cm-hP-0wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -8142,6 +8219,7 @@
                         <outlet property="recentTwoIcon" destination="7Yw-52-z4F" id="avv-oW-zYo"/>
                         <outlet property="recentTwoTitle" destination="Bug-3I-srw" id="Qxa-gE-lzL"/>
                         <outlet property="recentTwoType" destination="kMV-yC-63a" id="96P-sX-j3G"/>
+                        <segue destination="n7I-Zl-Wkq" kind="show" identifier="goToArticle" id="QOw-aL-y9B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eA6-ll-5Q0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -8180,6 +8258,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="L6o-0U-dh9"/>
+        <segue reference="twm-uE-6mu"/>
+        <segue reference="9if-4S-YeM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>

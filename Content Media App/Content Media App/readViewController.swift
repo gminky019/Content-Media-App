@@ -72,30 +72,273 @@ class readViewController: UIViewController {
     @IBOutlet weak var footerImageFour: UIImageView!
     @IBOutlet weak var footerBackground: UIImageView!
 
+    var articleClicked = "null"
+    var contDict: [String: ThumbNail] = [String: ThumbNail]()
+    var passedThumbnail: ThumbNail!
     
     override func viewDidLoad(){
         
+        let imageView = UIImageView(frame: CGRect(x:0, y:0, width: 86, height: 44))
+        let image = UIImage(named: "Logo.png")
+        imageView.contentMode = .ScaleAspectFit
+        imageView.image = image
         
-    heroOneView.image = UIImage(named: "tempArtOne.jpg")
+        navigationItem.titleView = imageView
         
-    heroTwoView.image = UIImage(named: "tempArtTwo.jpg")
+        var overlay : UIView
+        overlay = UIView(frame: view.frame)
         
-    originalOne.image = UIImage(named: "DarthMal.png")
+        let backgroundOverlay = UIImage(named: "BackgroundImageLoading2.png")
         
-    originalTwo.image = UIImage(named: "X-Wing Attack.png")
+        let backgroundView = UIImageView(image: backgroundOverlay)
         
-    originalThree.image = UIImage(named: "MileniumFalcon.png")
-    originalFour.image = UIImage(named: "Vader.png")
+        var activityIndicator = UIActivityIndicatorView()
         
-    originalFive.image = UIImage(named:"KyloRen.png")
-    
-    originalSix.image = UIImage(named: "r2d2.png")
+        activityIndicator.frame = CGRectMake(0, 0, 40, 40)
+        activityIndicator.activityIndicatorViewStyle = .WhiteLarge
+        activityIndicator.center = CGPointMake(overlay.bounds.width / 2, (overlay.bounds.height / 3)*2)
+        
+        backgroundView.addSubview(activityIndicator)
+        
+        view.addSubview(backgroundView)
+        
+        activityIndicator.startAnimating()
+        
+
+        var integrate: MiddleIntegration = MiddleIntegration()
+        var content: ContentPage?
+        let typeColor = UIColor.init(red: 221/255, green: 180/255, blue: 0/255, alpha: 1)
+        
+        integrate.getReadPage(){ (returned: ContentPage) in
+            content = returned
+            
+            
+            var her1: ThumbNail = returned._heroes[0]
+            var her2: ThumbNail = returned._heroes[1]
+            var org1: ThumbNail = returned._others[0]
+            var org2: ThumbNail = returned._others[1]
+            var org3: ThumbNail = returned._others[2]
+            var org4: ThumbNail = returned._others[3]
+            var org5: ThumbNail = returned._others[4]
+            var org6: ThumbNail = returned._others[5]
+            var rec1: ThumbNail = returned._others[6]
+            var rec2: ThumbNail = returned._others[7]
+            var rec3: ThumbNail = returned._others[8]
+            var rec4: ThumbNail = returned._others[9]
+            var rec5: ThumbNail = returned._others[10]
+            var rec6: ThumbNail = returned._others[11]
+            
+            self.contDict["HeroOne"] = her1
+            self.contDict["HeroTwo"] = her2
+            self.contDict["OriginalOne"] = org1
+            self.contDict["OriginalTwo"] = org2
+            self.contDict["OriginalThree"] = org3
+            self.contDict["OriginalFour"] = org4
+            self.contDict["OriginalFive"] = org5
+            self.contDict["OriginalSix"] = org6
+            self.contDict["RecentOne"] = rec1
+            self.contDict["RecentTwo"] = rec2
+            self.contDict["RecentThree"] = rec3
+            self.contDict["RecentFour"] = rec4
+            self.contDict["RecentFive"] = rec5
+            self.contDict["RecentSix"] = rec6
+
+            
+            
+            self.heroOneView.image = her1.pic
+            self.heroOneTitle.text = her1.title
+            self.heroOneType.text = "READ"
+            self.heroOneIcon.image = UIImage (named: "readicon.png")
+            
+            self.heroTwoView.image = her2.pic
+            self.heroTwoTitle.text = her2.title
+            self.heroTwoType.text = "READ"
+            self.heroTwoIcon.image = UIImage (named: "readicon.png")
+            
+            self.originalOne.image = org1.pic
+            self.originalOneIcon.image = UIImage (named: "readiconsmall.png")
+            
+            self.originalTwo.image = org2.pic
+            self.originalTwoIcon.image = UIImage (named: "readiconsmall.png")
+            
+            self.originalThree.image = org3.pic
+            self.originalThreeIcon.image = UIImage (named: "readiconsmall.png")
+            
+            self.originalFour.image = org4.pic
+            self.originalFourIcon.image = UIImage (named: "readiconsmall.png")
+            
+            self.originalFive.image = org5.pic
+            self.originalFiveIcon.image = UIImage (named: "readiconsmall.png")
+            
+            self.originalSix.image = org6.pic
+            self.originalSixIcon.image = UIImage (named: "readiconsmall.png")
+            
+            self.recentOne.image = rec1.pic
+            self.recentOneIcon.image = UIImage (named: "readiconsmall.png")
+            self.recentOneTitle.text = rec1.title
+            self.recentOneType.text = "READ"
+            
+            self.recentTwo.image = rec2.pic
+            self.recentTwoIcon.image = UIImage (named: "readiconsmall.png")
+            self.recentTwoTitle.text = rec2.title
+            self.recentTwoType.text = "READ"
+            
+            self.recentThree.image = rec3.pic
+            self.recentThreeIcon.image = UIImage (named: "readiconsmall.png")
+            self.recentThreeTitle.text = rec3.title
+            self.recentThreeType.text = "READ"
+            
+            self.recentFour.image = rec4.pic
+            self.recentFourIcon.image = UIImage (named: "readiconsmall.png")
+            self.recentFourTitle.text = rec4.title
+            self.recentFourType.text = "READ"
+            
+            self.recentFive.image = rec5.pic
+            self.recentFiveIcon.image = UIImage (named: "readiconsmall.png")
+            self.recentFiveTitle.text = rec5.title
+            self.recentFiveType.text = "READ"
+            
+            self.recentSix.image = rec6.pic
+            self.recentSixIcon.image = UIImage (named: "readiconsmall.png")
+            self.recentSixTitle.text = rec6.title
+            self.recentSixType.text = "READ"
+            
+            self.heroOneTitle.font = UIFont(name: "Roboto-Bold", size: 18)
+            self.heroOneTitle.textColor = UIColor.whiteColor()
+            self.heroOneType.font = UIFont(name: "Roboto-Medium", size: 12)
+            self.heroOneType.textColor = typeColor
+            
+            self.heroTwoTitle.font = UIFont(name: "Roboto-Bold", size: 18)
+            self.heroTwoTitle.textColor = UIColor.whiteColor()
+            self.heroTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
+            self.heroTwoType.textColor = typeColor
+            
+            self.recentOneType.font = UIFont(name: "Roboto-Medium", size: 12)
+            self.recentOneType.textColor = typeColor
+            self.recentOneType.textAlignment = .Center
+            
+            self.recentOneTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+            self.recentOneTitle.textColor = UIColor.blackColor()
+            self.recentOneTitle.textAlignment = .Center
+            
+            self.recentTwoType.font = UIFont(name: "Roboto-Medium", size: 12)
+            self.recentTwoType.textColor = typeColor
+            self.recentTwoType.textAlignment = .Center
+            
+            self.recentTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+            self.recentTwoTitle.textColor = UIColor.blackColor()
+            self.recentTwoTitle.textAlignment = .Center
+            
+            self.recentThreeType.font = UIFont(name: "Roboto-Medium", size: 12)
+            self.recentThreeType.textColor = typeColor
+            self.recentThreeType.textAlignment = .Center
+            
+            self.recentThreeTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+            self.recentThreeTitle.textColor = UIColor.blackColor()
+            self.recentThreeTitle.textAlignment = .Center
+            
+            self.recentFourType.font = UIFont(name: "Roboto-Medium", size: 12)
+            self.recentFourType.textColor = typeColor
+            self.recentFourType.textAlignment = .Center
+            
+            self.recentFourTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+            self.recentFourTitle.textColor = UIColor.blackColor()
+            self.recentFourTitle.textAlignment = .Center
+            
+            self.recentFiveType.font = UIFont(name: "Roboto-Medium", size: 12)
+            self.recentFiveType.textColor = typeColor
+            self.recentFiveType.textAlignment = .Center
+            
+            self.recentFiveTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+            self.recentFiveTitle.textColor = UIColor.blackColor()
+            self.recentFiveTitle.textAlignment = .Center
+            
+            self.recentSixType.font = UIFont(name: "Roboto-Medium", size: 12)
+            self.recentSixType.textColor = typeColor
+            self.recentSixType.textAlignment = .Center
+            
+            self.recentSixTitle.font = UIFont(name: "Roboto-Bold", size: 14)
+            self.recentSixTitle.textColor = UIColor.blackColor()
+            self.recentSixTitle.textAlignment = .Center
+
+            backgroundView.removeFromSuperview()
+        }
         
     footerBackground.image = UIImage(named: "black.png")
     footerImageOne.image = UIImage(named: "twitter2.png")
     footerImageTwo.image = UIImage(named: "facebook2.png")
     footerImageThree.image = UIImage(named: "youtube2.png")
     footerImageFour.image = UIImage(named: "instagram2.png")
+        
+    heroOneView.tag = 1
+    heroOneView.userInteractionEnabled = true
+    let tapRecognizerHeroOne = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    heroOneView.addGestureRecognizer(tapRecognizerHeroOne)
+        
+    heroTwoView.tag = 2
+    heroTwoView.userInteractionEnabled = true
+    let tapRecognizerHeroTwo = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    heroTwoView.addGestureRecognizer(tapRecognizerHeroTwo)
+        
+    originalOne.tag = 3
+    originalOne.userInteractionEnabled = true
+    let tapRecognizerOrgOne = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    originalOne.addGestureRecognizer(tapRecognizerOrgOne)
+        
+    originalTwo.tag = 4
+    originalTwo.userInteractionEnabled = true
+    let tapRecognizerOrgTwo = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    originalTwo.addGestureRecognizer(tapRecognizerOrgTwo)
+        
+    originalThree.tag = 5
+    originalThree.userInteractionEnabled = true
+    let tapRecognizerOrgThree = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    originalThree.addGestureRecognizer(tapRecognizerOrgThree)
+        
+    originalFour.tag = 6
+    originalFour.userInteractionEnabled = true
+    let tapRecognizerOrgFour = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    originalFour.addGestureRecognizer(tapRecognizerOrgFour)
+        
+    originalFive.tag = 7
+    originalFive.userInteractionEnabled = true
+    let tapRecognizerOrgFive = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    originalFive.addGestureRecognizer(tapRecognizerOrgFive)
+        
+    originalSix.tag = 8
+    originalSix.userInteractionEnabled = true
+    let tapRecognizerOrgSix = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    originalSix.addGestureRecognizer(tapRecognizerOrgSix)
+        
+    recentOne.tag = 9
+    recentOne.userInteractionEnabled = true
+    let tapRecognizerRecOne = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    recentOne.addGestureRecognizer(tapRecognizerRecOne)
+    
+    recentTwo.tag = 10
+    recentTwo.userInteractionEnabled = true
+    let tapRecognizerRecTwo = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    recentTwo.addGestureRecognizer(tapRecognizerRecTwo)
+        
+    recentThree.tag = 11
+    recentThree.userInteractionEnabled = true
+    let tapRecognizerRecThree = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    recentThree.addGestureRecognizer(tapRecognizerRecThree)
+        
+    recentFour.tag = 12
+    recentFour.userInteractionEnabled = true
+    let tapRecognizerRecFour = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    recentFour.addGestureRecognizer(tapRecognizerRecFour)
+        
+    recentFive.tag = 13
+    recentFive.userInteractionEnabled = true
+    let tapRecognizerRecFive = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    recentFive.addGestureRecognizer(tapRecognizerRecFive)
+        
+    recentSix.tag = 14
+    recentSix.userInteractionEnabled = true
+    let tapRecognizerRecSix = UITapGestureRecognizer(target: self, action: "imageTapped:")
+    recentSix.addGestureRecognizer(tapRecognizerRecSix)
         
     if self.revealViewController() != nil {
         navButton.target = self.revealViewController()
@@ -104,5 +347,67 @@ class readViewController: UIViewController {
         }
         
     
+    }
+    
+    func imageTapped(gestureRecognizer: UITapGestureRecognizer) {
+        
+        switch gestureRecognizer.view!.tag {
+        case 1:
+            articleClicked = "Hero One"
+            passedThumbnail = self.contDict["HeroOne"]!
+        case 2:
+            articleClicked = "Hero Two"
+            passedThumbnail = self.contDict["HeroTwo"]
+        case 3:
+            articleClicked = "Original One"
+            passedThumbnail = self.contDict["OriginalOne"]
+        case 4:
+            articleClicked = "Original Two"
+            passedThumbnail = self.contDict["OriginalTwo"]
+        case 5:
+            articleClicked = "Original Three"
+            passedThumbnail = self.contDict["OriginalThree"]
+        case 6:
+            articleClicked = "Original Four"
+            passedThumbnail = self.contDict["OriginalFour"]
+        case 7:
+            articleClicked = "Original Five"
+            passedThumbnail = self.contDict["OriginalFive"]
+        case 8:
+            articleClicked = "Original Six"
+            passedThumbnail = self.contDict["OriginalSix"]
+        case 9:
+            articleClicked = "Recent One"
+            passedThumbnail = self.contDict["RecentOne"]
+        case 10:
+            articleClicked = "Recent Two"
+            passedThumbnail = self.contDict["RecentTwo"]
+        case 11:
+            articleClicked = "Recent Three"
+            passedThumbnail = self.contDict["RecentThree"]
+        case 12:
+            articleClicked = "Recent Four"
+            passedThumbnail = self.contDict["RecentFour"]
+        case 13:
+            articleClicked = "Recent Five"
+            passedThumbnail = self.contDict["RecentFive"]
+        case 14:
+            articleClicked = "Recent Six"
+            passedThumbnail = self.contDict["RecentSix"]
+        default:
+            articleClicked = "null"
+        }
+        
+        self.performSegueWithIdentifier("goToArticle", sender: self)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let DestViewController : articleViewController = segue.destinationViewController as! articleViewController
+        
+        DestViewController.article = articleClicked
+        DestViewController.articleThumbnail = passedThumbnail
+        
+        
     }
 }

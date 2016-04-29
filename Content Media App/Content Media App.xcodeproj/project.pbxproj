@@ -44,6 +44,7 @@
 		CC335CF41CD30F350023AFB9 /* facebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CF31CD30F350023AFB9 /* facebookButton.png */; };
 		CC335CF61CD311570023AFB9 /* BackgroundImageLoading.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CF51CD311570023AFB9 /* BackgroundImageLoading.png */; };
 		CC335CF81CD312930023AFB9 /* BackgroundImageLoading2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CF71CD312930023AFB9 /* BackgroundImageLoading2.png */; };
+		CC335CFA1CD3618C0023AFB9 /* videoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC335CF91CD3618C0023AFB9 /* videoViewController.swift */; };
 		CC747D3C1CB4BC0B00140275 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D381CB4BC0B00140275 /* facebook.png */; };
 		CC747D3D1CB4BC0B00140275 /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D391CB4BC0B00140275 /* instagram.png */; };
 		CC747D3E1CB4BC0B00140275 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D3A1CB4BC0B00140275 /* twitter.png */; };
@@ -139,6 +140,7 @@
 		CC335CF31CD30F350023AFB9 /* facebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookButton.png; sourceTree = "<group>"; };
 		CC335CF51CD311570023AFB9 /* BackgroundImageLoading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundImageLoading.png; sourceTree = "<group>"; };
 		CC335CF71CD312930023AFB9 /* BackgroundImageLoading2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundImageLoading2.png; sourceTree = "<group>"; };
+		CC335CF91CD3618C0023AFB9 /* videoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videoViewController.swift; sourceTree = "<group>"; };
 		CC747D381CB4BC0B00140275 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		CC747D391CB4BC0B00140275 /* instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagram.png; sourceTree = "<group>"; };
 		CC747D3A1CB4BC0B00140275 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
@@ -234,10 +236,11 @@
 				856425F01C829C4A00D6AEE6 /* BackEnd */,
 				856425EE1C829C3700D6AEE6 /* Integration */,
 				856425ED1C829C2D00D6AEE6 /* FrontEnd */,
-				856425CD1C829B3D00D6AEE6 /* AppDelegate.swift */,
 				856425CF1C829B3D00D6AEE6 /* ViewController.swift */,
+				856425CD1C829B3D00D6AEE6 /* AppDelegate.swift */,
 				CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */,
 				CCEB0A321CAB996D00D4F349 /* Main.storyboard */,
+				CC335CF91CD3618C0023AFB9 /* videoViewController.swift */,
 				CCC816671CB787FA00E75007 /* readViewController.swift */,
 				CC335CEB1CD2BE7F0023AFB9 /* watchViewController.swift */,
 				CC335CED1CD2BEA70023AFB9 /* learnViewController.swift */,
@@ -582,6 +585,7 @@
 				CC335CEC1CD2BE7F0023AFB9 /* watchViewController.swift in Sources */,
 				CC335CEE1CD2BEA70023AFB9 /* learnViewController.swift in Sources */,
 				8539A5C61CB708F0007E4C38 /* MiddleIntegration.swift in Sources */,
+				CC335CFA1CD3618C0023AFB9 /* videoViewController.swift in Sources */,
 				8593BE271CA4F140009FECB5 /* FBTest.swift in Sources */,
 				CCC816681CB787FA00E75007 /* readViewController.swift in Sources */,
 				856864FB1CD3106800001D6B /* ContentPage.swift in Sources */,

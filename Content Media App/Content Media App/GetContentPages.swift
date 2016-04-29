@@ -53,7 +53,7 @@ public class GetContentPages {
             self._KeyVal = "learn"
         case "Shop":
             self._KeyVal = "shop"
-        case "Watch":
+        case "Video":
             self._KeyVal = "watch"
             
         default:

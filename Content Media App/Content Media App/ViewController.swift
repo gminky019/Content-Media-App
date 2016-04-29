@@ -135,6 +135,10 @@ class ViewController: UIViewController {
     var articleClicked = "null"
     
     // Hero Articles
+
+    var contDict: [String: ThumbNail] = [String: ThumbNail]()
+    var passedThumbnail: ThumbNail!
+    
     
     var imageHeroOne = UIImage (named: "tempHeroOne.jpg")
     var titleHeroOne = "Ice Melting In Arctic: How can you save the polar bears?"
@@ -292,10 +296,14 @@ class ViewController: UIViewController {
             let heroTwo = mainP!.hero[1] as! ThumbNail
             let heroThree = mainP!.hero[2] as! ThumbNail
             
+            self.contDict["HeroOne"] = heroOne
+            self.contDict["HeroTwo"] = heroTwo
+            self.contDict["HeroThree"] = heroThree
+            
             // Hero One
             self.heroOneView.image = heroOne.pic
+            self.imageHeroOne = self.heroOneView.image
             self.heroOneTitle.text = heroOne.title
-            
             self.heroOneTitle.font = UIFont(name: "Roboto-Bold", size: 18)
             self.heroOneTitle.textColor = UIColor.whiteColor()
             
@@ -324,6 +332,11 @@ class ViewController: UIViewController {
             let featuredTwo = mainP!.subHero[1] as! ThumbNail
             let featuredThree = mainP!.subHero[2] as! ThumbNail
             let featuredFour = mainP!.subHero[3] as! ThumbNail
+            
+            self.contDict["featuredOne"] = featuredOne
+            self.contDict["featuredTwo"] = featuredTwo
+            self.contDict["featuredThree"] = featuredThree
+            self.contDict["featuredFour"] = featuredFour
             
             // Featured One
             self.articleOne.image = featuredOne.pic
@@ -386,6 +399,11 @@ class ViewController: UIViewController {
                         self.readArticleTwoType.text = categoryHero.type
                         self.readArticleTwoIcon.image = UIImage (named: "readIconSmall.png")
                     
+                        self.contDict["readHero"] = mainH
+                        self.contDict["readArticleOne"] = sub1
+                        self.contDict["readArticleTwo"] = sub2
+
+                    
                     
                     case "watch":
                         self.watchHero.image = mainH.pic
@@ -401,6 +419,10 @@ class ViewController: UIViewController {
                         self.watchHeroIcon.image = UIImage (named: "playicon.png")
                         self.watchArticleOneIcon.image = UIImage (named: "playiconsmall.png")
                         self.watchArticleTwoIcon.image = UIImage (named: "playiconsmall.png")
+                    
+                        self.contDict["watchHero"] = mainH
+                        self.contDict["watchArticleOne"] = sub1
+                        self.contDict["watchArticleTwo"] = sub2
                     
                     
                     case "shop":
@@ -418,6 +440,10 @@ class ViewController: UIViewController {
                         self.shopArticleOneIcon.image = UIImage (named: "readIconSmall.png")
                         self.shopArticleTwoIcon.image = UIImage (named: "readIconSmall.png")
                     
+                        self.contDict["shopHero"] = mainH
+                        self.contDict["shopArticleOne"] = sub1
+                        self.contDict["shopArticleTwo"] = sub2
+                    
                     case "learn":
                         self.learnHero.image = mainH.pic
                         self.learnHeroTitle.text = mainH.title
@@ -432,6 +458,10 @@ class ViewController: UIViewController {
                         self.learnHeroIcon.image = UIImage (named: "readicon.png")
                         self.learnArticleOneIcon.image = UIImage (named: "readIconSmall.png")
                         self.learnArticleTwoIcon.image = UIImage (named: "readIconSmall.png")
+                    
+                        self.contDict["learnHero"] = mainH
+                        self.contDict["learnArticleOne"] = sub1
+                        self.contDict["learnArticleTwo"] = sub2
                     
                 default:
                     break
@@ -666,7 +696,7 @@ class ViewController: UIViewController {
         // Watch Hero Tap Gesture Recognizer
         watchHero.tag = 10
         watchHero.userInteractionEnabled = true
-        let tapRecognizerWatchHero = UITapGestureRecognizer(target: self, action: "imageTapped:")
+        let tapRecognizerWatchHero = UITapGestureRecognizer(target: self, action: "imageTappedVideo:")
         watchHero.addGestureRecognizer(tapRecognizerWatchHero)
         
         // Article One
@@ -675,7 +705,7 @@ class ViewController: UIViewController {
         // Watch Article One Tap Gesture Recognizer
         watchArticleOne.tag = 11
         watchArticleOne.userInteractionEnabled = true
-        let tapRecognizerWatchArticleOne = UITapGestureRecognizer(target: self, action: "imageTapped:")
+        let tapRecognizerWatchArticleOne = UITapGestureRecognizer(target: self, action: "imageTappedVideo:")
         watchArticleOne.addGestureRecognizer(tapRecognizerWatchArticleOne)
         
         
@@ -684,7 +714,7 @@ class ViewController: UIViewController {
         // Watch Article Two Tap Gesture Recognizer
         watchArticleTwo.tag = 12
         watchArticleTwo.userInteractionEnabled = true
-        let tapRecognizerWatchArticleTwo = UITapGestureRecognizer(target: self, action: "imageTapped:")
+        let tapRecognizerWatchArticleTwo = UITapGestureRecognizer(target: self, action: "imageTappedVideo:")
         watchArticleTwo.addGestureRecognizer(tapRecognizerWatchArticleTwo)
         
         
@@ -868,42 +898,61 @@ class ViewController: UIViewController {
         switch gestureRecognizer.view!.tag {
         case 1:
             articleClicked = "Hero One"
+            passedThumbnail = self.contDict["HeroOne"]!
         case 2:
             articleClicked = "Hero Two"
+            passedThumbnail = self.contDict["HeroTwo"]
         case 3:
             articleClicked = "Hero Three"
+            passedThumbnail = self.contDict["HeroThree"]
         case 4:
             articleClicked = "Article One"
+            passedThumbnail = self.contDict["featuredOne"]
         case 5:
             articleClicked = "Article Two"
+            passedThumbnail = self.contDict["featuredTwo"]
         case 6:
             articleClicked = "Article Three"
+            passedThumbnail = self.contDict["featuredThree"]
         case 7:
             articleClicked = "Article Four"
+            passedThumbnail = self.contDict["featuredFour"]
         case 10:
             articleClicked = "Watch Hero"
+            passedThumbnail = self.contDict["watchHero"]
         case 11:
             articleClicked = "Watch Article One"
+            passedThumbnail = self.contDict["watchArticleOne"]
         case 12:
             articleClicked = "Watch Article Two"
+            passedThumbnail = self.contDict["watchArticleTwo"]
         case 20:
             articleClicked = "Read Hero"
+            passedThumbnail = self.contDict["readHero"]
         case 21:
             articleClicked = "Read Article One"
+            passedThumbnail = self.contDict["readArticleOne"]
         case 22:
             articleClicked = "Read Article Two"
+            passedThumbnail = self.contDict["readArticleTwo"]
         case 30:
             articleClicked = "Learn Hero"
+            passedThumbnail = self.contDict["learnHero"]
         case 31:
             articleClicked = "Learn Article One"
+            passedThumbnail = self.contDict["learnArticleOne"]
         case 32:
             articleClicked = "Learn Article Two"
+            passedThumbnail = self.contDict["learnArticleTwo"]
         case 40:
             articleClicked = "Shop Hero"
+            passedThumbnail = self.contDict["shopHero"]
         case 41:
             articleClicked = "Shop Article One"
+            passedThumbnail = self.contDict["shopArticleOne"]
         case 42:
             articleClicked = "Shop Article Two"
+            passedThumbnail = self.contDict["shopArticleTwo"]
         default:
             articleClicked = "null"
         }
@@ -912,14 +961,90 @@ class ViewController: UIViewController {
 
     }
     
+    func imageTappedVideo(gestureRecognizer: UITapGestureRecognizer) {
+        
+        switch gestureRecognizer.view!.tag {
+        case 1:
+            articleClicked = "Hero One"
+            passedThumbnail = self.contDict["HeroOne"]!
+        case 2:
+            articleClicked = "Hero Two"
+            passedThumbnail = self.contDict["HeroTwo"]
+        case 3:
+            articleClicked = "Hero Three"
+            passedThumbnail = self.contDict["HeroThree"]
+        case 4:
+            articleClicked = "Article One"
+            passedThumbnail = self.contDict["featuredOne"]
+        case 5:
+            articleClicked = "Article Two"
+            passedThumbnail = self.contDict["featuredTwo"]
+        case 6:
+            articleClicked = "Article Three"
+            passedThumbnail = self.contDict["featuredThree"]
+        case 7:
+            articleClicked = "Article Four"
+            passedThumbnail = self.contDict["featuredFour"]
+        case 10:
+            articleClicked = "Watch Hero"
+            passedThumbnail = self.contDict["watchHero"]
+        case 11:
+            articleClicked = "Watch Article One"
+            passedThumbnail = self.contDict["watchArticleOne"]
+        case 12:
+            articleClicked = "Watch Article Two"
+            passedThumbnail = self.contDict["watchArticleTwo"]
+        case 20:
+            articleClicked = "Read Hero"
+            passedThumbnail = self.contDict["readHero"]
+        case 21:
+            articleClicked = "Read Article One"
+            passedThumbnail = self.contDict["readArticleOne"]
+        case 22:
+            articleClicked = "Read Article Two"
+            passedThumbnail = self.contDict["readArticleTwo"]
+        case 30:
+            articleClicked = "Learn Hero"
+            passedThumbnail = self.contDict["learnHero"]
+        case 31:
+            articleClicked = "Learn Article One"
+            passedThumbnail = self.contDict["learnArticleOne"]
+        case 32:
+            articleClicked = "Learn Article Two"
+            passedThumbnail = self.contDict["learnArticleTwo"]
+        case 40:
+            articleClicked = "Shop Hero"
+            passedThumbnail = self.contDict["shopHero"]
+        case 41:
+            articleClicked = "Shop Article One"
+            passedThumbnail = self.contDict["shopArticleOne"]
+        case 42:
+            articleClicked = "Shop Article Two"
+            passedThumbnail = self.contDict["shopArticleTwo"]
+        default:
+            articleClicked = "null"
+        }
+        
+        self.performSegueWithIdentifier("goToVideo", sender: self)
+        
+    }
+    
     
     override func viewDidAppear(animated: Bool) {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //let DestViewController : articleViewController = segue.destinationViewController as! articleViewController
         
-       // DestViewController.article = articleClicked
+        if segue.identifier == "goToArticle" {
+            let DestViewController : articleViewController = segue.destinationViewController as! articleViewController
+            DestViewController.article = articleClicked
+            DestViewController.articleThumbnail = passedThumbnail
+        }
+        else if segue.id == "goToVideo" {
+            let DestViewVideoController : videoViewController = segue.destinationViewController as! videoViewController
+            DestViewVideoController.articleThumbnail = passedThumbnail
+        }
+        
 
         
     }
