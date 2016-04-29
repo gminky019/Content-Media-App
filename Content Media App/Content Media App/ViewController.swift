@@ -917,9 +917,9 @@ class ViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let DestViewController : articleViewController = segue.destinationViewController as! articleViewController
+        //let DestViewController : articleViewController = segue.destinationViewController as! articleViewController
         
-        DestViewController.article = articleClicked
+       // DestViewController.article = articleClicked
 
         
     }

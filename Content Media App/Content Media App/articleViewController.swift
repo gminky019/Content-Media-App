@@ -28,7 +28,7 @@ class articleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.articleAuthorDate.text = " "
         let accessViewController: ViewController = ViewController(nibName: nil, bundle: nil)
         
         /*var tempCont : Content = Content(title: "Test Art", description: "My Test Art", key: "/dolphins-_communication_with_sonar")
