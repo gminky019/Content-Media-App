@@ -45,6 +45,14 @@
 		CC335CF61CD311570023AFB9 /* BackgroundImageLoading.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CF51CD311570023AFB9 /* BackgroundImageLoading.png */; };
 		CC335CF81CD312930023AFB9 /* BackgroundImageLoading2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CF71CD312930023AFB9 /* BackgroundImageLoading2.png */; };
 		CC335CFA1CD3618C0023AFB9 /* videoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC335CF91CD3618C0023AFB9 /* videoViewController.swift */; };
+		CC335CFC1CD36E3F0023AFB9 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC335CFB1CD36E3F0023AFB9 /* loginViewController.swift */; };
+		CC335CFE1CD374930023AFB9 /* BackgroundLoadingScreen3.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CFD1CD374930023AFB9 /* BackgroundLoadingScreen3.png */; };
+		CC335D001CD376920023AFB9 /* skiploginbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CFF1CD376920023AFB9 /* skiploginbutton.png */; };
+		CC335D061CD378DD0023AFB9 /* 58.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC335D011CD378DD0023AFB9 /* 58.jpg */; };
+		CC335D071CD378DD0023AFB9 /* 80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC335D021CD378DD0023AFB9 /* 80.jpg */; };
+		CC335D081CD378DD0023AFB9 /* 87.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC335D031CD378DD0023AFB9 /* 87.jpg */; };
+		CC335D091CD378DD0023AFB9 /* 120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC335D041CD378DD0023AFB9 /* 120.jpg */; };
+		CC335D0A1CD378DD0023AFB9 /* 180.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC335D051CD378DD0023AFB9 /* 180.jpg */; };
 		CC747D3C1CB4BC0B00140275 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D381CB4BC0B00140275 /* facebook.png */; };
 		CC747D3D1CB4BC0B00140275 /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D391CB4BC0B00140275 /* instagram.png */; };
 		CC747D3E1CB4BC0B00140275 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D3A1CB4BC0B00140275 /* twitter.png */; };
@@ -141,6 +149,14 @@
 		CC335CF51CD311570023AFB9 /* BackgroundImageLoading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundImageLoading.png; sourceTree = "<group>"; };
 		CC335CF71CD312930023AFB9 /* BackgroundImageLoading2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundImageLoading2.png; sourceTree = "<group>"; };
 		CC335CF91CD3618C0023AFB9 /* videoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videoViewController.swift; sourceTree = "<group>"; };
+		CC335CFB1CD36E3F0023AFB9 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		CC335CFD1CD374930023AFB9 /* BackgroundLoadingScreen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundLoadingScreen3.png; sourceTree = "<group>"; };
+		CC335CFF1CD376920023AFB9 /* skiploginbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skiploginbutton.png; sourceTree = "<group>"; };
+		CC335D011CD378DD0023AFB9 /* 58.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 58.jpg; sourceTree = "<group>"; };
+		CC335D021CD378DD0023AFB9 /* 80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 80.jpg; sourceTree = "<group>"; };
+		CC335D031CD378DD0023AFB9 /* 87.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 87.jpg; sourceTree = "<group>"; };
+		CC335D041CD378DD0023AFB9 /* 120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 120.jpg; sourceTree = "<group>"; };
+		CC335D051CD378DD0023AFB9 /* 180.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 180.jpg; sourceTree = "<group>"; };
 		CC747D381CB4BC0B00140275 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		CC747D391CB4BC0B00140275 /* instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagram.png; sourceTree = "<group>"; };
 		CC747D3A1CB4BC0B00140275 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
@@ -240,6 +256,7 @@
 				856425CD1C829B3D00D6AEE6 /* AppDelegate.swift */,
 				CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */,
 				CCEB0A321CAB996D00D4F349 /* Main.storyboard */,
+				CC335CFB1CD36E3F0023AFB9 /* loginViewController.swift */,
 				CC335CF91CD3618C0023AFB9 /* videoViewController.swift */,
 				CCC816671CB787FA00E75007 /* readViewController.swift */,
 				CC335CEB1CD2BE7F0023AFB9 /* watchViewController.swift */,
@@ -331,6 +348,11 @@
 		CCD62A721CA4EA2700B4E786 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				CC335D011CD378DD0023AFB9 /* 58.jpg */,
+				CC335D021CD378DD0023AFB9 /* 80.jpg */,
+				CC335D031CD378DD0023AFB9 /* 87.jpg */,
+				CC335D041CD378DD0023AFB9 /* 120.jpg */,
+				CC335D051CD378DD0023AFB9 /* 180.jpg */,
 				CC335CE11CCF16210023AFB9 /* playicon.png */,
 				CC335CE21CCF16210023AFB9 /* playiconsmall.png */,
 				CC335CE31CCF16210023AFB9 /* readicon.png */,
@@ -341,8 +363,10 @@
 				CC747D451CB4C07000140275 /* youtube2.png */,
 				CC747D401CB4BC6700140275 /* black.png */,
 				CC747D381CB4BC0B00140275 /* facebook.png */,
+				CC335CFD1CD374930023AFB9 /* BackgroundLoadingScreen3.png */,
 				CC747D391CB4BC0B00140275 /* instagram.png */,
 				CC747D3A1CB4BC0B00140275 /* twitter.png */,
+				CC335CFF1CD376920023AFB9 /* skiploginbutton.png */,
 				CC747D3B1CB4BC0B00140275 /* youtube.png */,
 				CCEB0A5B1CAB9E9A00D4F349 /* BB8.jpg */,
 				CCEB0A5C1CAB9E9A00D4F349 /* bb8.png */,
@@ -463,9 +487,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC747D461CB4C07000140275 /* facebook2.png in Resources */,
+				CC335CFE1CD374930023AFB9 /* BackgroundLoadingScreen3.png in Resources */,
 				CCEB0A741CAB9EEE00D4F349 /* PlayfairDisplay-Bold.ttf in Resources */,
 				CC747D3C1CB4BC0B00140275 /* facebook.png in Resources */,
 				CC335CF61CD311570023AFB9 /* BackgroundImageLoading.png in Resources */,
+				CC335D0A1CD378DD0023AFB9 /* 180.jpg in Resources */,
 				CC335CE61CCF16210023AFB9 /* playiconsmall.png in Resources */,
 				CCEB0A671CAB9E9A00D4F349 /* KyloRen.png in Resources */,
 				CCEB0A771CAB9EEE00D4F349 /* PlayfairDisplay-Regular.ttf in Resources */,
@@ -474,6 +500,7 @@
 				CC335CF01CD304C90023AFB9 /* CDALoadingLogo.png in Resources */,
 				CC335CE51CCF16210023AFB9 /* playicon.png in Resources */,
 				CC747D471CB4C07000140275 /* instagram2.png in Resources */,
+				CC335D071CD378DD0023AFB9 /* 80.jpg in Resources */,
 				CCEB0A331CAB996D00D4F349 /* Main.storyboard in Resources */,
 				CC747D481CB4C07000140275 /* twitter2.png in Resources */,
 				CC747D3E1CB4BC0B00140275 /* twitter.png in Resources */,
@@ -488,16 +515,19 @@
 				CCEB0A581CAB9E7000D4F349 /* tempArtTwo.JPG in Resources */,
 				CC335CE81CCF16210023AFB9 /* readiconsmall.png in Resources */,
 				CCEB0A541CAB9E7000D4F349 /* Logo.png in Resources */,
+				CC335D061CD378DD0023AFB9 /* 58.jpg in Resources */,
 				CCEB0A7A1CAB9EEE00D4F349 /* Roboto-Regular.ttf in Resources */,
 				CCEB0A651CAB9E9A00D4F349 /* bb8.png in Resources */,
 				CC335CF21CD30DCE0023AFB9 /* LoginBackground.jpg in Resources */,
 				CCEB0A5A1CAB9E7000D4F349 /* tempHeroTwo.jpg in Resources */,
+				CC335D091CD378DD0023AFB9 /* 120.jpg in Resources */,
 				CCEB0A531CAB9E7000D4F349 /* BlackOverlay.png in Resources */,
 				CC747D3F1CB4BC0B00140275 /* youtube.png in Resources */,
 				CCEB0A781CAB9EEE00D4F349 /* Roboto-Bold.ttf in Resources */,
 				856426001C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf in Resources */,
 				CCEB0A661CAB9E9A00D4F349 /* DarthMal.png in Resources */,
 				CCEB0A6A1CAB9E9A00D4F349 /* tempHeroOne.jpg in Resources */,
+				CC335D081CD378DD0023AFB9 /* 87.jpg in Resources */,
 				CCEB0A641CAB9E9A00D4F349 /* BB8.jpg in Resources */,
 				CC335CF41CD30F350023AFB9 /* facebookButton.png in Resources */,
 				CCEB0A761CAB9EEE00D4F349 /* PlayfairDisplay-Italic.ttf in Resources */,
@@ -507,6 +537,7 @@
 				CC747D411CB4BC6700140275 /* black.png in Resources */,
 				856425FE1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf in Resources */,
 				CCEB0A6C1CAB9E9A00D4F349 /* X-Wing Attack.png in Resources */,
+				CC335D001CD376920023AFB9 /* skiploginbutton.png in Resources */,
 				CCEB0A571CAB9E7000D4F349 /* tempArtOne.jpg in Resources */,
 				CCEB0A591CAB9E7000D4F349 /* tempHeroThree.jpg in Resources */,
 				CCEB0A561CAB9E7000D4F349 /* SearchButton.png in Resources */,
@@ -599,6 +630,7 @@
 				8524068A1CAE18FE0086FACB /* ConnectToAWS.swift in Sources */,
 				856425F71C829DB500D6AEE6 /* SWRevealViewController.m in Sources */,
 				8514CF7B1C869E7F00EF5301 /* Content.swift in Sources */,
+				CC335CFC1CD36E3F0023AFB9 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
