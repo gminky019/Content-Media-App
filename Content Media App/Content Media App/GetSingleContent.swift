@@ -54,7 +54,7 @@ class GetSingleContent {
     {
         do
         {
-        let txt: String = try String(contentsOfURL: url, encoding: NSUTF16StringEncoding)
+        let txt: String = try NSString(contentsOfURL: url, encoding: NSUTF8StringEncoding) as String
             
             let singleCont: ArticleObj = ArticleObj(title: cont.title, description: cont.description, key: cont.awskey, article: txt, author: "Garrett Minky")
             
@@ -87,7 +87,7 @@ class GetSingleContent {
     func setRequest(key: String) -> AWSS3TransferManagerDownloadRequest
     {
         var str: String = key
-        var r: Int32 = rand()
+        let r = Int(arc4random_uniform(1000000) + 1)
         
         str = String(r)  + str
         var downReq: AWSS3TransferManagerDownloadRequest = AWSS3TransferManagerDownloadRequest()
