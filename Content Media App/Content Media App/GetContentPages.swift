@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GetContentPages {
+public class GetContentPages {
     
     var _Type:String
     var _KeyVal : String?
@@ -19,6 +19,7 @@ class GetContentPages {
     var _arrayHolder: [NSURL]
     var _heroA : [NSURL]
     var _nonA: [NSURL]
+    var _s3Holder: [NSURL: [String: String]]
     
     init()
     {
@@ -30,6 +31,7 @@ class GetContentPages {
         self._arrayHolder = [NSURL] ()
         self._nonA = [NSURL]()
         self._heroA = [NSURL]()
+        self._s3Holder = [NSURL:[String: String]]()
     }
     
     func setType(typer: String)
@@ -73,6 +75,11 @@ class GetContentPages {
             self._KeyVal = self._KeyVal! + "non"
             self._KeyVal = self._KeyVal! + "/"
         }*/
+    }
+    
+   public func getKeyStuff() -> [NSURL: [String: String]]
+    {
+        return self._s3Holder
     }
     
     func getKeys(complete: (completion: [AWSS3Object]) -> ())
@@ -184,12 +191,40 @@ class GetContentPages {
                     
                     dispatch_group_leave(group)
                     
+                    var tempH: [String: String] = [String:String]()
+                    
+                    tempH["key"] = downReq.key
+                    tempH["title"] = self.parseTitleFromKey(downReq.key!)
+                    
+                    self._s3Holder[downLoadPath!] = tempH
+                    
                     completionDown(compl: downLoadPath!)
                 })
             }
             //   dispatch_group_leave(group)
             return nil
         })
+    }
+    
+    func parseTitleFromKey(key: String) -> String
+    {
+        let temp: String = key
+        
+        let tempArr: [String] = temp.characters.split{$0 == "/"}.map(String.init)
+        
+        let arrcount: Int = tempArr.count
+        
+        if(arrcount != 0)
+        {
+            let final: String = tempArr[arrcount-1]
+            
+            return final.stringByReplacingOccurrencesOfString("_", withString: " " )
+        }
+        else
+        {
+            return "BAD Title Splitting"
+        }
+
     }
     
     
@@ -243,6 +278,7 @@ class GetContentPages {
               //  arrUrl.append(compl)
                 
             //  self._arrayHolder.append(compl)
+                
                 
                 
                 if(fileType == "Hero")

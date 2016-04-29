@@ -100,7 +100,7 @@ class MiddleIntegration{
         
         if(temp.isEmpty)
         {
-            print("Error: while gettign content Page could not convert to thumbs. May be because content dictionary is null")
+            print("Error: while getting content Page could not convert to thumbs. May be because content dictionary is null")
         }
         return temp
     }

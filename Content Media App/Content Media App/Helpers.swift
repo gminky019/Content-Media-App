@@ -11,10 +11,20 @@ import Foundation
 class Helpers{
     
     var _awsInstance : ConnectToAWS
+    var _contentAws: GetContentPages
+    var _contentFlag: Bool
     
     init(aws: ConnectToAWS){
         self._awsInstance = aws
+        self._contentAws = GetContentPages()
+        self._contentFlag = false
+    }
+    
+    func setContentAWS(aws: GetContentPages)
+    {
+        self._contentFlag = true
         
+        self._contentAws = aws
     }
     
     
@@ -142,7 +152,21 @@ class Helpers{
     
     func createThumbHelper(url: NSURL) -> ThumbNail
     {
-        return ThumbNail(title: "Needs FIXING", description: getDesc(url), key: "BOBOBOBOBOB", picture: UIImage(contentsOfFile: url.path!)!)
+        var thatT: [NSURL: [String: String]] = self._contentAws.getKeyStuff()
+        
+        if(!self._contentFlag)
+        {
+            objc_exception_throw("Tried to used helper for ContentAWS; content AWS was never set to correct obj")
+    
+            return ThumbNail(title: thatT[url]!["title"]! , description: getDesc(url), key: thatT[url]!["key"]!, picture: UIImage(contentsOfFile: url.path!)!)
+        }
+        else
+        {
+            
+            
+            
+            return ThumbNail(title: thatT[url]!["title"]! , description: getDesc(url), key: thatT[url]!["key"]!, picture: UIImage(contentsOfFile: url.path!)!)
+        }
     }
     
     func getTitle(url: NSURL) -> String

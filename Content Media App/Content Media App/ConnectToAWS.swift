@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ConnectToAWS{
+public class ConnectToAWS{
     let _transferManager: AWSS3TransferManager
     var _completionHandler: AWSS3TransferUtilityDownloadCompletionHandlerBlock?
     var _prefix: String
