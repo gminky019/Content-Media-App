@@ -161,4 +161,24 @@ class articleViewController: UIViewController {
     
     }
     
+    func stripKey(key: String) -> String
+    {
+        let temp: String = key
+        
+        let tempArr: [String] = temp.characters.split{$0 == "/"}.map(String.init)
+        
+        let arrcount: Int = tempArr.count
+        
+        if(arrcount != 0)
+        {
+            let final: String = tempArr[arrcount-1]
+            
+            return final
+        }
+        else
+        {
+            return "BAD Title Stripping for article getting"
+        }
+    }
+    
 }
