@@ -26,6 +26,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var heroTwoType: UITextView!
     @IBOutlet weak var heroThreeType: UITextView!
     
+    @IBOutlet weak var heroOneIcon: UIImageView!
+    @IBOutlet weak var heroTwoIcon: UIImageView!
+    @IBOutlet weak var heroThreeIcon: UIImageView!
+    
     @IBOutlet weak var articleOne: UIImageView!
     @IBOutlet weak var articleTwo: UIImageView!
     @IBOutlet weak var articleThree: UIImageView!
@@ -105,6 +109,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var footerImageThree: UIImageView!
     @IBOutlet weak var footerImageFour: UIImageView!
     @IBOutlet weak var footerBackground: UIImageView!
+    
     
     var articleClicked = "null"
     
@@ -199,6 +204,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var overlay : UIView
+        var cdaLogo = UIImage(named: "CDALoadingLogo.png")
+        overlay = UIView(frame: view.frame)
+        overlay.backgroundColor = UIColor.whiteColor()
+        overlay.alpha = 1.0
+        
+        var activityIndicator = UIActivityIndicatorView()
+        
+        activityIndicator.frame = CGRectMake(0, 0, 40, 40)
+        activityIndicator.activityIndicatorViewStyle = .Gray
+        activityIndicator.center = CGPointMake(overlay.bounds.width / 2, (overlay.bounds.height / 7)*6)
+        
+        let logoView = UIImageView(image: cdaLogo)
+        
+        logoView.frame = CGRectMake((overlay.bounds.width / 2) - 317/2, (overlay.bounds.height / 7), 317, 400)
+        
+        
+        overlay.addSubview(activityIndicator)
+        overlay.addSubview(logoView)
+        
+        view.addSubview(overlay)
+        
+        activityIndicator.startAnimating()
+        
         let typeColor = UIColor.init(red: 221/255, green: 180/255, blue: 0/255, alpha: 1)
         
         
@@ -236,6 +265,8 @@ class ViewController: UIViewController {
             self.heroOneTitle.font = UIFont(name: "Roboto-Bold", size: 18)
             self.heroOneTitle.textColor = UIColor.whiteColor()
             
+            self.heroOneIcon.image = UIImage(named: "readicon.png")
+            
             // Hero Two
             self.heroTwoView.image = heroTwo.pic
             self.heroTwoTitle.text = heroTwo.title
@@ -243,12 +274,16 @@ class ViewController: UIViewController {
             self.heroTwoTitle.font = UIFont(name: "Roboto-Bold", size: 18)
             self.heroTwoTitle.textColor = UIColor.whiteColor()
             
+            self.heroTwoIcon.image = UIImage(named: "playicon.png")
+            
             // Hero Three
             self.heroThreeView.image = heroThree.pic
             self.heroThreeTitle.text = heroThree.title
             
             self.heroThreeTitle.font = UIFont(name: "Roboto-Bold", size: 18)
             self.heroThreeTitle.textColor = UIColor.whiteColor()
+            
+            self.heroThreeIcon.image = UIImage(named: "readicon.png")
             
             // Featured Articles
             let featuredOne = mainP!.subHero[0] as! ThumbNail
@@ -420,7 +455,7 @@ class ViewController: UIViewController {
                 self.learnArticleTwoTitle.textAlignment = .Center
                 
             }
-            
+        overlay.removeFromSuperview()
         }
         
         // Hero One Type 

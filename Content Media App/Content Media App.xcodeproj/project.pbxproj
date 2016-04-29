@@ -32,6 +32,13 @@
 		8593BE271CA4F140009FECB5 /* FBTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8593BE261CA4F140009FECB5 /* FBTest.swift */; };
 		85ED5AC91C88AC9300DA2971 /* ArticleObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5AC81C88AC9300DA2971 /* ArticleObj.swift */; };
 		85ED5ACB1C88AD4A00DA2971 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5ACA1C88AD4A00DA2971 /* Picture.swift */; };
+		CC335CE51CCF16210023AFB9 /* playicon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CE11CCF16210023AFB9 /* playicon.png */; };
+		CC335CE61CCF16210023AFB9 /* playiconsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CE21CCF16210023AFB9 /* playiconsmall.png */; };
+		CC335CE71CCF16210023AFB9 /* readicon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CE31CCF16210023AFB9 /* readicon.png */; };
+		CC335CE81CCF16210023AFB9 /* readiconsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CE41CCF16210023AFB9 /* readiconsmall.png */; };
+		CC335CEC1CD2BE7F0023AFB9 /* watchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC335CEB1CD2BE7F0023AFB9 /* watchViewController.swift */; };
+		CC335CEE1CD2BEA70023AFB9 /* learnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC335CED1CD2BEA70023AFB9 /* learnViewController.swift */; };
+		CC335CF01CD304C90023AFB9 /* CDALoadingLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CEF1CD304C90023AFB9 /* CDALoadingLogo.png */; };
 		CC747D3C1CB4BC0B00140275 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D381CB4BC0B00140275 /* facebook.png */; };
 		CC747D3D1CB4BC0B00140275 /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D391CB4BC0B00140275 /* instagram.png */; };
 		CC747D3E1CB4BC0B00140275 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D3A1CB4BC0B00140275 /* twitter.png */; };
@@ -41,8 +48,7 @@
 		CC747D471CB4C07000140275 /* instagram2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D431CB4C07000140275 /* instagram2.png */; };
 		CC747D481CB4C07000140275 /* twitter2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D441CB4C07000140275 /* twitter2.png */; };
 		CC747D491CB4C07000140275 /* youtube2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D451CB4C07000140275 /* youtube2.png */; };
-		CCC816681CB787FA00E75007 /* categoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC816671CB787FA00E75007 /* categoryViewController.swift */; };
-		CCC8166A1CB7882C00E75007 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC816691CB7882C00E75007 /* settingsViewController.swift */; };
+		CCC816681CB787FA00E75007 /* readViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC816671CB787FA00E75007 /* readViewController.swift */; };
 		CCD62A921CAA172200B4E786 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD62A911CAA172200B4E786 /* QuartzCore.framework */; };
 		CCD62ABE1CAA6AF700B4E786 /* articleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */; };
 		CCEB0A331CAB996D00D4F349 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEB0A321CAB996D00D4F349 /* Main.storyboard */; };
@@ -216,8 +222,9 @@
 				856425CF1C829B3D00D6AEE6 /* ViewController.swift */,
 				CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */,
 				CCEB0A321CAB996D00D4F349 /* Main.storyboard */,
-				CCC816671CB787FA00E75007 /* categoryViewController.swift */,
-				CCC816691CB7882C00E75007 /* settingsViewController.swift */,
+				CCC816671CB787FA00E75007 /* readViewController.swift */,
+				CC335CEB1CD2BE7F0023AFB9 /* watchViewController.swift */,
+				CC335CED1CD2BEA70023AFB9 /* learnViewController.swift */,
 				856425D41C829B3D00D6AEE6 /* Assets.xcassets */,
 				856425D61C829B3D00D6AEE6 /* LaunchScreen.storyboard */,
 				856425D91C829B3D00D6AEE6 /* Info.plist */,
@@ -304,6 +311,10 @@
 		CCD62A721CA4EA2700B4E786 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				CC335CE11CCF16210023AFB9 /* playicon.png */,
+				CC335CE21CCF16210023AFB9 /* playiconsmall.png */,
+				CC335CE31CCF16210023AFB9 /* readicon.png */,
+				CC335CE41CCF16210023AFB9 /* readiconsmall.png */,
 				CC747D421CB4C07000140275 /* facebook2.png */,
 				CC747D431CB4C07000140275 /* instagram2.png */,
 				CC747D441CB4C07000140275 /* twitter2.png */,
@@ -329,6 +340,7 @@
 				CCEB0A4F1CAB9E7000D4F349 /* tempArtOne.jpg */,
 				CCEB0A501CAB9E7000D4F349 /* tempArtTwo.JPG */,
 				CCEB0A511CAB9E7000D4F349 /* tempHeroThree.jpg */,
+				CC335CEF1CD304C90023AFB9 /* CDALoadingLogo.png */,
 				CCEB0A521CAB9E7000D4F349 /* tempHeroTwo.jpg */,
 				CCEB0A6D1CAB9EEE00D4F349 /* PlayfairDisplay-Bold.ttf */,
 				CCEB0A6E1CAB9EEE00D4F349 /* PlayfairDisplay-BoldItalic.ttf */,
@@ -429,9 +441,13 @@
 				CC747D461CB4C07000140275 /* facebook2.png in Resources */,
 				CCEB0A741CAB9EEE00D4F349 /* PlayfairDisplay-Bold.ttf in Resources */,
 				CC747D3C1CB4BC0B00140275 /* facebook.png in Resources */,
+				CC335CE61CCF16210023AFB9 /* playiconsmall.png in Resources */,
 				CCEB0A671CAB9E9A00D4F349 /* KyloRen.png in Resources */,
 				CCEB0A771CAB9EEE00D4F349 /* PlayfairDisplay-Regular.ttf in Resources */,
+				CC335CE71CCF16210023AFB9 /* readicon.png in Resources */,
 				CCEB0A691CAB9E9A00D4F349 /* r2d2.png in Resources */,
+				CC335CF01CD304C90023AFB9 /* CDALoadingLogo.png in Resources */,
+				CC335CE51CCF16210023AFB9 /* playicon.png in Resources */,
 				CC747D471CB4C07000140275 /* instagram2.png in Resources */,
 				CCEB0A331CAB996D00D4F349 /* Main.storyboard in Resources */,
 				CC747D481CB4C07000140275 /* twitter2.png in Resources */,
@@ -444,6 +460,7 @@
 				CCEB0A791CAB9EEE00D4F349 /* Roboto-Medium.ttf in Resources */,
 				856425D51C829B3D00D6AEE6 /* Assets.xcassets in Resources */,
 				CCEB0A581CAB9E7000D4F349 /* tempArtTwo.JPG in Resources */,
+				CC335CE81CCF16210023AFB9 /* readiconsmall.png in Resources */,
 				CCEB0A541CAB9E7000D4F349 /* Logo.png in Resources */,
 				CCEB0A7A1CAB9EEE00D4F349 /* Roboto-Regular.ttf in Resources */,
 				CCEB0A651CAB9E9A00D4F349 /* bb8.png in Resources */,
@@ -537,9 +554,11 @@
 				856425CE1C829B3D00D6AEE6 /* AppDelegate.swift in Sources */,
 				8537BEF01CB7928500E30EC6 /* GetSingleContent.swift in Sources */,
 				8593BE1A1CA4E489009FECB5 /* InterfaceToBackEnd.swift in Sources */,
+				CC335CEC1CD2BE7F0023AFB9 /* watchViewController.swift in Sources */,
+				CC335CEE1CD2BEA70023AFB9 /* learnViewController.swift in Sources */,
 				8539A5C61CB708F0007E4C38 /* MiddleIntegration.swift in Sources */,
 				8593BE271CA4F140009FECB5 /* FBTest.swift in Sources */,
-				CCC816681CB787FA00E75007 /* categoryViewController.swift in Sources */,
+				CCC816681CB787FA00E75007 /* readViewController.swift in Sources */,
 				8593BE1C1CA4E550009FECB5 /* MainPage.swift in Sources */,
 				85ED5ACB1C88AD4A00DA2971 /* Picture.swift in Sources */,
 				8524068C1CB0C89F0086FACB /* SubHero.swift in Sources */,
@@ -550,7 +569,6 @@
 				8524068A1CAE18FE0086FACB /* ConnectToAWS.swift in Sources */,
 				856425F71C829DB500D6AEE6 /* SWRevealViewController.m in Sources */,
 				8514CF7B1C869E7F00EF5301 /* Content.swift in Sources */,
-				CCC8166A1CB7882C00E75007 /* settingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
