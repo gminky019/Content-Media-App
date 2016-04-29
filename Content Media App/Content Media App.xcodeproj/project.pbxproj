@@ -40,6 +40,10 @@
 		CC335CEC1CD2BE7F0023AFB9 /* watchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC335CEB1CD2BE7F0023AFB9 /* watchViewController.swift */; };
 		CC335CEE1CD2BEA70023AFB9 /* learnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC335CED1CD2BEA70023AFB9 /* learnViewController.swift */; };
 		CC335CF01CD304C90023AFB9 /* CDALoadingLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CEF1CD304C90023AFB9 /* CDALoadingLogo.png */; };
+		CC335CF21CD30DCE0023AFB9 /* LoginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC335CF11CD30DCE0023AFB9 /* LoginBackground.jpg */; };
+		CC335CF41CD30F350023AFB9 /* facebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CF31CD30F350023AFB9 /* facebookButton.png */; };
+		CC335CF61CD311570023AFB9 /* BackgroundImageLoading.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CF51CD311570023AFB9 /* BackgroundImageLoading.png */; };
+		CC335CF81CD312930023AFB9 /* BackgroundImageLoading2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC335CF71CD312930023AFB9 /* BackgroundImageLoading2.png */; };
 		CC747D3C1CB4BC0B00140275 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D381CB4BC0B00140275 /* facebook.png */; };
 		CC747D3D1CB4BC0B00140275 /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D391CB4BC0B00140275 /* instagram.png */; };
 		CC747D3E1CB4BC0B00140275 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = CC747D3A1CB4BC0B00140275 /* twitter.png */; };
@@ -131,6 +135,10 @@
 		CC335CEB1CD2BE7F0023AFB9 /* watchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = watchViewController.swift; sourceTree = "<group>"; };
 		CC335CED1CD2BEA70023AFB9 /* learnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = learnViewController.swift; sourceTree = "<group>"; };
 		CC335CEF1CD304C90023AFB9 /* CDALoadingLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CDALoadingLogo.png; sourceTree = "<group>"; };
+		CC335CF11CD30DCE0023AFB9 /* LoginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground.jpg; sourceTree = "<group>"; };
+		CC335CF31CD30F350023AFB9 /* facebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookButton.png; sourceTree = "<group>"; };
+		CC335CF51CD311570023AFB9 /* BackgroundImageLoading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundImageLoading.png; sourceTree = "<group>"; };
+		CC335CF71CD312930023AFB9 /* BackgroundImageLoading2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundImageLoading2.png; sourceTree = "<group>"; };
 		CC747D381CB4BC0B00140275 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		CC747D391CB4BC0B00140275 /* instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagram.png; sourceTree = "<group>"; };
 		CC747D3A1CB4BC0B00140275 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
@@ -341,9 +349,12 @@
 				CCEB0A601CAB9E9A00D4F349 /* r2d2.png */,
 				CCEB0A611CAB9E9A00D4F349 /* tempHeroOne.jpg */,
 				CCEB0A621CAB9E9A00D4F349 /* Vader.png */,
+				CC335CF51CD311570023AFB9 /* BackgroundImageLoading.png */,
+				CC335CF71CD312930023AFB9 /* BackgroundImageLoading2.png */,
 				CCEB0A631CAB9E9A00D4F349 /* X-Wing Attack.png */,
 				CCEB0A4B1CAB9E7000D4F349 /* BlackOverlay.png */,
 				CCEB0A4C1CAB9E7000D4F349 /* Logo.png */,
+				CC335CF31CD30F350023AFB9 /* facebookButton.png */,
 				CCEB0A4D1CAB9E7000D4F349 /* navButton.png */,
 				CCEB0A4E1CAB9E7000D4F349 /* SearchButton.png */,
 				CCEB0A4F1CAB9E7000D4F349 /* tempArtOne.jpg */,
@@ -358,6 +369,7 @@
 				CCEB0A711CAB9EEE00D4F349 /* Roboto-Bold.ttf */,
 				CCEB0A721CAB9EEE00D4F349 /* Roboto-Medium.ttf */,
 				CCEB0A731CAB9EEE00D4F349 /* Roboto-Regular.ttf */,
+				CC335CF11CD30DCE0023AFB9 /* LoginBackground.jpg */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -450,6 +462,7 @@
 				CC747D461CB4C07000140275 /* facebook2.png in Resources */,
 				CCEB0A741CAB9EEE00D4F349 /* PlayfairDisplay-Bold.ttf in Resources */,
 				CC747D3C1CB4BC0B00140275 /* facebook.png in Resources */,
+				CC335CF61CD311570023AFB9 /* BackgroundImageLoading.png in Resources */,
 				CC335CE61CCF16210023AFB9 /* playiconsmall.png in Resources */,
 				CCEB0A671CAB9E9A00D4F349 /* KyloRen.png in Resources */,
 				CCEB0A771CAB9EEE00D4F349 /* PlayfairDisplay-Regular.ttf in Resources */,
@@ -463,6 +476,7 @@
 				CC747D3E1CB4BC0B00140275 /* twitter.png in Resources */,
 				CC747D491CB4C07000140275 /* youtube2.png in Resources */,
 				CC747D3D1CB4BC0B00140275 /* instagram.png in Resources */,
+				CC335CF81CD312930023AFB9 /* BackgroundImageLoading2.png in Resources */,
 				856425D81C829B3D00D6AEE6 /* LaunchScreen.storyboard in Resources */,
 				CCEB0A6B1CAB9E9A00D4F349 /* Vader.png in Resources */,
 				856425F91C829F1E00D6AEE6 /* BackEnd_ReadMe.rtf in Resources */,
@@ -473,6 +487,7 @@
 				CCEB0A541CAB9E7000D4F349 /* Logo.png in Resources */,
 				CCEB0A7A1CAB9EEE00D4F349 /* Roboto-Regular.ttf in Resources */,
 				CCEB0A651CAB9E9A00D4F349 /* bb8.png in Resources */,
+				CC335CF21CD30DCE0023AFB9 /* LoginBackground.jpg in Resources */,
 				CCEB0A5A1CAB9E7000D4F349 /* tempHeroTwo.jpg in Resources */,
 				CCEB0A531CAB9E7000D4F349 /* BlackOverlay.png in Resources */,
 				CC747D3F1CB4BC0B00140275 /* youtube.png in Resources */,
@@ -481,6 +496,7 @@
 				CCEB0A661CAB9E9A00D4F349 /* DarthMal.png in Resources */,
 				CCEB0A6A1CAB9E9A00D4F349 /* tempHeroOne.jpg in Resources */,
 				CCEB0A641CAB9E9A00D4F349 /* BB8.jpg in Resources */,
+				CC335CF41CD30F350023AFB9 /* facebookButton.png in Resources */,
 				CCEB0A761CAB9EEE00D4F349 /* PlayfairDisplay-Italic.ttf in Resources */,
 				CCEB0A751CAB9EEE00D4F349 /* PlayfairDisplay-BoldItalic.ttf in Resources */,
 				CCEB0A681CAB9E9A00D4F349 /* MileniumFalcon.png in Resources */,

@@ -45,9 +45,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var articleThreeTitle: UITextView!
     @IBOutlet weak var articleFourTitle: UITextView!
     
+    @IBOutlet weak var articleOneIcon: UIImageView!
+    @IBOutlet weak var articleTwoIcon: UIImageView!
+    @IBOutlet weak var articleThreeIcon: UIImageView!
+    @IBOutlet weak var articleFourIcon: UIImageView!
+    
     @IBOutlet weak var watchHero: UIImageView!
     @IBOutlet weak var watchHeroTitle: UITextView!
     @IBOutlet weak var watchHeroType: UITextView!
+    @IBOutlet weak var watchHeroIcon: UIImageView!
     
     @IBOutlet weak var watchArticleOne: UIImageView!
     @IBOutlet weak var watchArticleTwo: UIImageView!
@@ -58,9 +64,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var watchArticleOneTitle: UITextView!
     @IBOutlet weak var watchArticleTwoTitle: UITextView!
     
+    @IBOutlet weak var watchArticleOneIcon: UIImageView!
+    @IBOutlet weak var watchArticleTwoIcon: UIImageView!
+    
     @IBOutlet weak var readHero: UIImageView!
     @IBOutlet weak var readHeroTitle: UITextView!
     @IBOutlet weak var readHeroType: UITextView!
+    @IBOutlet weak var readHeroIcon: UIImageView!
     
     @IBOutlet weak var readArticleOne: UIImageView!
     @IBOutlet weak var readArticleTwo: UIImageView!
@@ -71,9 +81,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var readArticleOneTitle: UITextView!
     @IBOutlet weak var readArticleTwoTitle: UITextView!
     
+    @IBOutlet weak var readArticleOneIcon: UIImageView!
+    @IBOutlet weak var readArticleTwoIcon: UIImageView!
+    
     @IBOutlet weak var learnHero: UIImageView!
     @IBOutlet weak var learnHeroTitle: UITextView!
     @IBOutlet weak var learnHeroType: UITextView!
+    @IBOutlet weak var learnHeroIcon: UIImageView!
     
     @IBOutlet weak var learnArticleOne: UIImageView!
     @IBOutlet weak var learnArticleTwo: UIImageView!
@@ -85,6 +99,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var learnArticleOneTitle: UITextView!
     @IBOutlet weak var learnArticleTwoTitle: UITextView!
     
+    @IBOutlet weak var learnArticleOneIcon: UIImageView!
+    @IBOutlet weak var learnArticleTwoIcon: UIImageView!
+    
     @IBOutlet weak var watchLabel: UITextView!
     @IBOutlet weak var readLabel: UITextView!
     @IBOutlet weak var learnLabel: UITextView!
@@ -94,6 +111,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var shopHero: UIImageView!
     @IBOutlet weak var shopHeroTitle: UITextView!
     @IBOutlet weak var shopHeroType: UITextView!
+    @IBOutlet weak var shopHeroIcon: UIImageView!
     
     @IBOutlet weak var shopArticleOne: UIImageView!
     @IBOutlet weak var shopArticleTwo: UIImageView!
@@ -103,6 +121,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var shopArticleOneTitle: UITextView!
     @IBOutlet weak var shopArticleTwoTitle: UITextView!
+    
+    @IBOutlet weak var shopArticleOneIcon: UIImageView!
+    @IBOutlet weak var shopArticleTwoIcon: UIImageView!
     
     @IBOutlet weak var footerImageOne: UIImageView!
     @IBOutlet weak var footerImageTwo: UIImageView!
@@ -121,7 +142,7 @@ class ViewController: UIViewController {
     
     var imageHeroTwo = UIImage (named: "tempHeroTwo.jpg")
     var titleHeroTwo = "Monkeys of the Jungle"
-    var typeHeroTwo = "WATCH"
+    var typeHeroTwo = "READ"
     
     var imageHeroThree = UIImage (named: "tempHeroThree.jpg")
     var titleHeroThree = "Dolphins: Communication with Sonar"
@@ -204,27 +225,38 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let imageView = UIImageView(frame: CGRect(x:0, y:0, width: 86, height: 44))
+        let image = UIImage(named: "Logo.png")
+        imageView.contentMode = .ScaleAspectFit
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+        
         var overlay : UIView
-        var cdaLogo = UIImage(named: "CDALoadingLogo.png")
+        //var cdaLogo = UIImage(named: "CDALoadingLogo.png")
         overlay = UIView(frame: view.frame)
-        overlay.backgroundColor = UIColor.whiteColor()
-        overlay.alpha = 1.0
+        //overlay.backgroundColor = UIColor.whiteColor()
+        //overlay.alpha = 1.0
+        
+        let backgroundOverlay = UIImage(named: "BackgroundImageLoading2.png")
+        
+        let backgroundView = UIImageView(image: backgroundOverlay)
         
         var activityIndicator = UIActivityIndicatorView()
         
         activityIndicator.frame = CGRectMake(0, 0, 40, 40)
-        activityIndicator.activityIndicatorViewStyle = .Gray
-        activityIndicator.center = CGPointMake(overlay.bounds.width / 2, (overlay.bounds.height / 7)*6)
+        activityIndicator.activityIndicatorViewStyle = .WhiteLarge
+        activityIndicator.center = CGPointMake(overlay.bounds.width / 2, (overlay.bounds.height / 3)*2)
         
-        let logoView = UIImageView(image: cdaLogo)
+        //let logoView = UIImageView(image: cdaLogo)
         
-        logoView.frame = CGRectMake((overlay.bounds.width / 2) - 317/2, (overlay.bounds.height / 7), 317, 400)
+        //logoView.frame = CGRectMake((overlay.bounds.width / 2) - 317/2, (overlay.bounds.height / 7), 317, 400)
         
+        backgroundView.addSubview(activityIndicator)
+        //overlay.addSubview(activityIndicator)
+        //overlay.addSubview(logoView)
         
-        overlay.addSubview(activityIndicator)
-        overlay.addSubview(logoView)
-        
-        view.addSubview(overlay)
+        view.addSubview(backgroundView)
         
         activityIndicator.startAnimating()
         
@@ -238,6 +270,8 @@ class ViewController: UIViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
        }
+
+        
         
         var mainP: MainPageContent?
         var integrate: MiddleIntegration = MiddleIntegration()
@@ -274,7 +308,7 @@ class ViewController: UIViewController {
             self.heroTwoTitle.font = UIFont(name: "Roboto-Bold", size: 18)
             self.heroTwoTitle.textColor = UIColor.whiteColor()
             
-            self.heroTwoIcon.image = UIImage(named: "playicon.png")
+            self.heroTwoIcon.image = UIImage(named: "readicon.png")
             
             // Hero Three
             self.heroThreeView.image = heroThree.pic
@@ -299,6 +333,7 @@ class ViewController: UIViewController {
             self.articleOneTitle.textColor = UIColor.blackColor()
             self.articleOneTitle.textAlignment = .Center
             
+            self.articleOneIcon.image = UIImage(named: "readIconSmall.png")
             // Featured Two
             self.articleTwo.image = featuredTwo.pic
             self.articleTwoTitle.text = featuredTwo.title
@@ -306,7 +341,7 @@ class ViewController: UIViewController {
             self.articleTwoTitle.font = UIFont(name: "Roboto-Bold", size: 14)
             self.articleTwoTitle.textColor = UIColor.blackColor()
             self.articleTwoTitle.textAlignment = .Center
-            
+            self.articleTwoIcon.image = UIImage(named: "readIconSmall.png")
             // Featured Three
             self.articleThree.image = featuredThree.pic
             self.articleThreeTitle.text = featuredThree.title
@@ -315,6 +350,8 @@ class ViewController: UIViewController {
             self.articleThreeTitle.textColor = UIColor.blackColor()
             self.articleThreeTitle.textAlignment = .Center
             
+            self.articleThreeIcon.image = UIImage(named: "readIconSmall.png")
+            
             // Featured Four
             self.articleFour.image = featuredFour.pic
             self.articleFourTitle.text = featuredFour.title
@@ -322,6 +359,8 @@ class ViewController: UIViewController {
             self.articleFourTitle.font = UIFont(name: "Roboto-Bold", size: 14)
             self.articleFourTitle.textColor = UIColor.blackColor()
             self.articleFourTitle.textAlignment = .Center
+            
+            self.articleFourIcon.image = UIImage(named: "readIconSmall.png")
             
             let contentHero:[SubHero] = mainP!.contentHero
             
@@ -337,12 +376,16 @@ class ViewController: UIViewController {
                         self.readHero.image = mainH.pic
                         self.readHeroTitle.text = mainH.title
                         self.readHeroType.text = categoryHero.type
+                        self.readHeroIcon.image = UIImage (named: "readicon.png")
                         self.readArticleOne.image = sub1.pic
                         self.readArticleOneTitle.text = sub1.title
                         self.readArticleOneType.text = categoryHero.type
+                        self.readArticleOneIcon.image = UIImage (named: "readIconSmall.png")
                         self.readArticleTwo.image = sub2.pic
                         self.readArticleTwoTitle.text = sub2.title
                         self.readArticleTwoType.text = categoryHero.type
+                        self.readArticleTwoIcon.image = UIImage (named: "readIconSmall.png")
+                    
                     
                     case "watch":
                         self.watchHero.image = mainH.pic
@@ -355,6 +398,11 @@ class ViewController: UIViewController {
                         self.watchArticleTwoTitle.text = sub2.title
                         self.watchArticleTwoType.text = categoryHero.type
                     
+                        self.watchHeroIcon.image = UIImage (named: "playicon.png")
+                        self.watchArticleOneIcon.image = UIImage (named: "playiconsmall.png")
+                        self.watchArticleTwoIcon.image = UIImage (named: "playiconsmall.png")
+                    
+                    
                     case "shop":
                         self.shopHero.image = mainH.pic
                         self.shopHeroTitle.text = mainH.title
@@ -366,6 +414,10 @@ class ViewController: UIViewController {
                         self.shopArticleTwoTitle.text = sub2.title
                         self.shopArticleTwoType.text = categoryHero.type
                     
+                        self.shopHeroIcon.image = UIImage (named: "readicon.png")
+                        self.shopArticleOneIcon.image = UIImage (named: "readIconSmall.png")
+                        self.shopArticleTwoIcon.image = UIImage (named: "readIconSmall.png")
+                    
                     case "learn":
                         self.learnHero.image = mainH.pic
                         self.learnHeroTitle.text = mainH.title
@@ -376,6 +428,10 @@ class ViewController: UIViewController {
                         self.learnArticleTwo.image = sub2.pic
                         self.learnArticleTwoTitle.text = sub2.title
                         self.learnArticleTwoType.text = categoryHero.type
+                    
+                        self.learnHeroIcon.image = UIImage (named: "readicon.png")
+                        self.learnArticleOneIcon.image = UIImage (named: "readIconSmall.png")
+                        self.learnArticleTwoIcon.image = UIImage (named: "readIconSmall.png")
                     
                 default:
                     break
@@ -454,8 +510,13 @@ class ViewController: UIViewController {
                 self.learnArticleTwoTitle.textColor = UIColor.blackColor()
                 self.learnArticleTwoTitle.textAlignment = .Center
                 
+                // Shop
+                
+                self.shopHeroIcon.image = UIImage (named: "readicon.png")
+                self.shopArticleOneIcon.image = UIImage (named: "readIconSmall.png")
+                self.shopArticleTwoIcon.image = UIImage (named: "readIconSmall.png")
             }
-        overlay.removeFromSuperview()
+        backgroundView.removeFromSuperview()
         }
         
         // Hero One Type 
@@ -862,7 +923,7 @@ class ViewController: UIViewController {
 
         
     }
-
+    
     }
 
 
