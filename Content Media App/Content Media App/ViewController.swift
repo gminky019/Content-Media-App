@@ -1040,7 +1040,7 @@ class ViewController: UIViewController {
             DestViewController.article = articleClicked
             DestViewController.articleThumbnail = passedThumbnail
         }
-        else if segue.id == "goToVideo" {
+        else if segue.identifier == "goToVideo" {
             let DestViewVideoController : videoViewController = segue.destinationViewController as! videoViewController
             DestViewVideoController.articleThumbnail = passedThumbnail
         }
