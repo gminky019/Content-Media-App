@@ -62,6 +62,9 @@ class GetSingleContent {
     func setRequest(key: String) -> AWSS3TransferManagerDownloadRequest
     {
         var str: String = key
+        var r: Int32 = rand()
+        
+        str = String(r)  + str
         var downReq: AWSS3TransferManagerDownloadRequest = AWSS3TransferManagerDownloadRequest()
         
         if(str.lowercaseString.rangeOfString("/") != nil)
@@ -73,7 +76,7 @@ class GetSingleContent {
         
         if NSFileManager.defaultManager().fileExistsAtPath(downFileURL.path!){
             //reqList.append(nil)
-            let r : Int32 = rand()
+          //  let r : Int32 = rand()
             //downFileURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).URLByAppendingPathComponent("temp" + String(r) + str)
             print("Error getting download request file path exists")
         }

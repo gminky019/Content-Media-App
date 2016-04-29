@@ -241,10 +241,10 @@ class ViewController: UIViewController {
         
         var mainP: MainPageContent?
         var integrate: MiddleIntegration = MiddleIntegration()
-        var testerPage: [ThumbNail] = [ThumbNail]()
         
-        integrate.getReadPage(){(returned: [ThumbNail]) in
-            testerPage = returned
+        
+        
+        integrate.getReadPage(){(returned: ContentPage) in
             
             var thatHolder = 0
         }

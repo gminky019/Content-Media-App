@@ -70,13 +70,13 @@ class MiddleIntegration{
         }
     }
     
-    func getReadPage(completion: (returned: [ThumbNail]) -> ())
+    func getReadPage(completion: (returned: ContentPage) -> ())
     {
         let awsContent: GetContentPages = GetContentPages()
         
         self.help.setContentAWS(awsContent)
         
-        var temp: [ThumbNail] = [ThumbNail] ()
+        var temp: ContentPage
         
         awsContent.getContentMain("Read"){(loc: [String: [NSURL]]) in
             
@@ -86,25 +86,27 @@ class MiddleIntegration{
         }
     }
     
-    func convertToThumbs(dict: [String: [NSURL]]) -> [ThumbNail]
-    {
-        var temp: [ThumbNail] = [ThumbNail]()
+    
+    func convertToThumbs(dict: [String: [NSURL]]) -> ContentPage
+    {        var hero: [ThumbNail] = [ThumbNail]()
+        var other : [ThumbNail] = [ThumbNail]()
 
         for url in dict["Hero"]!
         {
-            temp.append(self.convertUrlToThumb(url))
+            hero.append(self.convertUrlToThumb(url))
+            
         }
         
         for url in dict["Non"]!
         {
-            temp.append(self.convertUrlToThumb(url))
+            other.append(self.convertUrlToThumb(url))
         }
         
-        if(temp.isEmpty)
+        if(other.isEmpty || hero.isEmpty)
         {
             print("Error: while getting content Page could not convert to thumbs. May be because content dictionary is null")
         }
-        return temp
+        return ContentPage(h: hero, o: other)
     }
     
     func convertUrlToThumb(url: NSURL) -> ThumbNail

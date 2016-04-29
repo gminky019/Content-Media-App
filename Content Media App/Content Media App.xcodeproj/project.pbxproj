@@ -27,6 +27,7 @@
 		856425FE1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 856425FD1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf */; };
 		856426001C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 856425FF1C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf */; };
 		856864F91CCC30EB00001D6B /* GetContentPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856864F81CCC30EB00001D6B /* GetContentPages.swift */; };
+		856864FB1CD3106800001D6B /* ContentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856864FA1CD3106800001D6B /* ContentPage.swift */; };
 		8593BE1A1CA4E489009FECB5 /* InterfaceToBackEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8593BE191CA4E489009FECB5 /* InterfaceToBackEnd.swift */; };
 		8593BE1C1CA4E550009FECB5 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8593BE1B1CA4E550009FECB5 /* MainPage.swift */; };
 		8593BE271CA4F140009FECB5 /* FBTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8593BE261CA4F140009FECB5 /* FBTest.swift */; };
@@ -115,6 +116,7 @@
 		856425FD1C82A4DC00D6AEE6 /* ReadMe_Integration.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe_Integration.rtf; sourceTree = "<group>"; };
 		856425FF1C82A50300D6AEE6 /* ReadMe_FrontEnd.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe_FrontEnd.rtf; sourceTree = "<group>"; };
 		856864F81CCC30EB00001D6B /* GetContentPages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetContentPages.swift; sourceTree = "<group>"; };
+		856864FA1CD3106800001D6B /* ContentPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPage.swift; sourceTree = "<group>"; };
 		8593BE191CA4E489009FECB5 /* InterfaceToBackEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceToBackEnd.swift; sourceTree = "<group>"; };
 		8593BE1B1CA4E550009FECB5 /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		8593BE261CA4F140009FECB5 /* FBTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBTest.swift; sourceTree = "<group>"; };
@@ -138,8 +140,6 @@
 		CC747D431CB4C07000140275 /* instagram2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagram2.png; sourceTree = "<group>"; };
 		CC747D441CB4C07000140275 /* twitter2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter2.png; sourceTree = "<group>"; };
 		CC747D451CB4C07000140275 /* youtube2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube2.png; sourceTree = "<group>"; };
-		CCC816671CB787FA00E75007 /* categoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryViewController.swift; sourceTree = "<group>"; };
-		CCC816691CB7882C00E75007 /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		CCC816671CB787FA00E75007 /* readViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = readViewController.swift; sourceTree = "<group>"; };
 		CCD62A911CAA172200B4E786 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CCD62ABD1CAA6AF700B4E786 /* articleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = articleViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +303,7 @@
 				8593BE1B1CA4E550009FECB5 /* MainPage.swift */,
 				8524068B1CB0C89F0086FACB /* SubHero.swift */,
 				8524068D1CB0C9F60086FACB /* ThumbNail.swift */,
+				856864FA1CD3106800001D6B /* ContentPage.swift */,
 			);
 			name = "Content Classes";
 			sourceTree = "<group>";
@@ -567,6 +568,7 @@
 				8539A5C61CB708F0007E4C38 /* MiddleIntegration.swift in Sources */,
 				8593BE271CA4F140009FECB5 /* FBTest.swift in Sources */,
 				CCC816681CB787FA00E75007 /* readViewController.swift in Sources */,
+				856864FB1CD3106800001D6B /* ContentPage.swift in Sources */,
 				8593BE1C1CA4E550009FECB5 /* MainPage.swift in Sources */,
 				85ED5ACB1C88AD4A00DA2971 /* Picture.swift in Sources */,
 				8524068C1CB0C89F0086FACB /* SubHero.swift in Sources */,
