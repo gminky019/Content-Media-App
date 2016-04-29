@@ -25,6 +25,31 @@ class GetSingleContent {
         }
     }
     
+    func getVideoContent(key: String, type: String, cont: Content, complete: (single: String)-> ())
+    {
+        let req: AWSS3TransferManagerDownloadRequest = self.setRequest(key)
+        
+        var urlContent: NSURL?
+        var single: String?
+        
+        self.downLoad(req){ (url: NSURL) in
+            urlContent = url
+            (complete(single: self.getVideoUrl(url)))
+        }
+    }
+    
+    func getVideoUrl(url: NSURL) -> String
+    {
+        var txt: String?
+        
+        do {
+            txt = try NSString(contentsOfURL: url, encoding: NSUTF8StringEncoding) as String
+        }
+        catch {/* error handling here */}
+        
+        return txt!
+    }
+    
     func createContent(url: NSURL, type: String, cont: Content ) -> Content?
     {
         do

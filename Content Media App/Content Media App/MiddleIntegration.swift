@@ -40,31 +40,42 @@ class MiddleIntegration{
         }
         
     }
+    func getVideoContent(cont: Content, completion: (retContent: String) -> ())
+    {
+        let srcKey: String = self.help.createKeyFromContent(cont)
+        
+        self.contentAws.getVideoContent(srcKey, type: "Video", cont: cont){(single: String) in
+            (completion(retContent: single))
+        }
+    }
     
-    func getVideoPage(completion: (returned: [ThumbNail]) -> ())
+    func getVideoPage(completion: (returned: ContentPage) -> ())
     {
         let awsContent: GetContentPages = GetContentPages()
         
-        var temp: [ThumbNail] = [ThumbNail] ()
+        self.help.setContentAWS(awsContent)
+        
+     
         
         awsContent.getContentMain("Video"){(loc: [String: [NSURL]]) in
             
-            temp = self.convertToThumbs(loc)
+            var temp = self.convertToThumbs(loc)
             
             completion(returned: temp)
         }
-        
     }
     
-    func getLearnPage(completion: (returned: [ThumbNail]) -> ())
+    func getLearnPage(completion: (returned: ContentPage) -> ())
     {
         let awsContent: GetContentPages = GetContentPages()
         
-        var temp: [ThumbNail] = [ThumbNail] ()
+        self.help.setContentAWS(awsContent)
+        
+     
         
         awsContent.getContentMain("Learn"){(loc: [String: [NSURL]]) in
             
-            temp = self.convertToThumbs(loc)
+          var temp = self.convertToThumbs(loc)
             
             completion(returned: temp)
         }
@@ -76,11 +87,11 @@ class MiddleIntegration{
         
         self.help.setContentAWS(awsContent)
         
-        var temp: ContentPage
+      
         
         awsContent.getContentMain("Read"){(loc: [String: [NSURL]]) in
             
-            temp = self.convertToThumbs(loc)
+           var temp = self.convertToThumbs(loc)
             
             completion(returned: temp)
         }

@@ -21,5 +21,7 @@ class Content {
         self.title = title
         self.description = description
         self.awskey = key
+        
     }
+    
 }
