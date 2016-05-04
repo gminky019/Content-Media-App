@@ -25,6 +25,7 @@ class videoViewController: UIViewController {
         
         var integrate: MiddleIntegration = MiddleIntegration()
         
+        // Load video 
         integrate.getVideoContent(tempC){(retContent: String) in
             var url: NSURL = NSURL(string: retContent)!
             
@@ -35,6 +36,7 @@ class videoViewController: UIViewController {
     
     }
     
+    // Strip the "key" so that it is formatted properly
     func stripKey(temp: String) -> String{
         let tempArr: [String] = temp.characters.split{$0 == "/"}.map(String.init)
         

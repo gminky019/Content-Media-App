@@ -13,6 +13,8 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
             super.viewDidLoad()
         
+        // Facebook Login Button 
+        
         if (FBSDKAccessToken.currentAccessToken() != nil) {
             
             performSegueWithIdentifier("goToHome", sender: nil)
