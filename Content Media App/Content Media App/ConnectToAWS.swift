@@ -22,6 +22,7 @@ public class ConnectToAWS{
     var _globFlag: Bool = false
     var _downLoaded: [String: Bool]
     var _realDown: [String]
+    let _s3MainBucket: String = "contentmediaapp"
     
     
     //let _baseURL : String

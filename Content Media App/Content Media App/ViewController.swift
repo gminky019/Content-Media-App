@@ -281,11 +281,11 @@ class ViewController: UIViewController {
         var integrate: MiddleIntegration = MiddleIntegration()
         
         
-        
+        /*
         integrate.getReadPage(){(returned: ContentPage) in
             
             var thatHolder = 0
-        }
+        }*/
         
         integrate.getMainPage(){
             (main: MainPageContent) in
