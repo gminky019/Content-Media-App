@@ -31,6 +31,7 @@ class articleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Declarations
         self.articleAuthorDate.text = " "
         let accessViewController: ViewController = ViewController(nibName: nil, bundle: nil)
         
@@ -39,8 +40,9 @@ class articleViewController: UIViewController {
         
         var tempK: String = self.stripKey(self.articleThumbnail.awskey)
         
-       var tempCont = Content(title: self.articleThumbnail.title, description: self.articleThumbnail.description, key: tempK )
+        var tempCont = Content(title: self.articleThumbnail.title, description: self.articleThumbnail.description, key: tempK )
         
+        // Load Content into articles
         var realArt: ArticleObj?
         integrate.getContent(tempCont){
             (retContent: Content) in
@@ -89,6 +91,7 @@ class articleViewController: UIViewController {
     
     }
     
+    // Strip the "key" so that it is formatted correctly 
     func stripKey(temp: String) -> String{
         let tempArr: [String] = temp.characters.split{$0 == "/"}.map(String.init)
         

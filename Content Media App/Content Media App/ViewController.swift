@@ -377,6 +377,7 @@ class ViewController: UIViewController {
             
             let contentHero:[SubHero] = mainP!.contentHero
             
+            // Load content from backend into content views
             for categoryHero in contentHero {
                 let mainH :
                     ThumbNail = categoryHero.main as! ThumbNail
@@ -681,17 +682,6 @@ class ViewController: UIViewController {
         
         // Hero
         
-        // Hero Gradient  --- Broken, Fix Later
-       
-        /*
-        let gradientLayerWatchHero = CAGradientLayer.init()
-        gradientLayerWatchHero.frame = watchHero.bounds
-        gradientLayerWatchHero.colors = colors
-        gradientLayerWatchHero.startPoint = startPoint
-        gradientLayerWatchHero.endPoint = endPoint
-        self.watchHero.layer.addSublayer(gradientLayerWatchHero)
-        */
-        
         
         // Watch Hero Tap Gesture Recognizer
         watchHero.tag = 10
@@ -726,17 +716,6 @@ class ViewController: UIViewController {
         
         // Hero
         
-        // Hero Gradient  --- Broken, Fix Later
-        
-        /*
-        let gradientLayerWatchHero = CAGradientLayer.init()
-        gradientLayerWatchHero.frame = watchHero.bounds
-        gradientLayerWatchHero.colors = colors
-        gradientLayerWatchHero.startPoint = startPoint
-        gradientLayerWatchHero.endPoint = endPoint
-        self.watchHero.layer.addSublayer(gradientLayerWatchHero)
-        */
-        
         
         // Read Hero Tap Gesture Recognizer
         readHero.tag = 20
@@ -769,18 +748,6 @@ class ViewController: UIViewController {
         
         // Hero
         
-        
-        
-        // Hero Gradient  --- Broken, Fix Later
-        
-        /*
-        let gradientLayerWatchHero = CAGradientLayer.init()
-        gradientLayerWatchHero.frame = watchHero.bounds
-        gradientLayerWatchHero.colors = colors
-        gradientLayerWatchHero.startPoint = startPoint
-        gradientLayerWatchHero.endPoint = endPoint
-        self.watchHero.layer.addSublayer(gradientLayerWatchHero)
-        */
         
         // Learn Hero Tap Gesture Recognizer
         learnHero.tag = 30
@@ -823,17 +790,6 @@ class ViewController: UIViewController {
         shopHeroType.text = typeShopHero
         shopHeroType.font = UIFont(name: "Roboto-Medium", size: 12)
         shopHeroType.textColor = typeColor
-        
-        // Hero Gradient  --- Broken, Fix Later
-        
-        /*
-        let gradientLayerWatchHero = CAGradientLayer.init()
-        gradientLayerWatchHero.frame = watchHero.bounds
-        gradientLayerWatchHero.colors = colors
-        gradientLayerWatchHero.startPoint = startPoint
-        gradientLayerWatchHero.endPoint = endPoint
-        self.watchHero.layer.addSublayer(gradientLayerWatchHero)
-        */
         
         // Shop Hero Tap Gesture Recognizer
         shopHero.tag = 40
@@ -893,6 +849,7 @@ class ViewController: UIViewController {
         
     }
     
+    // This function sends the correct thumbnail to the article when it is clicked
     func imageTapped(gestureRecognizer: UITapGestureRecognizer) {
         
         switch gestureRecognizer.view!.tag {
@@ -961,6 +918,7 @@ class ViewController: UIViewController {
 
     }
     
+    // This function sends the correct video to the article when it is clicked
     func imageTappedVideo(gestureRecognizer: UITapGestureRecognizer) {
         
         switch gestureRecognizer.view!.tag {
@@ -1029,6 +987,7 @@ class ViewController: UIViewController {
         
     }
     
+    // This function overwrites the prepareForSegue function when transitioning between views 
     
     override func viewDidAppear(animated: Bool) {
     }

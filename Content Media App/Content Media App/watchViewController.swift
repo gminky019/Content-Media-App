@@ -83,6 +83,8 @@ class watchViewController: UIViewController {
     
     override func viewDidLoad(){
         
+        // Declarations 
+        
         let imageView = UIImageView(frame: CGRect(x:0, y:0, width: 86, height: 44))
         let image = UIImage(named: "Logo.png")
         imageView.contentMode = .ScaleAspectFit
@@ -99,6 +101,8 @@ class watchViewController: UIViewController {
         
         var activityIndicator = UIActivityIndicatorView()
         
+    
+        // Create Loading Screen
         activityIndicator.frame = CGRectMake(0, 0, 40, 40)
         activityIndicator.activityIndicatorViewStyle = .WhiteLarge
         activityIndicator.center = CGPointMake(overlay.bounds.width / 2, (overlay.bounds.height / 3)*2)
@@ -113,6 +117,8 @@ class watchViewController: UIViewController {
         var integrate: MiddleIntegration = MiddleIntegration()
         var content: ContentPage?
         let typeColor = UIColor.init(red: 221/255, green: 180/255, blue: 0/255, alpha: 1)
+        
+        // Load content from backend 
         
         integrate.getVideoPage(){ (returned: ContentPage) in
             content = returned
@@ -269,12 +275,15 @@ class watchViewController: UIViewController {
             backgroundView.removeFromSuperview()
         }
         
+        // Setup Footer
+        
         footerBackground.image = UIImage(named: "black.png")
         footerImageOne.image = UIImage(named: "twitter2.png")
         footerImageTwo.image = UIImage(named: "facebook2.png")
         footerImageThree.image = UIImage(named: "youtube2.png")
         footerImageFour.image = UIImage(named: "instagram2.png")
         
+        // Setup correct tags for all articles
         heroOneView.tag = 1
         heroOneView.userInteractionEnabled = true
         let tapRecognizerHeroOne = UITapGestureRecognizer(target: self, action: "imageTapped:")
@@ -354,6 +363,9 @@ class watchViewController: UIViewController {
         
     }
     
+    
+    // This function makes sure the correct article is sent to the article view when an image is tapped
+
     func imageTapped(gestureRecognizer: UITapGestureRecognizer) {
         
         switch gestureRecognizer.view!.tag {
@@ -407,6 +419,8 @@ class watchViewController: UIViewController {
         
     }
     
+    // This function overrides the prepareForSegue to allow passing of objects.
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let DestViewController : videoViewController = segue.destinationViewController as! videoViewController
         
