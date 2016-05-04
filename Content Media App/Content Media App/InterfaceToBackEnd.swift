@@ -4,6 +4,9 @@
 //
 //  Created by Garrett Minky on 3/24/16.
 //  Copyright © 2016 Garrett Minky. All rights reserved.
+/*
+    This class is representative of the methods that the middle ware will use to access the backend. This class has been depreciated for use in the newer versions. This is being left in the code base for when we decide to move the backend to include restful functions. 
+ */
 //
 
 import Foundation

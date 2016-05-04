@@ -5,10 +5,19 @@
 //  Created by Garrett Minky on 3/31/16.
 //  Copyright © 2016 Garrett Minky. All rights reserved.
 //
+/*
+ Description:
+ 
+ This is the main class that connects to the AWS S3 instance to download the main page. 
+ This class opens up a function that passes a complex dictionary to the integration layer that contains all the data needed for the content classes to populate the main page. It utilizes multithreaded asyncrounous functions to laod the content from aws extremely fast. It uses the _s3MainBucket as the global o get the data from a bucket.
+ 
+ */
 
 import Foundation
 
 public class ConnectToAWS{
+    
+    // These globals are used to store the various content and data coming from aws
     let _transferManager: AWSS3TransferManager
     var _completionHandler: AWSS3TransferUtilityDownloadCompletionHandlerBlock?
     var _prefix: String
@@ -44,7 +53,10 @@ public class ConnectToAWS{
     
     }
     
-    
+    /*
+     This method is the method the middle ware will call to get the main page content. 
+     It uses a completion handler to handle the multithreaded aspect and returns a dictionary of the data passed back from AWS
+    */
     func getMain(completion: (main: [String: [NSURL]])->()){
         
         self.getKeys("Hero") {(keys: [AWSS3Object]) in
@@ -75,6 +87,14 @@ public class ConnectToAWS{
         
         
     }
+    
+    /*
+     This is the mid level completion handler function that handles the processing to download all the main content for the page. 
+     
+     It is essentially an abstraction layer method that uses all the Requests and then calls a download method for each one. What also makes this important is this method uses groups for the threads to be notified when all the threada are complete. 
+     
+     This will return the dictionary needed filled with the local url's for the downloaded content.
+    */
     
     func downLoadMain(reqs : [AWSS3TransferManagerDownloadRequest], complete: (mainDict: [String: [NSURL]])-> ())
     {
@@ -131,6 +151,12 @@ public class ConnectToAWS{
 
     }
     
+    /*
+     This is the vErsion 2 of the download function that will actually download the aws content. 
+     
+     This method will complete the completion handler on a data success or error and pass back the downloaded local url for the file content.
+    */
+    
     func downLoadV2(downReq: AWSS3TransferManagerDownloadRequest, group: dispatch_group_t, completionDown: (url: NSURL) ->())
     {
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
@@ -182,6 +208,11 @@ public class ConnectToAWS{
        
     }
     
+    /*
+     This method is a helper function that finds the main url based off of the key given. 
+     
+     It is used by the middle integration layer to complete the custom objects.
+    */
     func findMainURLKey(key: String) -> String
     {
         var dicKey: String = ""
@@ -271,6 +302,9 @@ public class ConnectToAWS{
         return dicKey
     }
     
+    /*
+        This method is a helper used when the downloaders need to put content into the dictionary that is passed back to the integration layer. This will take the s3 object and then create the key in the dictionary and how to find it.
+    */
     func setMainKeyDict(allKey: [AWSS3Object])
     {
         for key in allKey
@@ -343,6 +377,11 @@ public class ConnectToAWS{
         
     }
     
+    /*
+        This method parses the keys found from the AWS calls and finds what type of content they are; and if that is necessary for the download calls. 
+     
+        This will return the new array of s3 objects that are valid for downloading.
+    */
     func parseKeys(type: String, allKey: [AWSS3Object]) -> [AWSS3Object]
     {
         var parsedKeys: [AWSS3Object] = [AWSS3Object]()
@@ -368,6 +407,13 @@ public class ConnectToAWS{
         return parsedKeys
     }
     
+    /*
+        This method takes the AWSS3Objects and goes throuhgh each one and sets the downloadrequest objects needed for downloading.
+     
+        The download requests include the file download path as well.
+     
+        It will return an array of the download requests.
+    */
     func setReq(s3Obj: [AWSS3Object]) -> [AWSS3TransferManagerDownloadRequest]
     {
         var reqList: [AWSS3TransferManagerDownloadRequest] = [AWSS3TransferManagerDownloadRequest]()
@@ -412,7 +458,13 @@ public class ConnectToAWS{
         
         return reqList
     }
-    
+    /*
+        This method gets all keys from the aws s3 bucket set.
+     
+        Getting all the keys from this bucket is necessary to download as this is only main page content. 
+     
+        This method will return an array of the newly minted AWSS3Objects with the proper keys used for downloading.
+    */
     func getKeys(prefix: String, completionKey: (keys: [AWSS3Object]) -> ()){
         
         let listObjectsRequest = AWSS3ListObjectsRequest()
@@ -438,6 +490,11 @@ public class ConnectToAWS{
         })
     }
     
+    /*
+        This method is a helper function that propery creates the thumbnail objects and formats the dictionary so the front end/integration layer understands what type of data is held. 
+     
+        It will return a subhero object which is all of the subheros.
+    */
     func getSubHero(type: String) -> SubHero
     {
         self._prefix = type + "/Hero/"
@@ -478,7 +535,11 @@ public class ConnectToAWS{
         return SubHero(cType: type, hero: main!, subHero: subList)
         
     }
-    
+    /*
+     This is another get main page conent function like above. 
+     
+     This method has been depreciated but still is functional as it will return a flat array of the content instead of a proper formatted dictionary
+    */
     func GetMainPage() -> MainPageContent{
         
         var content: MainPageContent?
@@ -537,7 +598,11 @@ public class ConnectToAWS{
         
         return content!
     }
-    
+    /*
+        This is a depreciated download function as it does not handle multiple object calls. 
+     
+        This method can be used to download a single object.
+    */
     func downLoad(downReq: AWSS3TransferManagerDownloadRequest) -> NSURL
     {
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
@@ -567,6 +632,13 @@ public class ConnectToAWS{
         return downLoadPath!
     }
     
+    /*
+        This is a depreciated downloadrequiremtns function. 
+     
+        This method did not handle complex objects. 
+     
+        It is still functional it just will only do a flat AWS class.
+    */
     func setDownloadReq(s3Obj: [AWSS3Object]) -> [AWSS3TransferManagerDownloadRequest]
     {
         var reqList: [AWSS3TransferManagerDownloadRequest] = [AWSS3TransferManagerDownloadRequest]()
@@ -618,7 +690,10 @@ public class ConnectToAWS{
         })
     }*/
     
-    
+    /*  
+        This method is a get keys method call for the AWS S3 database. 
+        It will return all keys with a certain prefix.
+    */
     func getListObj() -> [AWSS3Object] {
         let listObjectsRequest = AWSS3ListObjectsRequest()
         listObjectsRequest.bucket = "contentmediaapp"
@@ -644,7 +719,11 @@ public class ConnectToAWS{
         return [AWSS3Object]()
     }
     
-    
+    /*
+        This is a testing method. 
+     
+        We used this method to test getting a single picture from the AWS Instance.
+    */
     func testGet()
     {
         let downloadURL = NSTemporaryDirectory().stringByAppendingString("ronswanson.jpg")
@@ -682,6 +761,10 @@ public class ConnectToAWS{
         }
 
     }
+    
+    /*
+        A helpr method that returns the class member dictionary to a class that calls it. 
+    */
     
     func getUrlKeyDict() -> [String: String]
     {

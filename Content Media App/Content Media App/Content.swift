@@ -5,6 +5,9 @@
 //  Created by Garrett Minky on 3/1/16.
 //  Copyright © 2016 Garrett Minky. All rights reserved.
 //
+/*
+ This is the content base class that all other content classes inherit from. 
+ */
 
 import Foundation
 

@@ -5,6 +5,11 @@
 //  Created by Garrett Minky on 2/27/16.
 //  Copyright © 2016 Garrett Minky. All rights reserved.
 //
+/*
+    This is the content class that is the video object. 
+ 
+    It hold the data needed for the front end to process videos. 
+ */
 
 import Foundation
 

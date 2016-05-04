@@ -6,6 +6,12 @@
 //  Copyright © 2016 Garrett Minky. All rights reserved.
 //
 
+/*
+ This is the article object that inherits from content. 
+ 
+ It contains two methods to set pictures if pictures are indeeed embedded within the article. 
+ */
+
 import Foundation
 
 class ArticleObj: Content {

@@ -5,6 +5,16 @@
 //  Created by Garrett Minky on 4/23/16.
 //  Copyright © 2016 Garrett Minky. All rights reserved.
 //
+/*
+    Description: 
+ 
+    This class is the clss that handles the generation and downloading for each specific content page.
+    i.e. Read watch learn. 
+ 
+    This class follows similar download patterns but uses separate bucktes and processing to download and handle page
+    generation. 
+ 
+ */
 
 import Foundation
 
@@ -34,15 +44,18 @@ public class GetContentPages {
         self._s3Holder = [NSURL:[String: String]]()
     }
     
+    // This method is a method ot set the global type variable
     func setType(typer: String)
     {
         self._Type = typer
     }
+    // This method is used to set the global hero variable to false
     func setHero()
     {
         self._HeroPage = false
     }
     
+    //Set key will set the key of the method determined by the global type variable
     func setKey ()
     {
         self._KeyVal = "/"
@@ -77,11 +90,19 @@ public class GetContentPages {
         }*/
     }
     
+    //This returns the global dctionary for the keys
    public func getKeyStuff() -> [NSURL: [String: String]]
     {
         return self._s3Holder
     }
     
+    /*
+        This method retrieves the keys for the specific peice of data we are trying to retrieve. 
+     
+        Since the keys can be different from the keys in the object you need to still retrieve the object by using the prefix setting in aws. 
+     
+        This method will return a list of objects to download.
+    */
     func getKeys(complete: (completion: [AWSS3Object]) -> ())
     {
         let keyReq: AWSS3ListObjectsRequest = AWSS3ListObjectsRequest()
@@ -109,6 +130,7 @@ public class GetContentPages {
         })
     }
     
+    //This method will set the aws request for each s3 key that was retrieved from aws.
     func setRequest()-> [AWSS3TransferManagerDownloadRequest]
     {
         var reqs: [AWSS3TransferManagerDownloadRequest] = [AWSS3TransferManagerDownloadRequest]()
@@ -154,6 +176,7 @@ public class GetContentPages {
         return reqs
     }
     
+    //This is the download method that will dowbnload a single piece of content from the aws database.
     func downloadContent(downReq: AWSS3TransferManagerDownloadRequest, group: dispatch_group_t, completionDown: (compl: NSURL )-> ())
     {
         let transferManager = AWSS3TransferManager.defaultS3TransferManager()
@@ -206,6 +229,7 @@ public class GetContentPages {
         })
     }
     
+    //This is a helper method that parses the titles from the given key and returns the title
     func parseTitleFromKey(key: String) -> String
     {
         let temp: String = key
@@ -227,7 +251,7 @@ public class GetContentPages {
 
     }
     
-    
+    //This is the main abstarcted method that will generate the download for the main content pages.
     func getContentMain( type: String, complet: (loc: [String : [NSURL]]) -> ())
     {
         setType(type)
@@ -244,6 +268,10 @@ public class GetContentPages {
             }
         }
     }
+    
+    /*
+        This is another abstracted method that will handle the multiple asyncrounous download requests and manages them accordingly using dispatch groups. 
+    */
     func multiDownloadHandler(reqs: [AWSS3TransferManagerDownloadRequest], complete: (locs: [String: [NSURL]])-> ())
     {
         var count : Int = 0

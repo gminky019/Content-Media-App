@@ -6,6 +6,10 @@
 //  Copyright © 2016 Garrett Minky. All rights reserved.
 //
 
+/*
+ This class is the content class for just pictures. and contains mehods to return the uiimage of the image. 
+ */
+
 import Foundation
 import UIKit
 

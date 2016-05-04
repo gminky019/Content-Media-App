@@ -5,6 +5,11 @@
 //  Created by Garrett Minky on 4/7/16.
 //  Copyright © 2016 Garrett Minky. All rights reserved.
 //
+/*
+    Description: 
+ 
+    This class is purely a helper class that helps the middleware/ integration classes with processsing of data.
+ */
 
 import Foundation
 
@@ -20,6 +25,7 @@ class Helpers{
         self._contentFlag = false
     }
     
+    //This method sets the instances of the aws backend for access
     func setContentAWS(aws: GetContentPages)
     {
         self._contentFlag = true
@@ -27,7 +33,11 @@ class Helpers{
         self._contentAws = aws
     }
     
-    
+    /*
+        This is the helper function that converts the main page dictionary to the usuable main page object.
+        
+        It takes the dictionary and with processing and helper functions creates the mainpage object,
+    */
     func setMainPageContentObj(urlDict: [String: [NSURL]]) -> MainPageContent{
         var mainKeys = urlDict.keys
 
@@ -144,12 +154,18 @@ class Helpers{
         return MainPageContent(heros: MainContents, sub: subMainContents, contSub: subHeroes)
     }
     
+    /*
+     A helper function for the main page creation that creates the sub content pieces oof the ui for the main page object.
+    */
     func createContentSub(main: [String: Content], sub: [String: [Content]], key: String) -> SubHero
     {
         let subHero : SubHero = SubHero(cType: key, hero: main[key]!, subHero: sub[key]!)
         return subHero
     }
     
+    /*
+        This function is used to take a url for a aws object and creates the proper thumbnail object from that url.
+    */
     func createThumbHelper(url: NSURL) -> ThumbNail
     {
         var thatT: [NSURL: [String: String]] = self._contentAws.getKeyStuff()
@@ -169,6 +185,7 @@ class Helpers{
         }
     }
     
+    //This method takes the url and finds the title created in the backend for it.
     func getTitle(url: NSURL) -> String
     {
         var temp : String? = self.getKeyName(url.path!)
@@ -190,11 +207,16 @@ class Helpers{
         }
         
     }
+    
+    //This is a stubbed out methid that would get the description for the content from the backend if it existed
+    //in this case the description was not feasable with current functionailty.
     func getDesc(url: NSURL) -> String
     {
         return ""
     }
     
+    // This is a depreciated function that would find the key name
+    // it is not used because the key name is already passed from the backend.
     func getKeyName(key: String) -> String{
         /*
         if(self._awsInstance.getUrlKeyDict().
@@ -208,7 +230,10 @@ class Helpers{
         }*/
         //return ""
     }
-    
+
+    /*
+        This mehtod creates the key from the content given to it. Some processing is needed so the ky can be readable by the backend. 
+    */
     func createKeyFromContent(cont: Content) -> String
     {
         let oldKey: String = cont.awskey
