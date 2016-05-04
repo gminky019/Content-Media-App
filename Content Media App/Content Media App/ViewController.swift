@@ -5,6 +5,9 @@
 //  Created by Garrett Minky on 2/27/16.
 //  Copyright © 2016 Garrett Minky. All rights reserved.
 //
+/*
+ Main controller for the main page and loading pages
+ */
 
 import QuartzCore
 import UIKit

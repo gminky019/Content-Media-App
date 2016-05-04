@@ -6,6 +6,10 @@
 //
 //
 
+/*
+ This is the controller for the learn content view page.
+ */
+
 import Foundation
 
 class learnViewController: UIViewController{

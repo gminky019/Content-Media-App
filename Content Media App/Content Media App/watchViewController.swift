@@ -6,6 +6,10 @@
 //
 //
 
+/*
+ This is the controller for the watch content view page.
+ */
+
 import Foundation
 
 class watchViewController: UIViewController {

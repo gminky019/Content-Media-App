@@ -6,6 +6,9 @@
 //  Copyright © 2016 Garrett Minky. All rights reserved.
 //
 
+/*
+ This is the view controller for viewing a single article. 
+ */
 import Foundation
 import QuartzCore
 import UIKit

@@ -5,7 +5,9 @@
 //  Created by Jordan Harris on 4/7/16.
 //  Copyright © 2016 Garrett Minky. All rights reserved.
 //
-
+/*
+ This is the controller for the read content view page.
+ */
 import Foundation
 
 class readViewController: UIViewController {

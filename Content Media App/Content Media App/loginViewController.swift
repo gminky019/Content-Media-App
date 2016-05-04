@@ -5,6 +5,9 @@
 //  Created by Jordan Harris on 4/29/16.
 //  Copyright © 2016 Garrett Minky. All rights reserved.
 //
+/*
+    This is the view controller for the login view for facebook .
+ */
 
 import Foundation
 
